@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0703</title>
+    <!-- 수평가운데정렬 : inline속성개체는 text-align:center;
+                         block속성개체는 margin:0auto
+             
+               수직정렬 : inline속성개체는 vertical-align:middle
+                        blck속성 하위요소가 한줄의 text line-height:높이값 
+                        해당img의 vertical-aling:middle까지 줘야함.
+                        block속성 하위요소가 두줄이상일때의 text
+                        line-height:높이값x
+                        dispaly:table-cell;
+                        vertical-align:middle;
+                        + 텍스트 중앙정렬
+                        width값 주고 text-align:center;
+                        -->
+    <style>
+      p {
+        height: 300px;
+        border: 1px solid #000;
+        line-height: 300px;
+      }
+      span,
+      span img {
+        vertical-align: middle;
+      }
+      div {
+        width: 300px;
+        height: 300px;
+        border: 1px solid #000;
+        /* line-height: 100px; 안됨 */
+        /* padding-top: 150px; 안됨 */
+        display: table-cell; /* 블록 크기를 갖는 속성 */
+        vertical-align: middle;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <span>이미지</span><span><img src="images/menu1.jpg" alt="menu1" /></span>
+    </p>
+    <div>
+      수직<br />
+      가운데<br />정렬
+    </div>
+  </body>
+</html>

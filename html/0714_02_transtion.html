@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>transition</title>
+        <style>
+            label {
+                cursor: pointer;
+                position: relative;
+                left: 0px;
+                top: 0px;
+                transition: left 0.5s ease-in-out;
+            }
+            #menu:checked ~ label {
+                left: 500px;
+            }
+            label span {
+                display: block;
+                width: 35px;
+                height: 5px;
+                background: #000;
+                margin: 6px 0;
+                transition: transform 0.2s ease-in;
+            }
+            #menu:checked ~ .menu01 .bar1 {
+                transform: translate(0, 11px) rotate(45deg);
+            }
+            #menu:checked ~ .menu01 .bar2 {
+                opacity: 0;
+            }
+            #menu:checked ~ .menu01 .bar3 {
+                transform: translate(0, -11px) rotate(-45deg);
+            }
+
+            .bar1 {
+                transform: translate(0, 0px);
+            }
+            .bar2 {
+                opacity: 1;
+            }
+            .bar3 {
+                transform: translate(0, 0px);
+            }
+            .box {
+                position: fixed;
+                width: 500px;
+                height: 100%;
+                left: -500px;
+                top: 0;
+                background: rgba(0, 0, 0, 0.5);
+                transition: left 0.5s ease-in-out;
+                z-index: -1;
+            }
+            #menu:checked ~ div.box {
+                left: 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 인풋과 라벨이 형제여야 함.
+            인풋 체크박스 아이디속성이랑 라벨 폴에 속성이 이름이 같아야함. -->
+        <input type="checkbox" id="menu" />
+        <label for="menu" class="menu01">
+            <span class="bar1"></span>
+            <span class="bar2"></span>
+            <span class="bar3"></span>
+        </label>
+        <div class="box"></div>
+    </body>
+</html>

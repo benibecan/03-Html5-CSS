@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* widtht, height 값 %는 부모를 봐야함. position fixed를 주고 width, height는 100% = 디바이스 전체. relative는 죄측상단정렬느낌.앱솔부모로주기도함. absolute는 left주면 무조건 움직임. 페이지밖으로도 나감.*/
+      .wrap {
+        position: relative;
+        left: 200px;
+        top: 200px;
+        padding-bottom: 2000px;
+      }
+      .wrap div:first-child {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: #ccc;
+        opacity: 0.5;
+        left: 0;
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div>fixed1</div>
+      <div>fixed2</div>
+      <div>fixed3</div>
+      <div>fixed4</div>
+    </div>
+  </body>
+</html>

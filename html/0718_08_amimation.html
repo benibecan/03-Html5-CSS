@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>animation</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            ul,
+            li {
+                list-style: none;
+            }
+
+            div {
+                margin: 20px 0;
+                width: 960px;
+                height: 640px;
+                animation-name: bg;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                /* animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);/ */
+                /* animation-delay: -1s; */
+                animation-timing-function: linear;
+            }
+
+            @keyframes bg {
+                0% {
+                    background: url(images/photo1.jpg) no-repeat;
+                    background-size: 960px 640px;
+                }
+                20% {
+                    background: url(images/photo2.jpg) no-repeat;
+                    background-size: 960px 640px;
+                }
+                40% {
+                    background: url(images/photo3.jpg) no-repeat;
+                    background-size: 960px 640px;
+                }
+                60% {
+                    background: url(images/photo4.jpg) no-repeat;
+                    background-size: 960px 640px;
+                }
+                80% {
+                    background: url(images/photo5.jpg) no-repeat;
+                    background-size: 960px 640px;
+                }
+                100% {
+                    background: url(images/photo6.jpg) no-repeat;
+                    background-size: 960px 640px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>
+                <div></div>
+            </li>
+        </ul>
+    </body>
+</html>

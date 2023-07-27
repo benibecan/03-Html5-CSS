@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrap1 div,
+      .wrap2 div {
+        width: 100px;
+        height: 100px;
+      }
+      .wrap1 div:first-child {
+        background: #aaa;
+      }
+      .wrap1 div:nth-child(2) {
+        background: #bbb;
+        position: relative;
+        top: -100px;
+        left: 100px;
+      }
+      .wrap1 div:nth-child(3) {
+        background: #ccc;
+        position: relative;
+        top: -200px;
+        left: 200px;
+      }
+      .wrap2 {
+        border: 1px solid #000;
+      }
+      /* float: left, right 왼쪽 오른쪽으로 띄우다. 포지션을 주지 않아도 콘텐츠를 정렬시킬 수잇음. but float right는 콘텐츠가 5 4 3 2 1 순서로 들어감 */
+      .wrap2 > div {
+        float: right;
+      }
+      .wrap2 div:first-child {
+        background: #aaa;
+      }
+      .wrap2 div:nth-child(2) {
+        background: #bbb;
+      }
+      .wrap2 div:nth-child(3) {
+        background: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap1">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="wrap2">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </body>
+</html>

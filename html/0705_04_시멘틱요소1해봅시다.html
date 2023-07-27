@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>레이아웃</title>
+    <style>
+      /* box-sizing: border-box==내용 영역의 폭(width)와 높이(height)는 패딩(Padding)과 보더(Border)를 포함한 범위가 됩니다. 
+       overflow 정의==요소 내용이 요소 크기보다 더 클 때, 요소 내용을 어떻게 처리할지 지정.*/
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #wrap {
+        width: 1280px;
+        margin: 0 auto;
+        background: #ccc;
+      }
+      .header {
+        width: auto;
+        /* width 값안주면 기본임. box-sizing: border-box;한 것처럼  */
+        border: #000 solid 1px;
+        border-radius: 5px;
+        padding: 20px;
+      }
+      .content {
+        margin: 20px 0 20px 0;
+        overflow: hidden;
+      }
+      .content > div {
+        height: 500px;
+        float: left;
+        border: #000 solid 1px;
+        border-radius: 5px;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      .nav {
+        width: 30%;
+      }
+      .section {
+        width: calc(50% - 40px); /* margin늘어난것만큼 빼기 */
+        margin: 0 20px;
+      }
+      .aside {
+        width: 20%;
+      }
+      .footer {
+        height: 100px;
+        border: #000 solid 1px;
+        border-radius: 5px;
+        padding: 20px;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="header">header</div>
+      <div class="content">
+        <div class="nav">nav</div>
+        <div class="section">section</div>
+        <div class="aside">asid</div>
+      </div>
+      <!-- content end -->
+      <div class="footer">footer</div>
+    </div>
+    <!-- wrap end -->
+    <div id="wrap2">
+      <header>header</header>
+      <section>
+        <nav>nav</nav>
+        <article>article</article>
+        <aside>aside</aside>
+      </section>
+      <footer>footer</footer>
+    </div>
+  </body>
+</html>

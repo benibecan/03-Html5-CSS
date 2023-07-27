@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrap1 > div {
+        width: 33.33333%;
+        float: left;
+        background: #ccc;
+      }
+
+      /* display: inline-block으로 빈틈없이 박스정렬하기
+      해결방법 1.태그를 enter로 기행하지 않기 2.enter로 기행한거 주석처리하기 3.  부모에게 font-size: 0px;을 준다. display: inline-block준 자식 text-size: 16px*/
+      .wrap2 {
+        font-size: 0px;
+      }
+      .wrap2 > div {
+        width: 33.3333%;
+        display: inline-block;
+        background: #ccc;
+        font-size: 16px;
+      }
+      .wrap3 {
+        position: relative;
+      }
+      .wrap3 > div {
+        position: absolute;
+        width: 33.333%;
+        background: #ccc;
+        top: 0;
+      }
+      .wrap3 .center {
+        left: 33.333%;
+      }
+      .wrap3 .right {
+        left: 66.666%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- float으로 가로배치 -->
+    <div class="wrap1">
+      <div class="left">left1</div>
+      <div class="center">center1</div>
+      <div class="right">right1</div>
+    </div>
+    <!-- display:inline-block으로 가로배치 -->
+    <div class="wrap2">
+      <div class="left">left2</div>
+      <div class="center">center2</div>
+      <div class="right">right2</div>
+    </div>
+    <!-- position으로 가로배치 -->
+    <div class="wrap3">
+      <div class="left">left3</div>
+      <div class="center">center3</div>
+      <div class="right">right3</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .clearfix::before,
+            .clearfix::after {
+                content: '';
+                display: block;
+            }
+            .clearfix::after {
+                clear: both;
+            }
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            ul {
+                list-style: none;
+            }
+            a {
+                text-decoration: none;
+            }
+            body {
+                font-family: Arial, '맑은 고딕', sans-serif;
+            }
+            /* 기본설정 */
+            .top {
+                background: red;
+            }
+            .top .inner {
+                width: 1025px;
+                margin: 0 auto;
+                padding: 5px 0;
+            }
+            .top .inner ul {
+                float: right;
+            }
+            .top .inner ul li {
+                float: left;
+                padding: 5px 20px;
+            }
+            .top .inner ul li a {
+                font-size: 12px;
+                color: #fff;
+            }
+            header {
+                width: 1025px;
+                margin: 0 auto;
+            }
+            header .logo {
+                float: left;
+            }
+            header nav {
+                margin: 10px 0;
+            }
+            header nav ul {
+                float: right;
+            }
+            header nav ul li {
+                float: left;
+                margin: 20px 40px 0 0;
+                text-align: center;
+            }
+            header nav ul li a {
+                color: red;
+                font-weight: bold;
+            }
+            .slide {
+                width: 1025px;
+                margin: 0 auto;
+            }
+            .slide img {
+                border-radius: 20px;
+            }
+            .icon {
+                width: 1025px;
+                margin: 0 auto;
+            }
+            .icon ul li {
+                float: left;
+                width: 25%;
+                text-align: center;
+                margin: 20px 0;
+            }
+            .container {
+                width: 1025px;
+                margin: 0 auto;
+            }
+            h2 {
+                font-size: 18px;
+            }
+            .container > div {
+                padding: 10px;
+                box-sizing: border-box;
+            }
+            .event {
+                width: 50%;
+                float: left;
+            }
+
+            .event img {
+                float: right;
+            }
+            .info {
+                width: 50%;
+                float: left;
+            }
+            table {
+                padding-top: 10px;
+                width: 100%;
+                font-size: 12px;
+                color: #888;
+            }
+            table td {
+                padding: 3px;
+            }
+            td:first-child {
+                display: block;
+                width: 350px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                line-height: 23px;
+            }
+            td:last-child {
+                text-align: right;
+            }
+
+            .copyright {
+                margin: 0 auto;
+                width: 1025px;
+                background: #d6b047;
+            }
+            .copyright > p {
+                padding: 30px;
+                line-height: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="top">
+                <div class="inner clearfix">
+                    <ul>
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">English</a></li>
+                    </ul>
+                </div>
+            </div>
+            <header class="clearfix">
+                <div class="logo"><img src="image/logo.gif" alt="" /></div>
+                <nav class="clearfix">
+                    <ul>
+                        <li><a href="#">영화예매</a></li>
+                        <li><a href="#">신작개봉</a></li>
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">CGV매점</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="slide"><img src="image/visual.jpg" alt="" /></div>
+            <div class="icon">
+                <ul class="clearfix">
+                    <li>
+                        <a href="#"><img src="image/img01.png" alt="img01" /></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="image/img02.png" alt="img01" /></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="image/img03.png" alt="img01" /></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="image/img04.png" alt="img01" /></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="container clearfix">
+                <div class="event">
+                    <h2>이벤트</h2>
+                    <a href="#"><img src="image/banner.jpg" alt="" /></a>
+                </div>
+                <div class="info">
+                    <h2>공지사항</h2>
+                    <table>
+                        <tr>
+                            <td>공지사항 제목이 들어갑니다.</td>
+                            <td>2023-07-20</td>
+                        </tr>
+                        <tr>
+                            <td>공지사항 제목이 들어갑니다.</td>
+                            <td>2023-07-20</td>
+                        </tr>
+                        <tr>
+                            <td>공지사항 제목이 들어갑니다.</td>
+                            <td>2023-07-20</td>
+                        </tr>
+                        <tr>
+                            <td>공지사항 제목이 들어갑니다.</td>
+                            <td>2023-07-20</td>
+                        </tr>
+                        <tr>
+                            <td>공지사항 제목이 들어갑니다.공지사항 제목이 들어갑니다.공지사항 제목이 들어갑니다.</td>
+                            <td>2023-07-20</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <footer>
+                <div class="copyright"><p>All Copyright Reserved.</p></div>
+            </footer>
+        </div>
+    </body>
+</html>

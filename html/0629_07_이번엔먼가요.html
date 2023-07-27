@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrap {
+        border: 1px solid #000;
+        background: #fff;
+        width: 1200px;
+        /* height: 100px; */
+        overflow: hidden;
+        margin: 0%;
+      }
+      .wrap > div {
+        width: 22%;
+        height: 100px;
+        margin-left: calc((100 * 4 - 22% * 3) / 3);
+        background: #ccc;
+        float: left;
+      }
+      .wrap > div:first-child {
+        margin-left: 0%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="div1">one</div>
+      <div class="div2">two</div>
+      <div class="div3">three</div>
+      <div class="div4">four</div>
+    </div>
+  </body>
+</html>

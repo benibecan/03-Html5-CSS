@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        text-align: center;
+        margin: auto;
+        max-width: 1280px;
+        width: 100%;
+        /* height: 50px; overflow: hidden; */
+        overflow: hidden;
+        background: #ccc;
+      }
+      .child {
+        text-align: left;
+        position: relative;
+        width: 25%;
+        background: #000;
+        color: #fff;
+      }
+      .parent > div {
+        float: left;
+      }
+      /*부모의 높이값이 없어짐. 
+      해결방법 1.height: 100px; 부모의 높이를 지정함. 2.부모의 overflow:hidden; 
+      부모가 높이 값을 가짐.
+      float속성을 지정하면 다음요소가 끌려올라간다. 
+      해별방법 1.다음요소에 clear속성을 지정한다. */
+      .left {
+        float: left;
+      }
+      .wrap .right {
+        clear: left;
+      }
+      .wrap1 {
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <!-- 부모요소 -->
+      <div class="child">자식요소</div>
+      <div class="child">자식요소</div>
+      <div class="child">자식요소</div>
+      <p class="child">자식요소</p>
+    </div>
+    <div class="wrap">
+      <div class="left">left</div>
+      <div class="left">left</div>
+      <div class="right">right</div>
+    </div>
+    <div class="wrap1">
+      <div class="left">1left</div>
+      <div class="right">1right</div>
+      <div class="contents">contents</div>
+    </div>
+  </body>
+</html>

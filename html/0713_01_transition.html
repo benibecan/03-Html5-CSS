@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>transition</title>
+        <style>
+            /* 수직가운데 정렬하는법 두가지
+            1-1. display:table-cell;
+            1-2. vertical-align:middle;
+            2-1. position:relative or absolute
+            2-2. left50%top50%
+            2-3. transform:translate(-50%, -50%)*/
+
+            /*  transition: transform 1s ease-in-out 3s;
+            --> 트랜지션을 주겠다: 트랜스폼으로 1초동안 이지인아웃해라 3초뒤에 */
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            ul {
+                list-style: none;
+            }
+            ul li {
+                width: 500px;
+                height: 200px;
+                background: #f0f0f0;
+            }
+            li {
+                position: relative;
+            }
+            div.content {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+            .line {
+                position: absolute;
+                background: #07348c;
+            }
+            .line-top {
+                width: 100%;
+                height: 5px;
+                left: 0;
+                transform: scaleX(0);
+                transform-origin: 0 0;
+                transition: transform 1s ease-in-out;
+            }
+            ul li:hover .line-top {
+                transform: scaleX(1);
+                transition: 1s ease-in-out;
+            }
+            .line-right {
+                width: 5px;
+                height: 100%;
+                right: 0;
+                transform: scaleY(0);
+                transform-origin: 0 0;
+                transition: transform 1s ease-in-out;
+            }
+            ul li:hover .line-right {
+                transform: scaleY(1);
+                transition: 1s ease-in-out 1s;
+            }
+            .line-bottom {
+                width: 100%;
+                height: 5px;
+                left: 0;
+                bottom: 0;
+                transform: scaleX(0);
+                transform-origin: 100% 0;
+                transition: transform 1s ease-in-out;
+            }
+            ul li:hover .line-bottom {
+                transform: scaleX(1);
+                transition: 1s ease-in-out 2s;
+            }
+            .line-left {
+                width: 5px;
+                height: 100%;
+                left: 0;
+                bottom: 0;
+                transform: scale(0);
+                transform-origin: 0 100%;
+                transition: transform 1s ease-in-out;
+            }
+            ul li:hover .line-left {
+                transform: scaleY(1);
+                transition: 1s ease-in-out 3s;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>
+                <div class="content">
+                    <h1>메인배너</h1>
+                    <h2>border transition</h2>
+                </div>
+                <span class="line line-top"></span>
+                <span class="line line-right"></span>
+                <span class="line line-bottom"></span>
+                <span class="line line-left"></span>
+            </li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0626_01_img</title>
+  </head>
+  <body>
+    <!-- img src="상대주소" -->
+    <img src="images/menu1.jpg" alt="메뉴1" width="50" height="50" />
+    <img src="images/menu2.jpg" alt="메뉴2" style="width: 50px" />
+    <img src="images/menu3.jpg" alt="메뉴3" />
+    <img src="images/photo1.jpg" alt="photo1" />
+    <!-- img src="절대주소" -->
+    <img
+      src="https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png"
+      alt="daum logo"
+    />
+    <a href="http://www.daum.net" target="_blank">다음</a>
+    <a href="http://www.daum.net" target="_new">
+      <img
+        src="https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png"
+        alt="다음로고"
+      />
+     <p> <a href=""><img src="images/map.jpg" alt="지도" /></a></p>
+     <!-- #korea -->
+<img src="images/map.jpg" alt="지도" usemap="#korea"/>
+<map name="korea">
+    <!-- area coords="그림판에서 마우스 올렸을 때의 왼쪽위, 오른쪽아래 좌표값" -->
+    <!-- area href=img src -->
+    <area shape="rect" coords="151,258,172,289" href="https://www.daejeon.go.kr/" target="_new" alt="대전광역시"> 
+    <!-- area shape="circle" coords="x,y,반지름" -->
+    <area shape="circle" coords="92,523,30" href="https://www.jejusi.go.kr/" target="_new" alt="제주시"> 
+    <area shape="poly" coords="334,289,324,321,344,320" href="https://www.pohang.go.kr/pohang/index.do" target="_new" alt="포항시"> 
+</map>  
+</body>
+</html>

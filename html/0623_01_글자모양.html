@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>글자모양</title>
+    <!-- style 내부방식 -->
+    <style>
+      mark {
+        background-color: aquamarine;
+      }
+      #first {
+        background-color: #f00;
+      }
+      .txt {
+        background-color: rgb(30, 255, 0) !important;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- p 본문, 블록태그 -->
+    <p><b>굵은 글자</b></p>
+    <p><strong>굵은 글자</strong></p>
+    <!-- b 굵은글자, strong 중요한 굵은글자 -->
+    <p><i>기울어진 글자</i></p>
+    <p><em>기울어진 글자</em></p>
+    <!-- i 기울어진 글자, em 중요한 기울어진 글자 -->
+    <p><small>작은 글자</small></p>
+    <p>x<sup>2</sup></p>
+    <p>h<sup>2</sup>0</p>
+    <p><ins>밑줄문자</ins></p>
+    <p><del>취소선문자</del></p>
+    <!-- style 인라인방식 -->
+    <p>
+      <mark style="background-color: #ff99d1"
+        >하이라이트된 글자 인라인방식</mark
+      >
+    </p>
+    <p>
+      <mark id="first" style="background-color: #ff99d1"
+        >하이라이트된 글자 인라인방식</mark
+      >
+    </p>
+    <p>
+      <mark id="first" class="txt"> first 하이라이트된 글자 인라인방식</mark>
+    </p>
+
+    <p>
+      <mark id="second" style="background-color: #ff99d1"
+        >second 하이라이트된 글자 인라인방식</mark
+      >
+    </p>
+    <p>
+      <mark style="background-color: #ff99d1"
+        >id없는 하이라이트된 글자 인라인방식</mark
+      >
+    </p>
+    <!-- style 내부방식 -->
+    <p><mark>하이라이트된 글자 내부방식</mark></p>
+    <!-- 글자바탕색칠됨 -->
+    <blockquote cite="http://www.naver.com">
+      For 60 years, WWF has worked to help people and nature thrive. As the
+      world's leading conservation organization, WWF works in nearly 100
+      countries. At every level, we collaborate with people around the world to
+      develop and deliver innovative solutions that protect communities,
+      wildlife, and the places in which they live.
+    </blockquote>
+    <!-- 다른출처로부터 인용된 블록을 정리할때 사용한다. 
+        blockquote에서 사용할수 있는 속성
+        cite:속성값(인용된 내용된 출처 source를 명시함) 
+        *들여쓰기가 된다. -->
+    <p>
+      For 60 years, WWF has worked to help people and nature thrive. As the
+      world's leading conservation organization, WWF works in nearly 100
+      countries. At every level, we collaborate with people around the world to
+      develop and deliver innovative solutions that protect communities,
+      wildlife, and the places in which they live.
+    </p>
+    <p>네이버 논문: <q cite="http://www.naver.com">환경에 관련된 논문</q></p>
+    <!-- q 짧게 인용할 때 
+        <q>"환경에 관련된 논문"</q>라고 나옴 -->
+    <p>
+      The <abbr title="World Health Organization">WHO</abbr> was founded in
+      1948.
+      <!-- abbr의 title속성 -->
+    </p>
+    <address>
+      대전광역시<br />서구<br />
+      둔산동
+    </address>
+    <!-- adress: html5시멘틱 요소, 주소의미, 기울임꼴 -->
+    <p>대전광역시 서구 둔산동</p>
+  </body>
+</html>

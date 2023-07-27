@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      /* position을 안주면 기본 static. static은 top, left를 줘도 움직이지 않음. top과 bottom을 동시에 주면 안됨. left와 right를 동시에 주면 안됨. position top, left 값은 양수이면 중앙으로 음수이면 화면 밖으로 감. */
+      div {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        border: 1px solid #000;
+      }
+      /* position absolute 부모 기준으로 top,left움직임. 부모가 없으면 상위태그 body 기준으로 움직임. */
+      ul:nth-child(2) {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+        list-style: none;
+        opacity: 0.5;
+        top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 부모가 필요할때 그룹으로 묶고싶을때 div사용 -->
+    <div></div>
+    <div>
+      <ul>
+        <li><a href="#">링크태그1</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">링크태그2</a></li>
+      </ul>
+      <p>
+        새로운 콘텐츠새로운 콘텐츠새로운 콘텐츠새로운 콘텐츠새로운 콘텐츠새로운
+        콘텐츠새로운 콘텐츠새로운 콘텐츠새로운 콘텐츠새로운 콘텐츠새로운
+        콘텐츠새로운 콘텐츠새로운 콘텐츠
+      </p>
+    </div>
+  </body>
+</html>

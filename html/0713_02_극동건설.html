@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>극동건설</title>
+        <style>
+            /* 수직가운데 정렬하는법 두가지
+            1-1. display:table-cell;
+            1-2. vertical-align:middle;
+            2-1. position:relative or absolute
+            2-2. left50%top50%
+            2-3. transform:translate(-50%, -50%)*/
+
+            /*  transition: transform 1s ease-in-out 3s;
+            --> 트랜지션을 주겠다: 트랜스폼으로 1초동안 이지인아웃해라 3초뒤에 */
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            ul {
+                position: relative;
+                list-style: none;
+                width: 1280px;
+                height: 400px;
+                margin: 0 auto;
+                background-image: url(images/mid_bg_img1.jpg);
+                background-size: 100%;
+            }
+
+            ul > h1 {
+                position: relative;
+                left: 50%;
+                top: 25%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                letter-spacing: -3px;
+                color: #fff;
+                font-weight: 200;
+            }
+            div.wrap {
+            }
+            div.wrap > h2 {
+                font-size: medium;
+                color: #fff;
+            }
+            ul > h1 > span {
+                font-weight: 600;
+            }
+            ul li {
+                position: relative;
+                width: 500px;
+                height: 200px;
+                background: #f0f0f0;
+            }
+
+            div.content {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+            .line {
+                position: absolute;
+                background: red;
+            }
+            .line-top {
+                width: 100%;
+                height: 1px;
+                transform: scaleX(0);
+                transition: transform 0.5s ease-in-out;
+            }
+            ul li:hover .line-top {
+                transform: scaleX(1);
+                transition: 0.5s ease-in-out;
+            }
+            .line-right {
+                width: 1px;
+                height: 100%;
+                right: 0;
+                transform: scaleY(0);
+                transition: transform 0.5s ease-in-out;
+            }
+            ul li:hover .line-right {
+                transform: scaleY(1);
+                transition: 0.5s ease-in-out;
+            }
+            .line-bottom {
+                width: 100%;
+                height: 1px;
+                left: 0;
+                bottom: 0;
+                transform: scaleX(0);
+                transition: transform 0.5s ease-in-out;
+            }
+            ul li:hover .line-bottom {
+                transform: scaleX(1);
+                transition: 0.5s ease-in-out;
+            }
+            .line-left {
+                width: 1px;
+                height: 100%;
+                left: 0;
+                transform: scale(0);
+                transition: transform 0.5s ease-in-out;
+            }
+            ul li:hover .line-left {
+                transform: scaleY(1);
+                transition: 0.5s ease-in-out;
+            }
+
+            div.content h1 {
+                font-size: 16px;
+                color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <h1>
+                개개인의 특성과 능력을 중시하는 극동건설은<br />
+                여러분의 <span>성장의 터</span>를 마련합니다.
+            </h1>
+            <li>
+                <div class="content">
+                    <div class="wrap">
+                        <h1>메인배너</h1>
+                    </div>
+                </div>
+
+                <span class="line line-top"></span>
+                <span class="line line-right"></span>
+                <span class="line line-bottom"></span>
+                <span class="line line-left"></span>
+            </li>
+            <h2>
+                극동건설이 추구하는 인재상을<br />
+                여러분께 소개합니다.
+            </h2>
+        </ul>
+    </body>
+</html>

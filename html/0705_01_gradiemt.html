@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gradient</title>
+    <style>
+      p.bg {
+        height: 100px;
+      }
+      .bg1 {
+        background-image: linear-gradient(red, rgba(225, 0, 0, 0));
+      }
+      .bg2 {
+        background-image: linear-gradient(to top, #fccb90 0%, #d57eeb 100%);
+      }
+      .bg3 {
+        background-image: linear-gradient(#fccb90, #d57eeb);
+      }
+      .bg4 {
+        background-image: linear-gradient(to left, #fccb90, #d57eeb);
+      }
+      .bg5 {
+        background-image: linear-gradient(-45deg, #fccb90, #d57eeb);
+      } /* deg==각도 양수 음수 가능 */
+      .bg6 {
+        background-image: linear-gradient(#fccb90 10%, #d57eeb 50%);
+      }
+      .bg7 {
+        background-image: repeating-linear-gradient(#fccb90, #d57eeb 20%);
+      } /* 반복하는 그라데이션 */
+      .bg8 {
+        background-image: radial-gradient(#fccb90, #d57eeb);
+      }
+
+      .bg9 {
+        background-image: radial-gradient(circle, #fccb90, #d57eeb);
+      } /* 원형그라데이션 */
+      .bg10 {
+        background-image: repeating-linear-gradient(red, blue 20%);
+      }
+    </style>
+  </head>
+  <body>
+    <p class="bg bg1"></p>
+    <p class="bg bg2"></p>
+    <p class="bg bg3"></p>
+    <p class="bg bg4"></p>
+    <p class="bg bg5"></p>
+    <p class="bg bg6"></p>
+    <p class="bg bg7"></p>
+    <p class="bg bg8"></p>
+    <p class="bg bg9"></p>
+    <p class="bg bg10"></p>
+  </body>
+</html>

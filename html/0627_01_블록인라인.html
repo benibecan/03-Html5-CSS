@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>block태그 inline태그</title>
+    <style>
+      body {
+        /* text-align: center; */
+        /* text-align은 문자, 이미지, 인라인 요소만*/
+        text-align: right;
+      }
+      /* 16진수 6자리 기입 0~9a,b,c,d,e,f R(cc)G(cc)B(cc) 3또는6자리 */
+      /* a태그(인라인태그)는  width, height 값을 줘도 못 가진다.=크기가 없다. 가운데 정렬시키고 싶으면 a태그의 부모인 body에게 줘야함.
+      p태그(블록태그)는 body의 정렬값을 무시함.*/
+      p,
+      a {
+        background: #ccc;
+        width: 300px;
+        height: 100px;
+        padding: 50px;
+        margin: 10px;
+        /* text-align텍스트수평정렬: 가운데 */
+      }
+      /* p블록태그는 margin바깥여백을 0 auto를 줘서 알아서 여백을 반반나누게해야함. */
+      p {
+        margin: 0 auto;
+      }
+      /* img는 인라인태그임에도 가로세로값을 줄수있음. */
+      img {
+        width: 10px;
+      }
+      /* 블록태그는 width가로값을 안주면 페이지 전체의 가로값을 가진다.
+      가운데 정렬시키고 싶으면 가로값을 주고 margin: 0 auto를 줘야함.*/
+      h1 {
+        background: #f00;
+        width: 200px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- p태그는 블록태그 줄바꿈 -->
+    <p>p태그:문단태그</p>
+    <p>p태그:문단태그</p>
+    <a href="#">a태그:링크태그</a>
+    <a href="#">a태그:링크태그</a>
+    <img src="images/menu1.jpg" alt="menu1" />
+    <img src="images/menu1.jpg" alt="menu1" />
+    <img src="images/menu1.jpg" alt="menu1" />
+    <h1>제목태그</h1>
+  </body>
+</html>

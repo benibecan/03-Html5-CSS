@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* background: url(images); 뒤에깔리는애를 마지막에 넣어야 됨*/
+      /* no-repeat 반복하지마
+         순서는 url/위치/px/repeat */
+      div {
+        background: url(images/img_flwr.gif) left top/50px no-repeat,
+          url(images/img_flwr.gif) right bottom/100px no-repeat,
+          url(images/paper.gif) repeat;
+        padding: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Lorem Ipsum</h1>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry.
+      </p>
+      <p>
+        orem Ipsum has been the industry's standard dummy text ever since the
+        1500s, when an unknown printer took a galley of type and scrambled it to
+        make a type specimen book.
+      </p>
+    </div>
+  </body>
+</html>

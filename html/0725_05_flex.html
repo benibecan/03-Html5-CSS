@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            div.flex-container {
+                background: #ccc;
+                height: 100vh;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-self: center;
+            }
+            div.item {
+                display: flex;
+                background: green;
+                border: 1px solid #000;
+                justify-content: center;
+                align-self: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-container">
+            <div class="item">1</div>
+        </div>
+    </body>
+</html>

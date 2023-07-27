@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>대전시청</title>
+        <style>
+            .clearfix::before,
+            .clearfix::after {
+                content: '';
+                display: block;
+            }
+            .clearfix::after {
+                clear: both;
+            }
+            li,
+            ul {
+                text-decoration: none;
+                list-style: none;
+            }
+            a {
+                text-decoration: none;
+                color: #000;
+                font-size: 18px;
+                line-height: 80px;
+            }
+            ul {
+                width: 720px;
+                margin: 0 auto;
+            }
+            li {
+                float: left;
+                width: calc(100% / 4);
+                text-align: center;
+            }
+            div {
+                display: inline-block;
+                width: 142px;
+                height: 142px;
+                border-radius: 50%;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                animation-duration: 1s;
+            }
+            div.one {
+                background-image: url(images/bg_info_m06.png);
+            }
+            a:hover div.one,
+            div.one:hover {
+                background-image: url(images/bg_info_m06.png);
+                background-position: 0 -240px;
+                animation-name: move;
+            }
+            div.two {
+                background-image: url(images/bg_info_m02.png);
+            }
+            a:hover div.two,
+            div.two:hover {
+                background-image: url(images/bg_info_m02.png);
+                background-position: 0 -240px;
+                animation-name: move;
+            }
+
+            div.three {
+                background-image: url(images/bg_info_m03.png);
+            }
+            a:hover div.three,
+            div.three:hover {
+                background-image: url(images/bg_info_m03.png);
+                background-position: 0 -240px;
+                animation-name: move;
+            }
+            div.four {
+                background-image: url(images/bg_info_m04.png);
+            }
+            a:hover div.four,
+            div.four:hover {
+                background-image: url(images/bg_info_m04.png);
+                background-position: 0 -240px;
+                animation-name: move;
+            }
+
+            @keyframes move {
+                0%,
+                100% {
+                    transform: translateY(0);
+                    animation-timing-function: ease-in-out;
+                }
+                50% {
+                    transform: translateY(20px);
+                    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <ul class="clearfix">
+            <li>
+                <a href="#"
+                    >대전청년포털
+                    <div class="one"></div
+                ></a>
+            </li>
+            <li>
+                <a href="#"
+                    >도시주택정보
+                    <div class="two"></div
+                ></a>
+            </li>
+            <li>
+                <a href="#"
+                    >동물보호센터
+                    <div class="three"></div
+                ></a>
+            </li>
+            <li>
+                <a href="#"
+                    >보건환경연구원
+                    <div class="four"></div
+                ></a>
+            </li>
+        </ul>
+    </body>
+</html>

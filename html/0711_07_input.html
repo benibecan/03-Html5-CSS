@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>input</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+             p.photo{
+                width: 100%;
+                height: 300px;
+                background: rgba(0, 0, 0, 0.5);
+                
+            } 
+
+             #one:checked ~ p.photo{
+                background: red;
+            } 
+             #two:checked ~ p.photo{
+                background: green;
+            } 
+             #three:checked ~ p.photo{
+                background: blue;
+            } 
+             #four:checked ~ p.photo{
+                background: orange;
+            } 
+
+            .tobcon{
+                background: red;
+                text-align: center;
+            }
+            h1{ 
+                display: inline-block;
+              
+                
+                
+            }
+
+            label{
+                display: block;
+                width: calc(100% / 4);
+                height: 40px;
+                line-height: 40px;
+                float: left;
+                text-align: center;
+                cursor: pointer;
+                background: rgba(0, 0, 0, 0.5);
+            }
+            
+            p label:first-child {
+                background: red;
+            }
+            p label:nth-child(2) {
+                background: green
+            }
+            p label:nth-child(3) {
+                background: blue
+            }
+            p label:nth-child(4) {
+                background: orange
+            }
+
+
+            /* #one:checked ~ p label:first-child,
+            #one:checked ~ p label:nth-child(2),
+            #one:checked ~ p label:nth-child(3),
+            #one:checked ~ p label:nth-child(4), */
+
+        </style>
+    </head>
+    <body>
+        <input type="radio" name="con" id="one" checked />
+        <input type="radio" name="con" id="two" />
+        <input type="radio" name="con" id="three" />
+        <input type="radio" name="con" id="four" />
+
+        <p class="photo">
+            <div class="tabcon"><h1>content1</h1></div>
+            <div class="tabcon"><h1>content2</h1></div>
+            <div class="tabcon"><h1>content3</h1></div>
+            <div class="tabcon"><h1>content4</h1></div>
+        </p>
+        <p class="title">
+            <label for="one">content1</label>
+            <label for="two">content2</label>
+            <label for="three">content3</label>
+            <label for="four">content4</label>
+        </p>
+    </body>
+</html>

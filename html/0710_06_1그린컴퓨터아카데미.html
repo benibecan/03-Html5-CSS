@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>table 태그</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                font-family: arial, Helvetica, 'natosansk', sans-serif;
+            }
+            ul {
+                list-style: none;
+            }
+            a {
+                text-decoration: none;
+                color: #000;
+            }
+            /*   ▲▲▲  기본 설정값  ▲▲▲     */
+            .wrap {
+                width: 980px;
+                height: 1230px;
+            }
+            table {
+                border-collapse: collapse; /*collapse==무너지다. 셀과 셀사이 간격없앰 */
+                margin: 0 auto;
+                width: 878px;
+                height: 800px;
+                border-top: 3px solid #000;
+            }
+            tr {
+                border-bottom: 1px solid #ccc;
+            }
+
+            td {
+                padding: 10px;
+            }
+            td.bg {
+                background: #eee;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <h1>수강료 조회</h1>
+
+            <table>
+                <tr>
+                    <!-- 행가로합치기 -->
+                    <td class="bg">교육대상</td>
+                    <td>일반과정</td>
+                </tr>
+                <tr>
+                    <!-- 열세로합치기 -->
+                    <td class="bg">지점</td>
+                    <td>선택</td>
+                </tr>
+                <tr>
+                    <td class="bg">이름</td>
+                    <td>기문</td>
+                </tr>
+                <tr>
+                    <td class="bg">이름</td>
+                    <td>운남</td>
+                </tr>
+                <tr>
+                    <td class="bg">인도 및 스리랑카</td>
+                    <td>아삼</td>
+                </tr>
+                <tr>
+                    <td class="bg">이름</td>
+                    <td>실론</td>
+                </tr>
+                <tr>
+                    <td class="bg">이름</td>
+                    <td>다질링</td>
+                </tr>
+                <tr>
+                    <td rowspan="2" class="bg">이름</td>
+                    <td>
+                        (주)지아이티아카데미는 온라인상담을 이용하기 원하는 분을 대상으로 아래와 같이 개인정보를
+                        수집하고 있습니다. -수집항목 : [필수] 성명, 이메일주소, 연락처 -개인정보의 수집 및 이용목적 :
+                        온라인상담에 따른 본인확인 및 원활한 의사소통 경로 확보 -보유 및 이용기간 : 모든 검토가 완료된
+                        후 3년간 이용자의 조회를 위하여 보관하며, 이 후 해당정보를 지체없이 파기합니다. -동의 거부권리
+                        안내 추가 :위와 같은 개인정보 수집 동의를 거부할 수 있습니다. 다만 동의를 거부하는 경우
+                        온라인상담 이용이 제한될 수 있습니다. 그 밖의 사항은 개인정보취급방침을 준수합니다. 개인정보수집
+                        및 이용에 동의합니다.
+                    </td>
+                </tr>
+                <tr>
+                    <td>개인정보수집 및 이용에 동의합니다.</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0703</title>
+  
+  <style>
+    /* 돋음은 잘 못 알아들어서 돋음, Dotum, '돋음'으로 불러와야함.
+    letter-spacing은 자간
+    */
+
+    body {
+      font-family: arial, "나눔고딕", Dotum, sans-serif;
+    }
+    /* text-decoration: line-through; 텍스트 중간줄 
+      text-decoration: overline; 텍스트 위에줄 */
+    /* text-transform: uppercase; 대문자
+      text-transform: lowercase; 소문자
+      text-transform: capitalize; 첫글자만 대문자 */
+    /* vertical-aling: middle; 인라인속성에게 미들값을 준다.
+    글자를 수직정렬할거면 line-height를 줘야함.  */
+    p {
+      letter-spacing: 10px;
+      word-spacing: 20px;
+      text-transform: capitalize; /* 첫글자만 대문자 */
+      text-align: center;
+      height: 50px;
+      border: 1px solid #000;
+      vertical-align: middle; /* 수직정렬이 아니다 */
+    }
+    div {
+      width: 100px;
+      border: #000 1px solid;
+      vertical-align: middle;
+      display: inline-block;
+      text-indent: 10px; /* 들여쓰기 */
+    }
+    div.one {
+      height: 100px;
+      line-height: 100px; /* 수직정렬안됨 */
+    }
+    div.two {
+      height: 50px;
+      line-height: 50px;
+      text-shadow: 2px 2px 5px rgba(255, 0, 0, 1); /*  글자 그림자: 오른쪽 아래 블러값 rgba(레드, 그린, 블루, 알파(그림자색)) */
+    }
+    .justinfy {
+      width: 500px;
+      text-align: justify; /* 양쪽정렬 */
+      /* 인라인속성에게 text-align은 의미가 없다. 
+      왜냐? border주면 글자수만큼 박스쳐져잇음. */
+    }
+  </style>
+</head>
+  <body>
+    <p>green computer academy</p>
+    <p>그린 컴퓨터 아카데미</p>
+    <span>green computer academy</span><br />
+    <span> 그린 컴퓨터 아카데미 </span>
+    <div class="one">one <br /></div>
+    <div class="two">two</div>
+    <div class="justinfy">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    <div class="justinfy">
+      국무회의는 대통령·국무총리와 15인 이상 30인 이하의 국무위원으로 구성한다. 헌법재판소의 장은 국회의 동의를 얻어 재판관중에서 대통령이 임명한다. 국가는 여자의 복지와 권익의 향상을 위하여 노력하여야 한다. 선거와 국민투표의 공정한 관리 및 정당에 관한 사무를 처리하기 위하여 선거관리위원회를 둔다. 법률이 헌법에 위반되는 여부가 재판의 전제가 된 경우에는 법원은 헌법재판소에 제청하여 그 심판에 의하여 재판한다. 당의 목적이나 활동이 민주적 기본질서에 위배될 때에는 정부는 헌법재판소에 그 해산을 제소할 수 있고, 정당은 헌법재판소의 심판에 의하여 해산된다.
+    </div>
+  </body>
+</html>

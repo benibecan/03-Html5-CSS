@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0703</title>
+    <style>
+      /* * {margin: 0; padding: 0;} 외에는 안 넣는게 좋다. */
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      /* 현재 실행중인 스크린 크기에 맞춰 상대적 크기를 반환
+      vw: 100/100viewport-width
+      wh: 100/100viewport-height */
+
+      .wrap {
+        display: table-cell;
+        width: 100vw;
+        height: 100vw;
+        text-align: center;
+        vertical-align: middle;
+        border: 1px solid #000;
+      }
+      .inner {
+        display: inline-block;
+        width: 500px;
+        height: 500px;
+        background: #ccc;
+      }
+
+      /* div {
+      }
+      .inner {
+        width: 500px;
+        height: 500px;
+        background: #ccc;
+        margin: 0 auto;
+        border: 1px solid #000;
+      }
+      .wrap {
+        padding-top: 250px;
+        border: 1px solid #000;
+      } */
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <div class="inner"></div>
+    </div>
+  </body>
+</html>

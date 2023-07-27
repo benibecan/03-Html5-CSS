@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>_03_a태그</title>
+    <style>
+      /* link방문전 visited방문후 hover마우스커서 active클릭시 text-decoration: none;링크밑줄없애는거*/
+
+      a:link {
+        color: green;
+        text-decoration: none;
+      }
+      a:visited {
+        color: pink;
+      }
+      a:hover {
+        color: red;
+        text-decoration: underline;
+      }
+      a:active {
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#">링크1</a>
+    <a href="#">링크2</a>
+    <a href="#">링크3</a>
+    <a href="#">링크4</a>
+    <p>
+      <!-- title 마우스커서 올리면 뜨는 말 -->
+      <a href="mailto:hell971019@gmail.com" title="관리자 이메일입니다.">
+        이메일보내기</a
+      >
+    </p>
+    <!-- img: 인라인 / p,h1~: 블록 -->
+    <!-- alt="img로딩 오류시 뜨는글씨" -->
+    <!--  -->
+    <img src="images/menu0.jpg" alt="menu0" />
+    <img src="images/menu1.jpg" alt="menu1" style="width: 42px; height: 42px" />
+    <img src="images/menu2.jpg" alt="" />
+    <img src="images/menu3.jpg" alt="" />
+    <img src="images/menu4.jpg" alt="" />
+    <p><img src="images/menu1.jpg" alt="" /></p>
+    <p><img src="images/menu2.jpg" alt="" /></p>
+    <p><img src="images/menu3.jpg" alt="" /></p>
+    <p><img src="images/menu4.jpg" alt="" /></p>
+    <h1><img src="images/menu1.jpg" alt="" /></h1>
+    <h2><img src="images/menu2.jpg" alt="" /></h2>
+    <h3><img src="images/menu3.jpg" alt="" /></h3>
+    <h4><img src="images/menu4.jpg" alt="" /></h4>
+  </body>
+</html>

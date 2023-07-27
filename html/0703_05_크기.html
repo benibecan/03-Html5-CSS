@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0703</title>
+    <style>
+      .wrap {
+        font-size: 180%; /* 16px=12pt=100% */
+      }
+      .wrap > div {
+        border: 1px solid #000;
+      }
+      .a {
+        width: 2em; /* 16*2=32px */
+      }
+      .b {
+        font-size: 2em; /* 16*2=32px 크기는 폰트사이즈와 연관 */
+        width: 2em;
+        /* em: 부모를 기준으로 배수를 한다.
+        wrap폰트사이즈는 200% 16*2=32px이다. 
+        b의 폰트사이즈는 32px*2=64px */
+      }
+      .c {
+        width: 2rem;
+        /* rem: 부모를 최상위html로 봄. 
+        html이 폰트사이즈가 없으면 기본 100%16px */
+      }
+      .d {
+        width: 160px;
+      }
+      .e {
+        width: 10em; /* 16px*1.5*10=320px */
+      }
+      .h {
+        font-size: 16px;
+        width: 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <div class="a">a</div>
+      <div class="b">b</div>
+      <div class="c">c</div>
+      <div class="d">d</div>
+      <div class="e">e</div>
+      <div class="h">h</div>
+    </div>
+  </body>
+</html>

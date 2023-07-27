@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>table 태그</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                font-family: arial, Helvetica, '나눔고딕', sans-serif;
+            }
+            ul {
+                list-style: none;
+            }
+            a {
+                text-decoration: none;
+                color: #000;
+            }
+            /*   ▲▲▲  기본 설정값  ▲▲▲     */
+            table {
+                border-collapse: collapse; /*collapse==무너지다. 셀과 셀사이 간격없앰 */
+                border: 1px solid #000;
+            }
+            tr {
+            }
+            td {
+                border: 1px solid #000;
+                padding: 10px;
+            }
+            td.bg {
+                background: #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <!-- 행합치기 -->
+                <td colspan="2" class="bg">첫행첫번째열첫행두번째열</td>
+                <td>첫행세번째열</td>
+            </tr>
+            <tr>
+                <!-- 열합치기 -->
+                <td rowspan="2" class="bg">두번째행첫번째열세번째행첫번째열</td>
+                <td>두번째행두번째열</td>
+                <td>두번째행세번째열</td>
+            </tr>
+            <tr>
+                <td>세번째행두번째열</td>
+                <td>세번째행세번째열</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>첫행첫번째열</td>
+                <td>첫행두번째열</td>
+                <td>첫행세번째열</td>
+            </tr>
+            <tr>
+                <td>두번째행첫번째열</td>
+                <td>두번째행두번째열</td>
+                <td>두번째행세번째열</td>
+            </tr>
+            <tr>
+                <td>세번째행첫번째열</td>
+                <td>세번째행두번째열</td>
+                <td>세번째행세번째열</td>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>리스트태그2</title>
+    <style>
+      /* *은 모든 선택자
+
+       * {
+        margin: 0px;
+        padding: 0px;
+      }*/
+
+      /* style에서 body(부모)>ul(자식)는 종속관계를 나타냄 */
+      body > ul {
+        list-style: upper-roman;
+      }
+      body > ul > li > ul {
+        list-style: disc;
+      }
+      ul li {
+        border: 1px solid #000000;
+      }
+      /* ul.second .list + li {
+        color: rgb(255, 0, 0);
+      } */
+      ul.second .list ~ li {
+        color: rgb(255, 0, 0);
+      }
+      .list2 {
+        color: greenyellow !important;
+      }
+      ul,
+      p {
+        background-color: beige;
+      }
+      p {
+        /* margin: 10px 20px 30px 40px; 시계방향 */
+        /* margin-top: 10px;
+        margin-right: 20px;
+        margin-bottom: 30px;
+        margin-left: 40px; */
+        /* margin: 10px 20px 30px; */
+        margin: 10px 20px;
+        padding: 50px;
+      }
+
+      dd {
+        padding: 5px 0 0 0;
+        margin: 0 0 0 50px;
+        color: gray;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="first">
+      <li>
+        <ul>
+          <li>리스트1</li>
+          <li>리스트2</li>
+          <li>리스트3</li>
+          <li>리스트4</li>
+        </ul>
+      </li>
+      <li>
+        <ul class="second">
+          <li class="list">리스트1</li>
+          <li class="list2">리스트2</li>
+          <li>리스트3</li>
+          <li>리스트4</li>
+        </ul>
+      </li>
+    </ul>
+    <p>문단태그</p>
+    <!-- dl dt dd 태그 -->
+    <h2>
+      <dl>
+        <dt>coffee</dt>
+        <dd>black hot drink</dd>
+        <dd>black iced drink</dd>
+        <dt>milk</dt>
+        <dd>ddd</dd>
+        <dd>ddd</dd>
+      </dl>
+    </h2>
+  </body>
+</html>

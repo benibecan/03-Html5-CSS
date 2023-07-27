@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-gothic.css" rel="stylesheet" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            ul {
+                list-style: none;
+            }
+            a {
+                text-decoration: none;
+                color: #333;
+            }
+            body {
+                font-family: arial, 'NanumGothic', sans-serif;
+            }
+            /* 	▲ 기본설정 	▲ */
+            .product {
+                width: 990px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-around;
+            }
+            .product h2 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .product .review .box {
+                border: 1px solid #ccc;
+                display: flex;
+                justify-content: center;
+            }
+            .product .review .box .picture {
+                background: lavender;
+            }
+            .product .review .box .desc {
+                width: 400px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                padding: 30px;
+                box-sizing: border-box;
+                text-align: justify;
+            }
+            .product .review .box .desc p:first-child {
+                font-size: 20px;
+            }
+            .product .review .box .desc p:last-child {
+                line-height: 25px;
+            }
+            .product .review .box .desc .star {
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px solid #ccc;
+                padding-bottom: 20px;
+            }
+            .product .review .box:hover {
+                border: 1px solid #000;
+            }
+            /* 	▲ product end 	▲ */
+            .product .news {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            .product .news .box {
+                width: 285px;
+                height: 100%;
+                animation: news 5s infinite both;
+                box-sizing: border-box;
+            }
+            @keyframes news {
+                0% {
+                    background: url(img/news1.jpg);
+                    background-size: cover;
+                }
+                100% {
+                    background: url(img/news2.jpg);
+                    background-size: cover;
+                }
+            }
+            .product .news .box:hover {
+                border: 1px solid #000;
+            }
+            /* 	▲ news end 	▲ */
+        </style>
+    </head>
+    <body>
+        <div class="product">
+            <div class="review">
+                <h2>제품리뷰</h2>
+                <div class="box">
+                    <div class="picture"><img src="img/review1.png" alt="review1" /></div>
+                    <div class="desc">
+                        <p>[오리지널 컬렉션 체리블로섬 바디워시]</p>
+                        <p class="star">
+                            <span>fkrr***</span><span><img src="img/star.png" alt="star" /></span>
+                        </p>
+                        <p>
+                            정말 오랜만에 향기도 좋고 성분도 착한 바디워시를 만났어요! 마일드한 세정력도 좋고 저자극의
+                            바디워시입니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="news">
+                <h2>해피바스 새소식</h2>
+                <div class="box"></div>
+            </div>
+        </div>
+    </body>
+</html>

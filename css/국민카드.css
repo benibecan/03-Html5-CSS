@@ -1,0 +1,32 @@
+@charset "utf-8";
+@font-face {
+    font-family: applesd;
+    src: url(../webfonts/AppleSDGothicNeoR.woff) format('woff');
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+/* .quickmenu1,
+.quickmenu2,
+.quickmenu3 {
+    width: 1080px;
+    margin: 0 auto;
+}
+.quickmenu1 li {
+    width: calc(100% / 8);
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.quickmenu1 li:first-child {
+    background: url(images/ico-write.png);
+    height: 50px;
+} */

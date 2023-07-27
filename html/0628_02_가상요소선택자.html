@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가상요소선택자</title>
+    <style>
+      /* p:first-child 부모의 첫번째 자식이면서 p태그인것 (기준이 부모라 바뀔수있음) p:first-of-type p타입 첫번째*/
+      /* p:first-child {color: aqua;} */
+      p:first-of-type {
+        color: rgb(255, 255, 255);
+        background: #aaa;
+      }
+      p:last-of-type {
+        color: rgb(255, 0, 149);
+      }
+
+      p:last-child {
+        background-color: blue;
+      }
+      p:nth-child(3) {
+        color: #f00;
+      }
+      p::first-letter {
+        font-size: 20px;
+      }
+      /* p의 첫번째 글자가 20px */
+      p::first-line {
+        text-decoration: underline;
+      }
+      h1::before {
+        content: "가상요소앞";
+      }
+      h1::after {
+        content: "가상요소뒤";
+      }
+      /* h1::before 선택한 태그 자식요소 앞에 hi::after 선택한 태그 자식요소 뒤에 */
+    </style>
+  </head>
+  <body>
+    <h1>제목태그</h1>
+    <p>첫째</p>
+    <p>둘째</p>
+    <p>셋째</p>
+    <p>넷째</p>
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the
+      1500s, when an unknown printer took a galley of type and scrambled it to
+      make a type specimen book. It has survived not only five centuries, but
+      also the leap into electronic typesetting, remaining essentially
+      unchanged. It was popularised in the 1960s with the release of Letraset
+      sheets containing Lorem Ipsum passages, and more recently with desktop
+      publishing software like Aldus PageMaker including versions of Lorem
+      Ipsum.
+    </p>
+    <ul>
+      <li>
+        <p>문단태그</p>
+        <p>문단태그</p>
+        <p>문단태그</p>
+        <p>문단태그</p>
+      </li>
+    </ul>
+  </body>
+</html>

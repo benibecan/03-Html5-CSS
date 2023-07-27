@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mad for Garlic</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            ul,
+            li {
+                list-style: none;
+            }
+            a {
+                text-decoration: none;
+            }
+            /* 기본세팅 end */
+            .top-nav {
+                background: gray;
+                display: flex;
+                justify-content: center;
+            }
+            .top-nav ul {
+                width: 1000px;
+                display: flex;
+                justify-content: flex-end;
+            }
+            .top-nav ul li {
+                margin-left: 20px;
+            }
+            .top-nav ul li:first-child {
+                margin: 0;
+            }
+            .top-nav ul li a {
+                color: #ccc;
+            }
+            /* .top-nav end */
+            nav {
+                background: rgb(22, 22, 22);
+                display: flex;
+                justify-content: center;
+            }
+            nav ul {
+                width: 1000px;
+                height: 90px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+            }
+            nav ul li a {
+                color: #fff;
+                margin-left: 20px;
+                font-weight: bold;
+            }
+            nav ul li:first-child {
+                flex: 2 1 0;
+            }
+            /* nav end  */
+            main {
+                background: #ccc;
+                height: 400px;
+                display: flex;
+                justify-content: center;
+            }
+            .mid-container {
+                background: rgb(22, 22, 22);
+                display: flex;
+                flex-direction: column;
+            }
+            .img-nav {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 1000px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+
+            .event-banner {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+            /* main end */
+        </style>
+    </head>
+    <head>
+        <div class="top-nav">
+            <ul>
+                <li><a href="#">LOGIN</a></li>
+                <li><a href="#">JOIN</a></li>
+                <li><a href="#">CUST</a></li>
+                <li><input type="text" placeholder="검색어를 입력해주세요" size="20" /></li>
+                <li>
+                    <a href="#"><img src="images/zoom.png" alt="zoom" /></a>
+                </li>
+            </ul>
+        </div>
+        <nav>
+            <ul>
+                <li><img src="images/mad_12.gif" alt="" /></li>
+                <li><a href="#">BRAND</a></li>
+                <li><a href="#">MENU</a></li>
+                <li><a href="#">STORE</a></li>
+                <li><a href="#">MEMBERSHIP</a></li>
+                <li><a href="#">EVENT</a></li>
+            </ul>
+        </nav>
+    </head>
+    <body>
+        <main>
+            <div class="mid">
+                <articel class="content"><img src="images/mad_17.jpg" alt="mad_17" /></articel>
+            </div>
+        </main>
+        <div class="mid-container">
+            <article class="img-nav">
+                <section><img src="images/mad_25.jpg" alt="mad_25" /></section>
+                <section><img src="images/mad_27.jpg" alt="mad_27" /></section>
+                <section><img src="images/mad_29.jpg" alt="mad_29" /></section>
+                <section><img src="images/mad_31.jpg" alt="mad_31" /></section>
+            </article>
+            <article class="event-banner">
+                <section><img src="images/mad_39.jpg" alt="mad_39" /></section>
+                <section><img src="images/mad_41.gif" alt="mad_41" /></section>
+            </article>
+        </div>
+    </body>
+    <footer>
+        <div>
+            <ul>
+                <li>서비스이용약관</li>
+                <li>개인정보처리방침</li>
+                <li>기기운영관리방침</li>
+                <li>고객서비스센터</li>
+                <li>관리자문의</li>
+            </ul>
+        </div>
+        <img src="images/mad_49.gif" alt="mad_49" />
+    </footer>
+</html>

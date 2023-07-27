@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            div.float {
+                background: #ccc;
+                border: 1px solid #000;
+                padding: 20px;
+                overflow: hidden;
+            }
+            div.float > div {
+                float: left;
+                background: green;
+                border: 1px solid #000;
+            }
+            /* float end */
+            div.flex {
+                background: #ccc;
+                border: 1px solid #000;
+                padding: 20px;
+            }
+            div.container1 {
+                display: flex;
+            }
+            div.container2 {
+                display: inline-flex;
+            }
+            div.flex > div {
+                background: green;
+                border: 1px solid #000;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="float">
+            <div>1<br />2<br />3<br /></div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+        <div class="flex container1">
+            <div>1<br />2<br />3<br /></div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+        <div class="flex container2">
+            <div>1<br />2<br />3<br /></div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+    </body>
+</html>

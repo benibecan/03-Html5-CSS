@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>table 태그</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            ul {
+                list-style: none;
+            }
+            a {
+                text-decoration: none;
+                color: #000;
+            }
+            @font-face {
+                font-family: notokr;
+                src: url(webfonts/NotoSansKR-Medium.otf) format('otf');
+            }
+            body {
+                font-family: arial, notokr, sans-serif;
+            }
+            /*   ▲▲▲  기본 설정값  ▲▲▲     */
+            .wrap {
+                height: 200px;
+                width: 400px;
+                margin: 0 auto;
+                background: #ccc;
+            }
+            table {
+                width: 360px;
+                margin: 0 auto;
+                border-collapse: collapse;
+                border: 1px solid #000;
+            }
+
+            td:first-child {
+                display: block;
+                width: 250px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                line-height: 23px;
+            }
+            h2 {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="wrap2">
+                <h2>공지사항</h2>
+                <table>
+                    <!-- th==테이블제목태그 -->
+                    <tr>
+                        <td>애스크로 서비스 변경 약관을 확인하세요</td>
+                        <td>2019-10-10</td>
+                    </tr>
+                    <tr>
+                        <td>배송 택배사 변경 및 배송방식 변경에 따른 공지</td>
+                        <td>2019-09-27</td>
+                    </tr>
+                    <tr>
+                        <td>여름 이월상품 정리 세일 안내</td>
+                        <td>2019-09-27</td>
+                    </tr>
+                    <tr>
+                        <td>여름 바캉스 상품 정리 세일 안내</td>
+                        <td>2019-08-24</td>
+                    </tr>
+                    <tr>
+                        <td>반품 및 교환 조건 변경 공지</td>
+                        <td>2019-07-27</td>
+                    </tr>
+                    <tr>
+                        <td>상품별 사이즈표 보는 방법과 치수 공지</td>
+                        <td>2019-05-25</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>transform</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            ul {
+                list-style: none;
+            }
+            a {
+                text-decoration: none;
+                color: #333;
+            }
+            body {
+                font-family: Arial, '맑은 고딕', sans-serif;
+            }
+            /* 기본설정 end */
+
+            /* top menu end */
+            div.header {
+                display: flex;
+                flex-direction: column;
+            }
+            div.logo {
+                margin: 0 auto;
+                position: relative;
+            }
+            div.top {
+                position: relative;
+                display: flex;
+                justify-content: flex-end;
+                left: 40%;
+                top: 50%;
+                transform: translate(-50%, -100%);
+            }
+            div.topmenu {
+                display: flex;
+                width: 300px;
+                align-items: center;
+                justify-content: space-between;
+            }
+            div.topmenu a::after {
+                content: '|';
+                margin-left: 10px;
+                color: #ccc;
+            }
+            div.nav ul {
+                width: 100vw;
+                height: 70px;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-bottom: 1px solid #ccc;
+            }
+            div.nav li {
+                margin-left: 30px;
+            }
+            /* header end */
+            div.banner {
+                width: 1600px;
+                height: 520px;
+                margin: 0 auto;
+            }
+            div.banner .box {
+                width: 100%;
+                height: 100%;
+                animation: slide 5s infinite;
+            }
+            @keyframes slide {
+                0% {
+                    background: url(img/banner1.jpg);
+                }
+                35% {
+                    background: url(img/banner2.jpg);
+                }
+                70% {
+                    background: url(img/banner3.jpg);
+                }
+                100% {
+                    background: url(img/banner4.jpg);
+                }
+            }
+            /* banner end */
+            div.content {
+                width: 990px;
+                margin: 0 auto;
+                flex-direction: column;
+            }
+            div.content .best {
+                background: url(img/bestbg.png) no-repeat;
+                background-position: 0 300px;
+                margin-top: 60px;
+            }
+            div.content .best ul {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                justify-content: space-between;
+            }
+            div.content .best ul li {
+            }
+            .best .txt {
+                text-align: center;
+            }
+            .best ul li img {
+                transition: 0.5s;
+                cursor: pointer;
+            }
+            .best ul li p {
+                margin-top: 20px;
+                cursor: pointer;
+            }
+            .best ul li:hover img {
+                transform: scale(1.1);
+            }
+
+            .best ul li:hover p {
+                font-weight: bold;
+            }
+            .best h2 {
+                position: relative;
+                text-align: center;
+            }
+            .best h2::before {
+                content: '';
+                width: 350px;
+                height: 1px;
+                background: #ccc;
+                position: absolute;
+                top: 50%;
+                left: 0%;
+                transform: translate(0%, -50%);
+            }
+            .best h2::after {
+                content: '';
+                width: 350px;
+                height: 1px;
+                background: #ccc;
+                position: absolute;
+                top: 50%;
+                right: 0%;
+                transform: translate(0%, -50%);
+            }
+            /* best end */
+            div.content2 {
+                width: 990px;
+                display: flex;
+                justify-content: space-between;
+                margin-top: 60px;
+                box-sizing: content-box;
+            }
+            div.content2 > div {
+                height: 100%;
+                /* border: 1px solid #000; */
+            }
+            div.content2 .box {
+                height: 250px;
+                border: 1px solid #ccc;
+            }
+            div.content2 h2 {
+                text-align: center;
+                margin: 20px 0;
+            }
+            .l-reveiw {
+                width: 65%;
+            }
+            .l-reveiw .box {
+                width: 100%;
+                display: flex;
+                cursor: pointer;
+            }
+            .l-reveiw .box .img {
+                width: 231px;
+                height: 100%;
+                animation: reveiw 5s infinite;
+            }
+            .l-reveiw .txt {
+                width: calc(100% - 231px);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                padding: 30px;
+                box-sizing: border-box;
+            }
+            .l-reveiw .txt .line {
+                position: relative;
+            }
+            .l-reveiw .txt .line::after {
+                content: '';
+                width: 100%;
+                height: 1px;
+                background: #ccc;
+                position: absolute;
+            }
+            .l-reveiw .box .txt .name {
+                display: flex;
+                justify-content: space-between;
+            }
+            @keyframes reveiw {
+                from {
+                    background: lavender url(img/reveiw.png);
+                }
+                to {
+                    background: lavender url(img/reveiw2.png);
+                }
+            }
+            /* .l-reveiw end  */
+            .r-event .box:hover,
+            .l-reveiw .box:hover {
+                border: 1px solid #000;
+            }
+            .r-event {
+                width: 30%;
+            }
+            .r-event .box {
+                animation: event 5s infinite;
+                cursor: pointer;
+            }
+            @keyframes event {
+                0% {
+                    background: url(img/event1.jpg);
+                }
+                100% {
+                    background: url(img/event1.jpg);
+                }
+            }
+            /* content2 end */
+            .happy {
+                width: 990px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+                margin-top: 100px;
+            }
+            .happy > div {
+                display: flex;
+                width: 48%;
+                height: 400px;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+            }
+            .happy ul {
+                width: 100%;
+                height: 306px;
+                display: flex;
+                overflow: hidden;
+            }
+            .happy ul li {
+                position: relative;
+                flex: 1 1 30%;
+                transition: flex-basis 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+                cursor: pointer;
+            }
+            .happy ul li.first {
+                background: url(images/sample01.jpg);
+            }
+            .happy ul li.second {
+                background: url(images/sample02.jpg);
+            }
+            .happy ul li.third {
+                background: url(images/sample03.jpg);
+            }
+            /* happy end  */
+            .left:hover ul,
+            .right:hover ul {
+                border: 1px solid #000;
+            }
+            .left .title,
+            .right .title {
+                text-align: center;
+                line-height: 306px;
+                font-size: 20px;
+                color: #fff;
+            }
+            .left .box {
+                position: absolute;
+                width: 100%;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                color: #fff;
+                opacity: 0;
+                text-align: center;
+                box-sizing: border-box;
+            }
+            .left ul:hover .title {
+                display: none;
+            }
+            .left ul li:hover .box {
+                opacity: 1;
+            }
+            .left ul:hover li:hover {
+                flex-basis: 60%;
+            }
+            .left ul:hover li:not(:hover) {
+                flex-basis: 20%;
+            }
+            /* left end  */
+
+            .happy .right ul {
+                width: 100%;
+                height: 306px;
+                background: url(images/beautytalk.jpg) center/100%;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                transition: 1s;
+                position: relative;
+            }
+            .right ul a {
+                position: absolute;
+                bottom: 25%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: block;
+                color: #fff;
+                outline: 1px solid #fff;
+                padding: 5px 15px;
+            }
+            .right ul a:hover {
+                background: rgba(255, 255, 255, 0.5);
+                color: #333;
+            }
+            .happy .right ul:hover {
+                background-size: 120%;
+            }
+            /* right end  */
+            ul.gnb > li {
+                position: relative;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <div class="logo"><img src="img/logo.png" alt="logo" /></div>
+            <div class="top">
+                <div class="topmenu">
+                    <a href="#">로그인</a>
+                    <a href="#">구매하기</a>
+                    <a href="#">매장찾기</a>
+                    <img src="img/searchbtn.png" alt="" />
+                </div>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li class="gnb">
+                        <a href="#">해피바스 <strong>이야기</strong></a>
+                        <ul class="lnb">
+                            <li><a href="#">브랜드 히스토리</a></li>
+                            <li><a href="#">영상 갤러리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">해피바스 <strong>뷰티톡</strong></a>
+                        <ul class="lnb">
+                            <li><a href="#">행복의 순간</a></li>
+                            <li><a href="#">내추럴 성분</a></li>
+                            <li><a href="#">풍성한 향</a></li>
+                            <li><a href="#">즐거운 경험 </a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">해피바스 <strong>선물</strong></a>
+                        <ul class="lnb">
+                            <li><a href="#">피부고민X뷰티팁</a></li>
+                            <li><a href="#">자산화 원료</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">해피바스 <strong>제품</strong></a>
+                        <ul class="lnb">
+                            <li><a href="#">유형별 제품</a></li>
+                            <li><a href="#">고민별 제품</a></li>
+                            <li><a href="#">전체 제품 보기</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="banner">
+                <div class="box"></div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="best">
+                <div class="txt">
+                    <h2>베스트셀러 아이템</h2>
+                </div>
+                <ul>
+                    <li>
+                        <img src="img/best1.png" alt="" />
+                        <p>
+                            해피바스 마이크로미셀라<br />
+                            딥 클렌징 폼
+                        </p>
+                    </li>
+                    <li>
+                        <img src="img/best2.png" alt="" />
+                        <p>
+                            해피바스 마이크로미셀라<br />
+                            딥 클렌징 폼
+                        </p>
+                    </li>
+                    <li>
+                        <img src="img/best3.png" alt="" />
+                        <p>
+                            해피바스 마이크로미셀라<br />
+                            딥 클렌징 폼
+                        </p>
+                    </li>
+                    <li>
+                        <img src="img/best4.png" alt="" />
+                        <p>
+                            해피바스 마이크로미셀라<br />
+                            딥 클렌징 폼
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="content2">
+                <div class="l-reveiw">
+                    <h2>제품 리뷰</h2>
+                    <div class="box">
+                        <div class="img"></div>
+                        <div class="txt">
+                            <h3>[오리지널컬렉션 체리블로섬 바디워시 ]</h3>
+
+                            <div class="name">
+                                <p>id****</p>
+                                <img src="img/stars.png" alt="" />
+                            </div>
+                            <div class="line"></div>
+                            <p>
+                                자몽향으로 사용중인데 여름에 아주 잘 어울리는 상큼함이예요 가족들도 모두 좋아하면서
+                                사용해요 거품도 풍성하게 잘 나고 세정력도 좋은편입니다
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="r-event">
+                    <h2>해피바스 소식</h2>
+                    <div class="box"></div>
+                </div>
+            </div>
+            <div class="happy">
+                <div class="left">
+                    <h2>해피바스 선물</h2>
+                    <ul>
+                        <li class="first">
+                            <p class="title">내추럴 성분</p>
+                            <div class="box">
+                                <p>해피바스가 담고 있는<br />'내추럴 성분'이 궁금하다면?</p>
+                            </div>
+                        </li>
+                        <li class="second">
+                            <p class="title">풍성한 향</p>
+                            <div class="box">
+                                <p>해피바스가 펼쳐지는<br />'풍성한 향'이 궁금하다면?</p>
+                            </div>
+                        </li>
+                        <li class="third">
+                            <p class="title">즐거운 경험</p>
+                            <div class="box">
+                                <p>해피바스가 이끄는<br />'즐거운 경험'이 궁금하다면?</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <h2>해피바스 뷰티톡</h2>
+                    <ul>
+                        <li><p class="title">피부고민에 따른 뷰티팁을 드려요</p></li>
+                        <a href="#">more</a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

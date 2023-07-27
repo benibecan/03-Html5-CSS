@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            ul,
+            li {
+                list-style: none;
+            }
+            a {
+                text-decoration: none;
+            }
+            /* 기본설정 end */
+            .top {
+                background: navy;
+            }
+            .inner {
+                width: 1001px;
+                margin: 0 auto;
+            }
+            .nav {
+                overflow: hidden;
+            }
+            .nav li {
+                float: left;
+            }
+            .nav li a {
+                display: block;
+                padding: 0 20px;
+                line-height: 80px;
+                color: #fff;
+                position: relative;
+                z-index: 1;
+            }
+            .nav li:first-child a,
+            .nav li a:hover {
+                background: red;
+            }
+            /* 네비게이션 end  */
+            .banner {
+                background: green;
+                position: relative;
+            }
+            .banner-inner {
+                width: 1001px;
+                height: 289px;
+                margin: 0 auto;
+            }
+            .banner-inner img {
+                width: 1001px;
+                height: 360px;
+                position: absolute;
+                top: -71px;
+            }
+            /* 배너 end */
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="top">
+                <div class="inner">
+                    <ul class="nav">
+                        <li><a href="#">Information</a></li>
+                        <li><a href="#">Information</a></li>
+                        <li><a href="#">Information</a></li>
+                        <li><a href="#">Information</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="banner">
+                <div class="banner-inner">
+                    <img src="images/bg_main.png" alt="bg_main" />
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

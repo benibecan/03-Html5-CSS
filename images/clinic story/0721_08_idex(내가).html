@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            ul {
+                list-style: none;
+            }
+            a {
+                text-decoration: none;
+                color: #fff;
+            }
+            body {
+                font-family: Arial, '맑은 고딕', sans-serif;
+            }
+            .wrap > h1 {
+                color: #555;
+            }
+            /* 기본설정 끝 */
+            .top {
+                width: 1001px;
+                margin: 0 auto;
+            }
+            .inner {
+                margin-top: 100px;
+                background: navy;
+                /* width: 1001px; */
+                overflow: hidden;
+            }
+            .inner ul {
+                float: left;
+            }
+            .inner li {
+                position: relative;
+                float: left;
+                display: block;
+                line-height: 70px;
+                padding: 0 30px;
+                z-index: 1;
+            }
+            .inner li:hover {
+                background: red;
+            }
+            .inner ul li:first-child {
+                background: red;
+            }
+            /* top end */
+            .top .img {
+                position: relative;
+                height: 360px;
+                width: 1001px;
+                background: url(images/bg_main.png) center no-repeat;
+                top: 110px;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .notice {
+                width: 1001px;
+                margin: -50px auto;
+                overflow: hidden;
+            }
+            .left {
+                width: 60%;
+                float: left;
+            }
+            .button {
+                float: right;
+            }
+            .story1 p {
+                text-align: center;
+            }
+            .right {
+                width: 30%;
+                float: right;
+            }
+            .right li {
+                color: blue;
+            }
+            .story > p {
+                margin-top: 15px;
+                text-align: center;
+            }
+            footer {
+                margin-top: 100px;
+                background: #ddd;
+            }
+            footer p {
+                text-align: center;
+                line-height: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="warp">
+            <div class="top">
+                <h1>The Growth Clinic Story</h1>
+                <div class="inner">
+                    <ul>
+                        <li><a href="#">Information</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Clinic Test</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <p class="img"></p>
+            </div>
+            <!-- 헤더끝 -->
+            <div class="notice">
+                <div class="left">
+                    <h2>Food Story For Growth</h2>
+                    <div class="story">
+                        <h2>해독 기능이 뛰어난 여름철 수박 껍질 차</h2>
+                        <p>
+                            해독 기능이 뛰어난 여름철 수박 껍질 차 수박 껍질 차는 아무리 먹어도 살이 찌지 않기 때문에
+                            한여름의 갈증을 없애고 스트레스로 갑갑증을 풀어주며 무더위를 날려 주는 데는 최고의 식품이다.
+                            수박 껍질 속의 시트룰린 성분은 간에서 효소의 생성을 촉진하므로 과잉 생성된 성호르몬의 분해에
+                            도움이 되며, 혈압을 낮추는 효과가 있다. 특히 수박 껍질차는 급성만성 신장염에 효과가 있으며
+                            시트룰린이 많아 소변도 잘 나오게 한다.
+                        </p>
+                        <p><input class="button" type="button" value="More Read" /></p>
+                    </div>
+                    <div class="story">
+                        <h2>천식에는 오미자차</h2>
+                        <p>
+                            오미자는 음혈이 허약하고 부족하며 심신이 불안하여 유발된 불면증 치료에 좋은 효과가 있으며,
+                            각종 알레르기 증세로 인해 숙면을 취하지 못하는 경우에도 많이 응용되고 있다.
+                        </p>
+                        <p class="button"><input type="button" value="More Read" /></p>
+                    </div>
+                </div>
+                <div class="right">
+                    <h1>Clinic Category</h1>
+                    <ul>
+                        <li>자가진단</li>
+                        <li>성장 장애</li>
+                        <li>발육 표준치</li>
+                        <li>성장 상식</li>
+                        <li>예상키 검사</li>
+                        <li>비만도 검사</li>
+                        <li>키크는 식품</li>
+                        <li>키크는 운동</li>
+                        <li>음식 백과</li>
+                        <li>성장 장애 예방법</li>
+                        <li>성장 장애 FAQ</li>
+                        <li>상담실</li>
+                    </ul>
+                    <h1>Link Site</h1>
+                    <ul>
+                        <li>보건 복지부</li>
+                        <li>의료 보험 공단</li>
+                        <li>질병 관리 보험 본부</li>
+                        <li>국립 보건 연구원부</li>
+                    </ul>
+                </div>
+            </div>
+            <footer>
+                <p>Copyright ⓒ 2012. The Growth Clinic Story. Since 1998.</p>
+            </footer>
+            <!--푸터끝 -->
+        </div>
+    </body>
+</html>

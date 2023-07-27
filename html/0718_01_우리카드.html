@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>우리카드</title>
+        <style>
+            .clearfix::before,
+            .clearfix::after {
+                content: '';
+                display: block;
+            }
+            .clearfix::after {
+                clear: both;
+            }
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            ul {
+                list-style: none;
+            }
+            a {
+                text-decoration: none;
+                color: #333;
+            }
+            .quickmenu {
+                width: 1080px;
+                margin: 0 auto;
+
+                text-align: center;
+            }
+            .inner {
+                position: relative;
+                float: left;
+                width: calc(1080px / 4);
+                position: relative;
+            }
+            .frame {
+                width: 100%;
+                height: 247px;
+            }
+            .inner img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+            .quickmenu .inner::after {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 60px;
+                width: 1px;
+                height: 200px;
+                background: #ccc;
+            }
+            .quickmenu .inner:last-child:after {
+                display: none;
+            }
+            .desc p:first-child {
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+            .desc p:last-child {
+                font-size: 14px;
+            }
+        </style>
+    </head>
+    <body>
+        <ul class="quickmenu clearfix">
+            <li>
+                <div class="inner">
+                    <a href="#">
+                        <div class="frame"><img src="images/special_mbnf_1_obj.png" alt="" /></div>
+                        <div class="desc">
+                            <p><strong>해외 이용의 정석</strong></p>
+                            <p>여행, 직구, 항공<br />무엇이든 우리카드로</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="inner">
+                    <a href="#">
+                        <div class="frame"><img src="images/special_mbnf_2_obj.png" alt="" /></div>
+                        <div class="desc">
+                            <p><strong>해외 이용의 정석</strong></p>
+                            <p>여행, 직구, 항공<br />무엇이든 우리카드로</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="inner">
+                    <a href="#">
+                        <div class="frame"><img src="images/special_mbnf_3_obj.png" alt="" /></div>
+                        <div class="desc">
+                            <p><strong>해외 이용의 정석</strong></p>
+                            <p>여행, 직구, 항공<br />무엇이든 우리카드로</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="inner">
+                    <a href="#">
+                        <div class="frame"><img src="images/special_mbnf_4_obj.png" alt="" /></div>
+                        <div class="desc">
+                            <p><strong>해외 이용의 정석</strong></p>
+                            <p>여행, 직구, 항공<br />무엇이든 우리카드로</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </body>
+</html>

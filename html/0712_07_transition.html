@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .clearfix::before,
+            .clearfix::after {
+                content: '';
+                display: block;
+            }
+            .clearfix::after {
+                clear: both;
+            }
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            /* 기본설정 */
+            ul {
+                width: 1200px;
+                height: 200px;
+                margin: 0 auto;
+                list-style: none;
+            }
+            ul li {
+                position: relative;
+                float: left;
+                width: 25%;
+                height: 100%;
+                overflow: hidden;
+                object-fit: cover;
+            }
+            ul li img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: 1s;
+                transform-origin: right bottom;
+            }
+            ul li .box {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                color: #fff;
+                text-align: center;
+                padding-top: 60px;
+                box-sizing: border-box;
+                transition: 1s;
+            }
+            ul li .box .title {
+                font-size: 20px;
+                padding-bottom: 30px;
+            }
+            ul li:first-child .box {
+                left: 100%;
+            }
+            ul li:first-child:hover .box {
+                left: 0;
+            }
+            ul li:nth-child(2) .box {
+                top: 100%;
+            }
+            ul li:nth-child(2):hover .box {
+                top: 0%;
+            }
+            ul li:nth-child(3) .box {
+                transform: scale(0);
+            }
+            ul li:nth-child(3):hover .box {
+                transform: scale(1);
+            }
+            ul li:nth-child(4) .box {
+                left: -100%;
+            }
+            ul li:nth-child(4):hover .box {
+                left: 0%;
+            }
+
+            /* 아래에서 위, 가운데에서 커짐, 오른쪽에서 옴 */
+        </style>
+    </head>
+    <body>
+        <ul class="clearfix">
+            <li>
+                <img src="images/photo1.jpg" alt="photo1" />
+                <div class="box">
+                    <p class="title">이미지 제목</p>
+                    <p class="desc">이미지 설명</p>
+                </div>
+            </li>
+            <li>
+                <img src="images/photo2.jpg" alt="photo2" />
+                <div class="box">
+                    <p class="title">이미지 제목</p>
+                    <p class="desc">이미지 설명</p>
+                </div>
+            </li>
+            <li>
+                <img src="images/photo3.jpg" alt="photo3" />
+                <div class="box">
+                    <p class="title">이미지 제목</p>
+                    <p class="desc">이미지 설명</p>
+                </div>
+            </li>
+            <li>
+                <img src="images/photo4.jpg" alt="photo4" />
+                <div class="box">
+                    <p class="title">이미지 제목</p>
+                    <p class="desc">이미지 설명</p>
+                </div>
+            </li>
+        </ul>
+    </body>
+</html>

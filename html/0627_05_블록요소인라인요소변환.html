@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>블록요소인라인요소변환</title>
+    <!-- inline속성의 글자속성으로 여백없애기
+    1. 태그입력시 개행하지 않기
+    2.개행한 태그를 주석처리
+    3-1.인라인속성을 준 요소의 부모요소에 font-size를 0 준다. 
+        여백을 없애기 위해. 여백이 폰트사이즈이기 때문에. 
+    3-2.글자가 보여야하는 하위요소에 font-size를 0이상 준다.-->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        text-align: center;
+        font-size: 0;
+      }
+      p {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        border: 1px solid #000;
+        font-size: 16px;
+      }
+      li {
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <!--수정이 불가능한 바람직하지 않은 방법(아래) -->
+    <p>문단태그</p>
+    <p>문단태그</p>
+    <p>문단태그</p>
+
+    <!-- p태그의 부모를 만들어 줄 수 있는 태그는 ul-li밖에 없다.
+    수정이 가능한 바람직한 방법이다.(아래) -->
+    <ul>
+      <li><p>문단태그</p></li>
+      <li><p>문단태그</p></li>
+      <li><p>문단태그</p></li>
+    </ul>
+  </body>
+</html>

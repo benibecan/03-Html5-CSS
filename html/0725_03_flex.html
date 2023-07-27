@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            div.flex {
+                display: flex;
+                margin: 10px;
+                height: 500px;
+                background: green;
+                border: 1px solid #000;
+                flex-direction: column;
+            }
+            div.flex > div {
+                width: 200px;
+                border: 1px solid #000;
+                background: gold;
+                margin: 10px;
+            }
+            div.start {
+                justify-content: flex-start;
+                align-items: flex-start;
+            }
+            div.end {
+                justify-content: flex-end;
+                align-items: flex-end;
+            }
+            div.center {
+                justify-content: center;
+                align-items: center;
+            }
+            div.between {
+                justify-content: space-between;
+                align-items: stretch;
+            }
+            div.around {
+                justify-content: space-around;
+                align-items: baseline;
+            }
+            div.evenly {
+                justify-content: space-evenly;
+                align-items: ;
+            }
+        </style>
+    </head>
+    <body>
+        justify-content: flex-start
+        <div class="flex start">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+        justify-content: flex-end
+        <div class="flex end">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+        justify-content: center
+        <div class="flex center">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+        justify-content: space-between
+        <div class="flex between">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+        justify-content: space-around
+        <div class="flex around">
+            <div><h1>1</h1></div>
+            <div><h6>2</h6></div>
+            <div><h3>3</h3></div>
+            <div><h4>4</h4></div>
+            <div><h2>5</h2></div>
+        </div>
+        justify-content: space-evenly
+        <div class="flex evenly">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+    </body>
+</html>

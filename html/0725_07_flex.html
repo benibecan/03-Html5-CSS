@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            div.flex-container {
+                display: flex;
+                width: 500px;
+                height: 200px;
+                background: #ccc;
+                align-items: flex-start;
+            }
+            div.item {
+                display: flex;
+                background: green;
+                border: 1px solid #000;
+                flex-basis: 200px;
+                /* width: 100px; */
+                flex-shrink: 0;
+            }
+            .item:first-child {
+                flex-grow: 0;
+            }
+            .item:nth-child(2) {
+                flex-grow: 1;
+            }
+            .item:nth-child(3) {
+                flex-grow: 2;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-container">
+            <div class="item">111111111111111111111</div>
+            <div class="item">22</div>
+            <div class="item">3</div>
+        </div>
+    </body>
+</html>

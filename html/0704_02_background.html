@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 블록태그는 가로를 다 씀. 높이값만 주면 됨. */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p,
+      span {
+        background-color: #ccc;
+      }
+      div {
+        width: 500px;
+        height: 500px;
+        border: 1px solid #000;
+        /* background-color: beige; */
+        /* background-color: #f0002f; */
+        /* opacity: 0.5; */
+        /* background-color: rgba(0, 0, 0, 0.5); */
+        /* background-color: hsla(29, 100%, 50%, 1); */
+        background-image: url(images/photo1.jpg);
+        /* 백그라운드 사진 
+           background-size: cover; 큰 사진 or 확대해서 넣을 때
+           background-size: contain; 사진 정사이즈로 넣을 때
+           background-position: center top; 정렬 어디로 할건지 */
+        /* background-position: 50% 50%;  */
+        /* background-position: 50px 50px; */
+        /* background-size: 50%;  */
+        /* background-size: 500px; */
+        background-size: contain;
+        background-repeat: no-repeat; /* 백그라운드 반복: 반복안함 */
+      }
+    </style>
+  </head>
+  <body>
+    <p>문단태그</p>
+    <span>인라인태그</span>
+    <div>div입니다</div>
+  </body>
+</html>

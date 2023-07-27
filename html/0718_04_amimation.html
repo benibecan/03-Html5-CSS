@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>animation</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            ul,
+            li {
+                list-style: none;
+            }
+            li {
+                font-size: 24px;
+                font-weight: bold;
+                margin-top: 20px;
+            }
+            div {
+                margin: 20px 0;
+                width: 100px;
+                height: 100px;
+                background: greenyellow;
+                animation-name: move;
+                animation-duration: 10s;
+                /* animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);/ */
+                /* animation-delay: -1s; */
+                animation-iteration-count: infinite;
+                border-radius: 50%;
+            }
+
+            @keyframes move {
+                from {
+                    transform: translateX(0px);
+                }
+                to {
+                    transform: translateX(300px);
+                }
+            }
+            div:nth-child(1) {
+                animation-timing-function: linear;
+            }
+            div:nth-child(2) {
+                animation-timing-function: ease;
+            }
+            div:nth-child(3) {
+                animation-timing-function: ease-in;
+            }
+            div:nth-child(4) {
+                animation-timing-function: ease-out;
+            }
+            div:nth-child(5) {
+                animation-timing-function: ease-in-out;
+            }
+            div:nth-child(6) {
+                animation-timing-function: cubic-bezier(0.15, 1.04, 0.88, 0.37);
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>
+                animation-timing-funcion: linear
+                <div class="linear"></div>
+
+                animation-timing-funcion: ease
+                <div class="ease"></div>
+
+                animation-timing-funcion: ease-in
+                <div class="ease-in"></div>
+
+                animation-timing-funcion: ease-out
+                <div class="ease-out"></div>
+
+                animation-timing-funcion: ease-in-out
+                <div class="ease-in-out"></div>
+
+                animation-timing-funcion: cubic-bezier
+                <div class="bezier"></div>
+            </li>
+        </ul>
+    </body>
+</html>

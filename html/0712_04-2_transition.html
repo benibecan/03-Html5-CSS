@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            /* box-sizing: border-box; 패딩을 합쳐도 가로값을 유지하기위해
+              box-shadow: 10px 10px 10px #aaa 박스뒤에 그림자효과
+              object-fit: cover; 넣은 이미지 안찌그러지게
+              object-position: center; 넣은 이미지 중앙정렬 */
+            .clearfix::before,
+            .clearfix::after {
+                content: '';
+                display: block; /*또는 display:table;*/
+            }
+            .clearfix::after {
+                clear: both;
+            }
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            ul {
+                list-style: none;
+                width: 1200px;
+                margin: 0 auto;
+                border: 1px solid #000;
+            }
+            ul li {
+                float: left;
+                width: 25%;
+                background: #fff;
+                border: 1px solid #ccc;
+                padding: 10px 10px 20px;
+                box-sizing: border-box;
+                box-shadow: 10px 10px 10px #aaa;
+            }
+            ul li .box {
+                height: 250px;
+            }
+            ul li img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+            ul li p {
+                text-align: center;
+                padding-top: 20px;
+            }
+            li:first-child,
+            li:nth-child(3) {
+                transform: rotate(-5deg);
+            }
+            li:nth-child(2),
+            li:nth-child(4) {
+                transform: rotate(5deg);
+            }
+        </style>
+    </head>
+    <body>
+        <ul class="clearfix">
+            <li>
+                <div class="box"><img src="images/photo1.jpg" alt="photo1" /></div>
+                <p>그린컴퓨터아트학원</p>
+            </li>
+            <li>
+                <div class="box"><img src="images/photo2.jpg" alt="photo2" /></div>
+                <p>그린컴퓨터아트학원</p>
+            </li>
+            <li>
+                <div class="box"><img src="images/photo3.jpg" alt="photo3" /></div>
+                <p>그린컴퓨터아트학원</p>
+            </li>
+            <li>
+                <div class="box"><img src="images/photo4.jpg" alt="photo4" /></div>
+                <p>그린컴퓨터아트학원</p>
+            </li>
+        </ul>
+    </body>
+</html>
