@@ -1,0 +1,205 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+ul,
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+body {
+    font-family: arial, '맑은고딕', sans-serif;
+}
+/* 기본셋팅 end */
+.top {
+    width: 100%;
+    min-width: 1903px;
+    background: #000;
+}
+.top .topmenu {
+    width: 1903px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    line-height: 30px;
+}
+.top .topmenu ul {
+    display: flex;
+}
+.top .topmenu ul.left {
+    margin-left: 50px;
+}
+.top .topmenu ul.right {
+    margin-right: 50px;
+}
+.top .topmenu ul.left li {
+    margin-right: 50px;
+}
+.top .topmenu ul.right li a {
+    color: #fff;
+    margin-left: 50px;
+    text-align: center;
+}
+.top .topmenu .right {
+}
+/* topmenu end */
+.head {
+    width: 1903px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+}
+.head .head_top {
+    width: calc(50% + 98.5px);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.head .head_top ul {
+    display: flex;
+    margin-right: 50px;
+}
+/* head_top end */
+.menu {
+    width: 1903px;
+    margin: 20px auto 70px;
+    display: flex;
+    justify-content: center;
+}
+.menu ul {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+@font-face {
+    font-family: solid;
+    src: url(../../../webfonts/fa-solid-900.ttf) format('woff2');
+}
+.menu ul li a::after {
+    content: ' \f107';
+    font-family: solid;
+}
+/* menu end */
+.gnb {
+    width: 100%;
+    background: #80d4c7;
+}
+.gnb ul {
+    width: 1903px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    line-height: 50px;
+}
+.gnb ul li {
+    flex-basis: 20%;
+    text-align: center;
+}
+.gnb ul li a {
+    text-decoration: underline;
+}
+/* gnb end */
+section {
+    width: 1903px;
+    margin: 0 auto;
+}
+section h3 {
+    text-align: center;
+    padding: 30px 0;
+}
+section ul.visual {
+    display: flex;
+}
+/* section end */
+.foot {
+    width: 100%;
+    min-width: 1903px;
+    background: #f8f8f8;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    margin-top: 50px;
+}
+/* foot end */
+.ft_top {
+    width: 1903px;
+    height: 300px;
+    margin: 0 auto;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+.ft_top > ul {
+    flex-basis: 60%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.ft_top > ul > li > a {
+    display: block;
+    margin-bottom: 30px;
+}
+.ft_top > ul > li > ul > li a {
+    line-height: 30px;
+}
+.ft_top > ul > li:last-child ul {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.ft_top .input input {
+    padding: 10px;
+}
+.ft_top .input input:last-child {
+    background: #000;
+    color: #fff;
+    float: right;
+    box-sizing: border-box;
+}
+:focus {
+    outline: none;
+}
+/* ft_top end */
+.ft_bottom {
+    width: 1903px;
+    margin: 0 auto;
+}
+.ft_bottom .ft {
+    height: 100px;
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ft_bottom .ft ul {
+    display: flex;
+    font-size: 12px;
+}
+.ft_bottom .ft ul li {
+    box-sizing: content-box;
+}
+.ft_bottom .ft ul li a {
+    line-height: 30px;
+}
+.ft_bottom .ft ul li a::after {
+    position: relative;
+    top: -2px;
+    content: '|';
+    padding: 0 10px;
+    font-size: 10px;
+}
+.ft_bottom .ft ul li:last-child a::after {
+    content: '';
+}
+.ft_bottom .ft p {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+/* ft_bottom end */
