@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            ul,
+            li {
+                list-style: none;
+            }
+            a {
+                text-decoration: none;
+                color: #555;
+            }
+
+            /* 기본설정 end */
+            .pop {
+                position: absolute;
+                right: 0;
+                top: 60px;
+                margin-right: 20px;
+            }
+            .pop ul {
+                display: flex;
+            }
+            /* pop end */
+            .message {
+                display: block;
+                position: fixed;
+                right: 10px;
+                bottom: 10px;
+                transform: scale(1.2);
+            }
+
+            /* box-shadow: rgba(0, 0, 0, 1); */
+
+            /* message end */
+            .top {
+                position: relative;
+                display: flex;
+                height: 40px;
+                justify-content: flex-end;
+                align-items: center;
+                background: #000;
+            }
+            .top p {
+                color: #fff;
+                margin-right: 20px;
+            }
+            /* top end */
+            .logo {
+                width: 197px;
+                height: 43px;
+                margin: 0 auto;
+                padding: 20px 0;
+            }
+            /* logo end */
+            .nav {
+                display: flex;
+                justify-content: center;
+                width: 600px;
+                margin: 0 auto;
+                align-items: center;
+            }
+            .nav ul {
+                width: 100%;
+                display: flex;
+                align-items: center;
+
+                justify-content: space-around;
+            }
+            .nav ul li {
+                position: relative;
+            }
+            .nav ul li::after {
+                position: absolute;
+                content: '>';
+                transform: rotate(90deg);
+                right: -17px;
+                top: 3px;
+            }
+            /* nav end */
+            .nav2 {
+                margin-top: 50px;
+                background: aquamarine;
+            }
+            .nav2 ul {
+                width: 800px;
+                height: 50px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0 auto;
+            }
+            .nav2 ul li {
+                text-decoration: underline;
+            }
+            /* nav2 end */
+            main .wrap {
+            }
+            main .wrap > div {
+                margin: 0 auto;
+                font-size: 0;
+                display: flex;
+                justify-content: center;
+            }
+            .banner {
+                width: 1903px;
+                height: 833px;
+                margin: 0 auto;
+            }
+
+            main .wrap span {
+                height: 100px;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                text-decoration: underline;
+            }
+            /* main end */
+            .foot {
+                height: 500px;
+            }
+            .foot .wrap {
+                border-top: 1px solid #ddd;
+                border-bottom: 1px solid #ddd;
+                margin-top: 70px;
+                height: 300px;
+                background: rgb(248, 248, 248);
+                display: flex;
+                align-items: center;
+            }
+            .footnav {
+                width: 1200px;
+
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+            }
+            .footnav > li p {
+                font-weight: bold;
+            }
+            .footnav li ul {
+                margin-top: 20px;
+                line-height: 30px;
+            }
+            /*footnav end */
+            .sns {
+                display: flex;
+                flex-direction: column;
+            }
+            .sns .email {
+                font-weight: normal;
+                margin-bottom: 20px;
+            }
+            .sns .serch {
+                position: relative;
+                height: 45px;
+                width: 250px;
+                outline: 1px solid #ccc;
+            }
+            .sns .serch input {
+                width: 60%;
+                height: 100%;
+                box-sizing: border-box;
+                font-size: 12px;
+                text-align: center;
+            }
+            .sns .serch span {
+                display: inline-block;
+                position: absolute;
+                background: #000;
+                color: #fff;
+                width: 40%;
+                height: 100%;
+                text-align: center;
+                line-height: 45px;
+                box-sizing: border-box;
+                font-size: 13px;
+            }
+            .sns .icon {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                margin-top: 50px;
+            }
+            /* sns end */
+            .bottom {
+                width: 1200px;
+                margin: 0 auto;
+            }
+            .bottom .container {
+                margin-top: 50px;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .bottom .container .right {
+                display: flex;
+            }
+            .bottom .container .right p::after {
+                content: '|';
+                padding-left: 20px;
+            }
+            .bottom .container .right p:last-child::after {
+                content: '';
+                padding-left: 0;
+            }
+            /* bottom end */
+        </style>
+    </head>
+    <body>
+        <div class="pop">
+            <ul>
+                <li>
+                    <img src="images/paul_05.png" alt="" />
+                </li>
+                <li>
+                    <img src="images/paul_07.png" alt="" />
+                </li>
+            </ul>
+        </div>
+        <div class="message">
+            <img src="images/paul_462.png" alt="" -- />
+        </div>
+        <header>
+            <div class="top">
+                <p>Shop Locator My Account Sign in</p>
+            </div>
+            <div class="logo"><img src="images/paul_03.png" alt="" /></div>
+            <div class="nav">
+                <ul>
+                    <li>sale</li>
+                    <li>new</li>
+                    <li>mens</li>
+                    <li>womens</li>
+                    <li>junior</li>
+                    <li>stories</li>
+                </ul>
+            </div>
+            <div class="nav2">
+                <ul>
+                    <li>free click & collect</li>
+                    <li>free shippong on orders over 200</li>
+                    <li>free returns</li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <div class="wrap">
+                <div class="banner">
+                    <img src="images/paul_12.jpg" alt="" />
+                </div>
+                <span>Shop by Category</span>
+                <div class="banner2">
+                    <img src="images/paul_14.jpg" alt="" />
+                    <img src="images/paul_15.gif" alt="" />
+                    <img src="images/paul_16.jpg" alt="" />
+                </div>
+                <span>Shop by Category</span>
+                <div class="banner2">
+                    <img src="images/paul_18.jpg" alt="" />
+                    <img src="images/paul_19.jpg" alt="" />
+                    <img src="images/paul_20.jpg" alt="" />
+                    <img src="images/paul_21.jpg" alt="" />
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot">
+                <div class="wrap">
+                    <ul class="footnav">
+                        <li>
+                            <p>CUSTOMER SERVICES</p>
+                            <ul>
+                                <li>Contact Us</li>
+                                <li>Paul Smith Price Match</li>
+                                <li>Payment Methods</li>
+                                <li>Returns</li>
+                                <li>Shopping</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>CUSTOMER SERVICES</p>
+                            <ul>
+                                <li>Contact Us</li>
+                                <li>Paul Smith Price Match</li>
+                                <li>Payment Methods</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>CUSTOMER SERVICES</p>
+                            <ul>
+                                <li>Contact Us</li>
+                                <li>Paul Smith Price Match</li>
+                                <li>Payment Methods</li>
+                            </ul>
+                        </li>
+                        <li class="sns">
+                            <p class="email">Email Updates</p>
+                            <div class="serch">
+                                <input
+                                    type="text"
+                                    placeholder="Enter your email address"
+                                    onfocus="this.placeholder=''"
+                                />
+                                <span>Subscribe</span>
+                            </div>
+                            <div class="icon">
+                                <img src="images/paul_24.gif" alt="" />
+                                <img src="images/paul_26.gif" alt="" />
+                                <img src="images/paul_28.gif" alt="" />
+                                <img src="images/paul_30.gif" alt="" />
+                                <img src="images/paul_32.gif" alt="" />
+                                <img src="images/paul_34.gif" alt="" />
+                                <img src="images/paul_36.gif" alt="" />
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bottom">
+                    <div class="container">
+                        <div class="bottomlogo"><img src="images/paul_03.png" alt="" /></div>
+                        <div class="right">
+                            <p>ⓒ Paul Smith</p>
+                            <p>Terms&conditions</p>
+                            <p>Privacy&Cookie Policy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
