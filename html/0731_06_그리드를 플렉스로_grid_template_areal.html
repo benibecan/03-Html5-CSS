@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .grid-container {
+                background: gold;
+                border: 1px solid #000;
+                width: 1200px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+            }
+            .grid-container div {
+                background: tomato;
+                border: 1px solid #000;
+            }
+            .grid-container .head {
+                display: flex;
+                justify-content: center;
+                height: 100px;
+            }
+            .grid-container > .slide {
+                height: 300px;
+            }
+            .grid-container .head > div:first-child {
+                width: 200px;
+            }
+            .grid-container .head > div:nth-child(2) {
+                width: 1000px;
+            }
+
+            .grid-container .con {
+                display: flex;
+                height: 200px;
+            }
+            .grid-container .con > div {
+                width: 33.33%;
+            }
+            .grid-container .foot {
+                display: flex;
+                height: 100px;
+            }
+            .grid-container .foot > div:first-child,
+            .grid-container .foot > div:last-child {
+                width: 200px;
+            }
+            .grid-container .foot > div:nth-child(2) {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="grid-container">
+            <div class="head">
+                <div class="grid-item">logo</div>
+                <div class="grid-item">menu</div>
+            </div>
+            <div class="grid-item slide">slide</div>
+            <div class="con">
+                <div class="grid-item">공지사항/갤러리</div>
+                <div class="grid-item">배너</div>
+                <div class="grid-item">바로가기</div>
+            </div>
+            <div class="foot">
+                <div class="grid-item">로고</div>
+                <div class="grid-item">copyright</div>
+                <div class="grid-item">sns</div>
+            </div>
+        </div>
+    </body>
+</html>

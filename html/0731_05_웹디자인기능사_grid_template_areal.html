@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .grid-container {
+                background: gold;
+                border: 1px solid #000;
+                width: 1200px;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: 200px 200px 400px 200px 200px;
+                grid-template-areas:
+                    'logo menu menu menu menu'
+                    'slide slide slide slide slide '
+                    'col1 col1 col2 col3 col3'
+                    'ftlogo copyright copyright copyright sns';
+                grid-template-rows: 100px 300px 200px 100px;
+            }
+            .grid-container > div {
+                background: tomato;
+                border: 1px solid #000;
+            }
+            .grid-container > div:first-child {
+                grid-area: logo;
+            }
+            .grid-container > div:nth-child(2) {
+                grid-area: menu;
+            }
+            .grid-container > div:nth-child(3) {
+                grid-area: slide;
+            }
+            .grid-container > div:nth-child(4) {
+                grid-area: col1;
+            }
+            .grid-container > div:nth-child(5) {
+                grid-area: col2;
+            }
+            .grid-container > div:nth-child(6) {
+                grid-area: col3;
+            }
+            .grid-container > div:nth-child(7) {
+                grid-area: ftlogo;
+            }
+            .grid-container > div:nth-child(8) {
+                grid-area: copyright;
+            }
+            .grid-container > div:nth-child(9) {
+                grid-area: sns;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="grid-container">
+            <div class="grid-item">logo</div>
+            <div class="grid-item">menu</div>
+            <div class="grid-item">slide</div>
+            <div class="grid-item">공지사항/갤러리</div>
+            <div class="grid-item">배너</div>
+            <div class="grid-item">바로가기</div>
+            <div class="grid-item">로고</div>
+            <div class="grid-item">copyright</div>
+            <div class="grid-item">sns</div>
+        </div>
+    </body>
+</html>
