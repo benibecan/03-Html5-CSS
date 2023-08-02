@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .fadein {
+                animation: fadein 2s;
+            }
+            @keyframes fadein {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+            .fadein-up {
+                position: relative;
+                animation: fadein-up 1s;
+            }
+            @keyframes fadein-up {
+                0% {
+                    opacity: 0;
+                    transform: translate3d(0, 100%, 0);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateZ(0);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="fadein">안녕하세요</div>
+        <div class="fadein-up">안녕하세요</div>
+    </body>
+</html>

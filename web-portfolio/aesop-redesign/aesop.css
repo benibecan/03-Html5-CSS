@@ -156,7 +156,7 @@ main .bg {
     width: 1280px;
     background: url(images/main_bg.png);
     margin: 0 auto;
-    padding-top: 30px;
+    padding-top: 100px;
 }
 main .bg_sub {
     height: 1458px;
@@ -175,13 +175,16 @@ main .product .tl_txt {
     color: #fff;
     padding-top: 80px;
 }
-main .product .tl_txt span {
+main .product .tl_txt a {
+    position: relative;
     width: max-content;
     color: #000;
     background: #fff;
     border-radius: 20px;
     padding: 10px 30px;
     margin-top: 10px;
+    cursor: pointer;
+    z-index: 1;
 }
 /* product tl_txt end */
 main .product .item {
@@ -200,7 +203,7 @@ main .product .item ul.item_middle {
 main .product .item ul li {
     width: 350px;
     height: 450px;
-    background: #ccc;
+    background: #fff;
     margin: 2px;
     position: relative;
     overflow: hidden;
@@ -213,11 +216,11 @@ main .product .item ul li img {
     max-width: 95%;
     height: auto;
 }
-/* product item */
+/* product item end */
 main .product .tb_txt {
     text-align: center;
     color: #fff;
-    margin: 50px 0;
+    margin: 100px 0 120px;
 }
 main .product .tb_txt h1 {
     margin-bottom: 10px;
@@ -239,8 +242,7 @@ main .product .story ul.st > li {
     width: 50%;
     height: 100%;
 }
-main .product .story ul.st li:first-child {
-}
+
 main .product .story ul.st li:last-child {
     display: flex;
     flex-direction: column;
@@ -250,6 +252,7 @@ main .product .story ul.st li:last-child {
     gap: 20px;
     box-sizing: border-box;
 }
+
 main .product .story ul.st img {
     width: 100%;
     height: 100%;
@@ -268,6 +271,7 @@ main .product .story .sb > li {
     height: 100%;
     background: #fff;
 }
+
 main .sb li ul {
     width: 100%;
     height: 100%;
@@ -282,6 +286,7 @@ main .sb li:first-child ul li {
     width: 100%;
     height: 70%;
 }
+
 main .sb li ul li img {
     width: 100%;
     height: 100%;
@@ -297,6 +302,38 @@ main .sb .txt {
     padding: 0 50px;
 }
 /* product stoty sb end */
-/* 기본셋팅 end */
-/* 기본셋팅 end */
-/* 기본셋팅 end */
+footer {
+    width: 1280px;
+    margin: 0 auto;
+}
+footer .foot_menu {
+    background: #cdc6ac;
+}
+footer .foot_menu .container ul {
+    display: flex;
+    padding-left: 105px;
+}
+footer .foot_menu .container ul li {
+    padding: 30px 10px;
+}
+footer .foot_menu .container ul li a {
+    display: block;
+    font-size: 14px;
+}
+footer .foot_menu .container ul li:first-child {
+    padding: 30px 5px 0 0;
+}
+/* foot_menu end */
+footer .foot_info {
+    background: #2d2d2d;
+}
+footer .foot_info .container ul {
+    padding: 70px 105px 105px;
+}
+footer .foot_info .container ul li p {
+    color: #fff;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 200;
+}
+/* foot_info end */

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, user-scalable=no,minimum-scale=1,maximum-scale=1"
+        />
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+            }
+            #wrap {
+                width: 100%;
+                max-width: 1280px;
+                margin: 0 auto;
+            }
+            .top {
+                height: 400px;
+                background: tomato;
+            }
+            .content {
+                display: flex;
+                height: 400px;
+            }
+            .content .left {
+                width: 50%;
+                height: 100%;
+                background: sandybrown;
+            }
+            .content .right {
+                width: 50%;
+                height: 100%;
+                background: teal;
+            }
+            @media screen and (max-width: 500px) {
+                .content {
+                    flex-direction: column;
+                }
+                .content .left {
+                    width: 100%;
+                }
+                .content .right {
+                    width: 100%;
+                }
+            }
+        </style>
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="top">top</div>
+            <div class="content">
+                <div class="left">left</div>
+                <div class="right">right</div>
+            </div>
+        </div>
+    </body>
+</html>
