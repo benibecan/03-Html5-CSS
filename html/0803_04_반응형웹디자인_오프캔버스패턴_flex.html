@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                overflow: hidden;
+            }
+            #wrap {
+                width: 80%;
+                margin: 0 auto;
+                background: #ccc;
+            }
+            #wrap_box {
+                width: 100%;
+                display: flex;
+            }
+            #wrap_box > div {
+                height: 400px;
+                background: #aaa;
+            }
+            #wrap_box #box_a {
+                width: 30%;
+                background: tomato;
+            }
+            #wrap_box #box_b {
+                width: 40%;
+                background: seagreen;
+            }
+            #wrap_box #box_c {
+                width: 30%;
+                background: skyblue;
+            }
+            @media screen and (max-width: 1024px) {
+                #wrap {
+                    width: 100%;
+                }
+            }
+            @media screen and (max-width: 768px) {
+                #wrap_box {
+                    position: absolute;
+                    width: 150%;
+                }
+                #wrap_box > div {
+                    flex: 1 1 30%;
+                }
+            }
+            @media screen and (max-width: 500px) {
+                #wrap_box {
+                    position: absolute;
+                    width: 300%;
+                    margin-left: -100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="wrap_box">
+                <div id="box_a"><h1>box_a</h1></div>
+                <div id="box_b"><h1>box_b</h1></div>
+                <div id="box_c"><h1>box_c</h1></div>
+            </div>
+        </div>
+    </body>
+</html>
