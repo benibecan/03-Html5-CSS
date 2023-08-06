@@ -1,0 +1,456 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+ul,
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+body {
+    font-family: 'Pretendard', '맑은고딕', sans-serif;
+}
+.material-symbols-outlined {
+    font-size: 20px;
+}
+/* 기본셋팅 end */
+.flex {
+    display: flex;
+}
+header {
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid rgba(0, 0, 0, 20%);
+    box-sizing: border-box;
+}
+header nav {
+    width: 1280px;
+    margin: 0 auto;
+}
+header nav > ul {
+    justify-content: space-between;
+    align-items: center;
+    /* margin: auto 30px; */
+}
+header nav ul li.logo {
+    height: 100%;
+}
+header nav ul li.logo a img {
+    height: 60px;
+    object-fit: contain;
+    display: flex;
+    align-items: center;
+}
+header nav ul li.menu ul {
+    /* gap: 50px; */
+}
+header nav ul li.menu-r ul {
+    gap: 20px;
+}
+header nav a {
+    font-size: 16px;
+}
+/* nav end */
+ul.gnb {
+    height: 60px;
+    display: flex;
+}
+ul.gnb > li {
+    position: relative;
+    float: left;
+    width: calc(1280px / 8);
+}
+ul.gnb > li > a {
+    display: block;
+    text-align: center;
+    line-height: 60px;
+}
+
+ul.gnb > li:hover {
+    border-bottom: 4px solid #5f5f5f;
+    box-sizing: border-box;
+}
+ul.lnb {
+    position: absolute;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    /* width: 100%; */
+    height: 0px;
+    background: #fff;
+    z-index: 10;
+    overflow: hidden;
+    transition: 0.5s;
+}
+ul.lnb li a {
+    display: block;
+    color: #555;
+    line-height: 40px;
+    padding-left: 30px;
+}
+ul.lnb li a:hover {
+    background: #bbb;
+}
+ul.gnb:hover ul.lnb {
+    height: 500px;
+}
+/* gnb lnb end  */
+/* nav .menu .bg {
+    position: absolute;
+    left: 0;
+    top: 60px;
+    width: 100%;
+    height: 0;
+    background: #fff;
+    transition: 0.5;
+    z-index: 2;
+}
+.gnb:hover ~ .bg {
+    height: 500px;
+} */
+/* gnb lnb bg end  */
+section .banner {
+    width: 100%;
+    background: #f1f1f1;
+    position: relative;
+}
+section .banner .container {
+    display: flex;
+    width: 1280px;
+    margin: 0 auto;
+}
+
+section .banner .left {
+    width: 640px;
+    height: 640px;
+    background: #f1f1f1;
+    display: flex;
+    position: relative;
+}
+section .banner .left img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+section .banner .right {
+    width: 640px;
+    height: 640px;
+}
+section .banner .right .right_top {
+    width: 100%;
+    height: 50%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 24px;
+    box-sizing: border-box;
+    gap: 15px;
+    position: relative;
+    z-index: 1;
+}
+section .banner .right .right_top h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+section .banner .right .right_top p {
+    font-size: 16px;
+    font-weight: 400;
+}
+section .banner .right .right_top span a {
+    font-size: 14px;
+    font-weight: 400;
+    position: relative;
+}
+section .banner .right .right_top span a::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background: #303e33;
+    bottom: 0px;
+    left: 0;
+    visibility: hidden;
+}
+section .banner .right .right_top span a:hover::after {
+    visibility: visible;
+}
+section .banner .right .right_bottom {
+    width: 100%;
+    height: 50%;
+    background: url(images/first/photo2.jpg);
+    background-size: cover;
+}
+/* banner end */
+main .wrap {
+    width: 100%;
+    background: #303e33;
+}
+main .bg {
+    height: 1850px;
+    width: 1280px;
+    margin: 0 auto;
+    position: relative;
+}
+main .bg_sub {
+    width: 100%;
+    height: 100%;
+    background: url(images/first/parsley.png) no-repeat center;
+    background-size: auto;
+    display: flex;
+}
+main .product {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+main .product .tl_txt {
+    position: absolute;
+    top: 134px;
+    left: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: #fff;
+}
+main .product .tl_txt h1 {
+    font-size: 32px;
+    font-weight: 500;
+}
+main .product .tl_txt p {
+    font-size: 16px;
+    font-weight: 400;
+}
+main .product .tl_txt a {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 400;
+    position: relative;
+}
+main .product .tl_txt a::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 5%;
+    background: #fff;
+    bottom: 0px;
+    left: 0;
+    visibility: hidden;
+}
+main .product .tl_txt a:hover::after {
+    visibility: visible;
+}
+/* product tl_txt end */
+main .product .item {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+}
+main .product .item ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+main .product .item ul li:nth-child(2) {
+    margin-top: 5px;
+}
+main .product .item ul.item_middle {
+    margin: 0 5px 180px;
+}
+
+main .product .item ul li {
+    width: 403.33px;
+    height: 450px;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+main .product .item ul li img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    height: auto;
+}
+/* product item end */
+main .tb_txt {
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+    background: #2d2d2d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    gap: 13px;
+}
+main .product .tb_txt h1 {
+    font-size: 32px;
+    font-weight: 500;
+}
+main .product .tb_txt p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* product tb_txt end */
+main .post {
+    width: 100%;
+    background: #303e33;
+}
+main .bottom {
+    width: 1280px;
+    height: 1200px;
+    margin: 0 auto;
+}
+main .bottom .wrap {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+main .bottom .story {
+    margin: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+main .bottom .story ul:nth-child(3) {
+    margin: 0 5px;
+}
+main .bottom .story ul.st {
+    width: 100%;
+    height: 345px;
+    background: #fff;
+    margin-bottom: 5px;
+    display: flex;
+}
+main .bottom .story ul.st > li {
+    width: 50%;
+    height: 100%;
+}
+
+main .bottom .story ul.st li:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 80px;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+main .bottom .story ul.st img {
+    width: 100%;
+    height: 100%;
+}
+main .bottom .story ul.st h1 {
+    font-size: 28px;
+    font-weight: 500;
+}
+main .bottom .story ul.st p {
+    font-size: 16px;
+    font-weight: 400;
+}
+/* product stoty st end */
+main .bottom .story .sb {
+    width: 100%;
+    height: 405px;
+}
+main .bottom .story .sb {
+    display: flex;
+    justify-content: space-between;
+}
+main .bottom .story .sb > li {
+    width: 33%;
+    height: 100%;
+    background: #fff;
+}
+main .sb li ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+main .sb li ul li {
+    width: 100%;
+    height: 50%;
+}
+main .sb li ul li img {
+    width: 100%;
+    height: 100%;
+}
+main .sb .txt {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    gap: 13px;
+    padding: 0 50px;
+}
+main .sb h2 {
+    font-size: 24px;
+    font-weight: 500;
+}
+main .sb p {
+    font-size: 16px;
+    font-weight: 400;
+}
+/* product stoty sb end */
+footer > .foot_menu {
+    width: 100%;
+    background: #cdc6ac;
+}
+footer > .foot_menu > .container {
+    width: 1280px;
+    height: 60px;
+    margin: 0 auto;
+}
+footer > .foot_menu > .container > ul {
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding-left: 30px;
+}
+footer > .foot_menu > .container > ul > li > a {
+    display: block;
+    font-size: 13px;
+}
+
+/* foot_menu end */
+footer .foot_info {
+    width: 100%;
+    background: #2d2d2d;
+}
+footer .foot_info .wrap {
+    width: 1280px;
+    height: 150px;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+footer .foot_info .container {
+    padding-left: 30px;
+}
+footer .foot_info .container ul li p {
+    color: #fff;
+    opacity: 80%;
+    font-size: 13px;
+    line-height: 22px;
+    font-weight: 300;
+}
+/* foot_info end */
+/* footer end */
