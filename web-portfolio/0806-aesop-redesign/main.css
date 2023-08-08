@@ -289,7 +289,7 @@ main .product .item ul {
 main .product .item ul li:nth-child(2) {
     margin-top: 5px;
 }
-main .product .item .item_middle {
+main .product .item > .item_middle {
     margin: 0 5px 180px;
 }
 

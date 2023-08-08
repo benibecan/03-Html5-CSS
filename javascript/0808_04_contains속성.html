@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .list {
+                color: red;
+                border: 1px solid #000;
+                padding: 20px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="add">add</button>
+        <button id="remove">remove</button>
+        <button id="toggle">toggle</button>
+        <div id="my" class="list">classList 속성</div>
+        <p id="demo"></p>
+        <p id="p01" class="a1 b1 c1">1</p>
+        <p id="p02"></p>
+
+        <script>
+            let ele = document.getElementById('my').classList;
+            document.getElementById('add').onclick = function () {
+                ele.add('list');
+            };
+            document.getElementById('remove').onclick = function () {
+                ele.remove('list');
+            };
+            document.getElementById('toggle').onclick = function () {
+                ele.toggle('list');
+            };
+            let a = ele.contains('list');
+            document.getElementById('demo').innerHTML = a;
+            let num = document.getElementById('p01').classList.length;
+            console.log(num);
+            let b = document.getElementById('p01').classList;
+            let c = '';
+            console.log(num + b);
+            b.forEach(function (keys, item) {
+                // c = c + 1; // c + = 1
+                // c = c + "keys" + item + "=" + key + "<br>";
+                c = 'keys' + item + '=' + keys + '<br>';
+                c = c + 'keys' + item + '=' + keys + '<br>';
+                console.log(c);
+                document.getElementById('p02').innerHTML = c;
+            });
+        </script>
+    </body>
+</html>

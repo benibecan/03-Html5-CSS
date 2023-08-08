@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .list {
+                color: red;
+                border: 1px solid #000;
+                padding: 20px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="add">add</button>
+        <button id="remove">remove</button>
+        <button id="toggle">toggle</button>
+        <div id="my">classList 속성</div>
+        <script>
+            let ele = document.getElementById('my').classList;
+            document.getElementById('add').onclick = function () {
+                ele.add('list');
+            };
+            document.getElementById('remove').onclick = function () {
+                ele.remove('list');
+            };
+            document.getElementById('toggle').onclick = function () {
+                ele.toggle('list');
+            };
+        </script>
+    </body>
+</html>
