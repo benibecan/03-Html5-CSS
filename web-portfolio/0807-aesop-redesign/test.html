@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            ul,
+            li {
+                list-style: none;
+            }
+            body {
+                color: #000;
+            }
+            header {
+                background: #ccc;
+            }
+            /* 기본  */
+            .sub_gnb_wrap {
+                position: fixed;
+                width: 100%;
+                height: 123px;
+                background: #000;
+                display: flex;
+                justify-content: center;
+            }
+            .sub_gnb_wrap_inner {
+                position: fixed;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 1100px;
+                height: 120px;
+                background: green;
+            }
+            .gnb_nav_inner {
+                width: 100%;
+                height: 66px;
+                margin: 0 auto;
+                background: goldenrod;
+            }
+            .gnb_sub_wrap {
+                width: 100%;
+                position: fixed;
+                left: 0;
+                display: none;
+                background: tomato;
+            }
+            .gnb_nav01:hover > .gnb_sub_wrap,
+            .gnb_nav02:hover > .gnb_sub_wrap,
+            .gnb_nav03:hover > .gnb_sub_wrap {
+                display: block;
+            }
+            .gnb_nav > .gnb_nav_inner {
+                width: 80%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+            }
+            .gnb_nav > .gnb_nav_inner > ul {
+                display: flex;
+                justify-content: center;
+            }
+            .gnb_sub_inner {
+                display: flex;
+                background: blue;
+            }
+            .utill_nav {
+                width: 80%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                background: red;
+            }
+            .utill_nav > ul {
+                display: flex;
+                justify-content: center;
+            }
+            /* 메뉴 */
+            .logo {
+                position: absolute;
+                width: 75px;
+                height: 75px;
+                top: 50%;
+
+                transform: translateY(-50%);
+            }
+            .logo img {
+                max-height: 100%;
+                width: auto;
+            }
+            /* 로고 */
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="mstopwrap">
+                <div class="gnb">
+                    <div class="sub_gnb_wrap">
+                        <div class="sub_gnb_wrap_inner">
+                            <h1 class="logo">
+                                <a href="./main.html"><img src="images/first/logo.png" alt="이솝 메인페이지" /></a>
+                            </h1>
+                            <nav class="utill_nav">
+                                <ul>
+                                    <li class="utill_nav01"><a href="#">Sign In</a></li>
+                                    <li class="utill_nav02"><a href="#">My Starbucks</a></li>
+                                    <li class="utill_nav03"><a href="#">Customer Service</a></li>
+                                    <li class="utill_nav04"><a href="#">Find a Store</a></li>
+                                </ul>
+                            </nav>
+                            <nav class="gnb_nav">
+                                <div class="gnb_nav_inner">
+                                    <ul>
+                                        <!-- 스킨케어 -->
+                                        <li class="gnb_nav01">
+                                            <h2><a href="#">스킨 케어</a></h2>
+                                            <div class="gnb_sub_wrap">
+                                                <div class="gnb_sub">
+                                                    <div class="gnb_sub_inner">
+                                                        <ul>
+                                                            <li class="gnb_sub_ttl">
+                                                                <a href="#">카테고리</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">스킨 케어 모두 보기</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">클렌저</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">각질 제거</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">트리트먼트 & 마스크</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">토너</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">하이드레이터</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">립 & 아이</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">쉐이빙</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">선 케어</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">키트</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">스킨 케어 번들</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">스킨 케어 기프트</a>
+                                                            </li>
+                                                        </ul>
+                                                        <ul>
+                                                            <li class="gnb_sub_ttl">
+                                                                <a href="#">피부 타입</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">중성</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">건성</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">지성</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">복합성</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">민감성 피부</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">노화 피부</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="gnb_nav02">
+                                            <h2><a href="#">스킨 케어2</a></h2>
+                                            <div class="gnb_sub_wrap">
+                                                <div class="gnb_sub">
+                                                    <div class="gnb_sub_inner">
+                                                        <ul>
+                                                            <li class="gnb_sub_ttl">
+                                                                <a href="#">카테고리2</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">스킨 케어 모두 보기</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">클렌저</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">각질 제거</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">트리트먼트 & 마스크</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">토너</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">하이드레이터</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">립 & 아이</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">쉐이빙</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">선 케어</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">키트</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">스킨 케어 번들</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">스킨 케어 기프트</a>
+                                                            </li>
+                                                        </ul>
+                                                        <ul>
+                                                            <li class="gnb_sub_ttl">
+                                                                <a href="#">피부 타입</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">중성</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">건성</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">지성</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">복합성</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">민감성 피부</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">노화 피부</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="gnb_nav03">
+                                            <h2><a href="#">스킨 케어2</a></h2>
+                                            <div class="gnb_sub_wrap">
+                                                <div class="gnb_sub">
+                                                    <div class="gnb_sub_inner">
+                                                        <ul>
+                                                            <li class="gnb_sub_ttl">
+                                                                <a href="#">카테고리2</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">스킨 케어 모두 보기</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">클렌저</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">각질 제거</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">트리트먼트 & 마스크</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">토너</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">하이드레이터</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">립 & 아이</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">쉐이빙</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">선 케어</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">키트</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">스킨 케어 번들</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">스킨 케어 기프트</a>
+                                                            </li>
+                                                        </ul>
+                                                        <ul>
+                                                            <li class="gnb_sub_ttl">
+                                                                <a href="#">피부 타입</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">중성</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">건성</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">지성</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">복합성</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">민감성 피부</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">노화 피부</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="bg"></div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </body>
+</html>
