@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let num = prompt('숫자를 입력하세요');
+            // let result = num % 2 == 0 ? '짝수' : '홀수';
+            // if(조건식){
+            //     참인실행문;
+            // }else{
+            //     거짓인 실행문;
+            // }
+            let result = '';
+            if (num >= 90) {
+                result = 'A';
+            } else if (num >= 80) {
+                result = 'B';
+            } else if (num >= 70) {
+                result = 'C';
+            } else if (num >= 60) {
+                result = 'D';
+            } else {
+                result = 'F';
+            }
+            document.write('당신이 입력한 점수는 ' + num + '은/는 ' + result + '학점입니다');
+        </script>
+    </body>
+</html>

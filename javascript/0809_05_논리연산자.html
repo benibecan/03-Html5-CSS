@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let a = 10;
+            let b = 20;
+            let c = 30;
+            let d = 40;
+            let e = '10';
+            document.write(a < b && c < d, '<br>'); // 전부 참이여야 참
+            document.write(a > b || c < d, '<br>'); // 둘 중 하나가 참이면 참
+            document.write(!(a > b) || c < d, '<br>'); // 부정부정
+            document.write(a === e, '<br>'); //문자 숫자 유형이 같니?
+            document.write(typeof a, '<br>'); // a타입이 뭐니? number
+            document.write(typeof e, '<br>'); // e타입이 뭐니? string
+            let f = Number('10'); // 문장이지만 숫자로 알렴
+            document.write(typeof f, '<br>');
+            let g = Number('하나'); // 숫자가 아니야 NaN
+            document.write(g, '<br>');
+            document.write(typeof parseFloat(10.33), '<br>');
+            document.write(typeof parseFloat('10.33'), '<br>');
+            document.write(typeof parseFloat(e), '<br>');
+            document.write(parseFloat('40 50 60'), '<br>');
+            document.write(parseFloat('40h'), '<br>');
+            document.write(parseFloat('h40'), '<br>');
+            document.write(parseInt('10.33'), '<br>');
+            document.write(parseInt(10.33), '<br>');
+            let y = '하나';
+            let x = +y;
+            document.write(typeof y + '<br>' + typeof x + '<br>');
+        </script>
+    </body>
+</html>
