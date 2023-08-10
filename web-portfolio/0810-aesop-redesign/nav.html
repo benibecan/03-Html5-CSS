@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            ul,
+            li {
+                list-style: none;
+            }
+            a {
+                text-decoration: none;
+                color: #2c2a29;
+            }
+            header > nav {
+                position: fixed;
+                top: 0px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                background: #fff;
+                /* border-bottom: 1px solid rgba(0, 0, 0, 20%); */
+                z-index: 999;
+            }
+            header .main-menu {
+                width: 1280px;
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+                padding: 0 30px;
+            }
+            header .main-menu::after {
+                position: absolute;
+                content: '';
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background: rgba(0, 0, 0, 20%);
+            }
+            header .main-menu .main-menu-wrap {
+                display: flex;
+            }
+            header .main-menu .item .item__name a {
+                display: block;
+                padding: 0 20px;
+                line-height: 60px;
+                font-size: 16px;
+            }
+            header .main-menu .item:hover .item__name a {
+                /* background-color: #2c2a29; */
+                color: #669900;
+                /* border-radius: 6px 6px 0 0; */
+                border-bottom: 3px solid #2c2a29;
+            }
+
+            header .main-menu .item .item__contents {
+                width: 100%;
+                position: fixed;
+                left: 0;
+                display: none;
+            }
+
+            header .main-menu .item:hover .item__contents {
+                display: block;
+            }
+
+            header .main-menu .item .item__contents .contents__menu {
+                background-color: rgba(250, 250, 250, 100%);
+                display: flex;
+                justify-content: center;
+                border-bottom: 1px solid rgba(0, 0, 0, 20%);
+            }
+
+            header .main-menu .item .item__contents .contents__menu > ul {
+                display: flex;
+                padding: 20px 0;
+            }
+
+            header .main-menu .item .item__contents .contents__menu > ul > li {
+                width: 200px;
+            }
+
+            header .main-menu .item .item__contents .contents__menu > ul > li h4 {
+                padding: 3px 0 12px 0;
+                font-size: 14px;
+                color: #2c2a29;
+            }
+            header .main-menu .item .item__contents .contents__menu > ul > li > ul {
+                padding: 0;
+            }
+            header .main-menu .item .item__contents .contents__menu > ul > li ul li {
+                padding: 5px 0;
+                font-size: 14px;
+                color: #555;
+                cursor: pointer;
+            }
+
+            header .main-menu .item .item__contents .contents__menu > ul > li ul li:hover {
+                color: #669900;
+            }
+            .logo {
+                width: 60px;
+                height: 60px;
+                /* position: absolute; */
+                left: 30px;
+                top: 0;
+            }
+            .logo img {
+                max-height: 100%;
+                width: auto;
+            }
+            .sub__item {
+                /* position: absolute; */
+                right: 30px;
+                top: 0;
+            }
+            .sub__item > ul {
+                display: flex;
+            }
+            .sub__item > ul > li > a {
+                display: block;
+                line-height: 60px;
+                padding: 0 5px;
+                font-size: 14px;
+                align-items: center;
+            }
+
+            .material-symbols-outlined {
+                /* position: absolute; */
+                top: 50%;
+                left: 0%;
+                transform: translate(-50%, -50%);
+            }
+            /* gnb lnb bg end  */
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul class="main-menu">
+                    <div class="logo">
+                        <a href="./main.html"><img src="./images/first/logo.png" alt="" /></a>
+                    </div>
+                    <div class="main-menu-wrap">
+                        <li class="item">
+                            <div class="item__name"><a href="#">스킨 케어</a></div>
+                            <div class="item__contents">
+                                <div class="contents__menu">
+                                    <ul class="inner">
+                                        <li>
+                                            <h4>카테고리</h4>
+                                            <ul>
+                                                <li>스킨 케어 모두 보기</li>
+                                                <li>클렌저</li>
+                                                <li>각질 제거</li>
+                                                <li>트린트먼트 & 마스크</li>
+                                                <li>토너</li>
+                                                <li>하이드레이터</li>
+                                                <li>립 & 아이</li>
+                                                <li>쉐이빙</li>
+                                                <li>선 케어</li>
+                                                <li>키트</li>
+                                                <li>스킨 케어 번들</li>
+                                                <li>스킨 케어 기프트</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <h4>피부 타입</h4>
+                                            <ul>
+                                                <li>중성</li>
+                                                <li>건성</li>
+                                                <li>지성</li>
+                                                <li>복합성</li>
+                                                <li>민감성 피부</li>
+                                                <li>노화 피부</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <h4>레인지</h4>
+                                            <ul>
+                                                <li>파슬리 씨드</li>
+                                                <li>스킨케어 플러스</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <h4>사랑받는 제품</h4>
+                                            <ul>
+                                                <li>파슬리 씨드 안티 옥시던트 인텐스 세럼</li>
+                                                <li>이그절티드 아이 세럼</li>
+                                                <li>아이스 푸어 오버</li>
+                                                <li>이그절티드 아이 세럼</li>
+                                                <li>비 트리플 씨 페이셜 밸런싱 젤</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="item__name"><a href="">바디 & 핸드</a></div>
+                            <div class="item__contents">
+                                <div class="contents__menu">
+                                    <ul class="inner">
+                                        <li>
+                                            <h4>카테고리</h4>
+                                            <ul>
+                                                <li>바디 & 핸드 모두 보기</li>
+                                                <li>핸드</li>
+                                                <li>바디</li>
+                                                <li>퍼스널 케어</li>
+                                                <li>번들</li>
+                                                <li>핸드 및 바디 케어 기프트</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <h4>레인지</h4>
+                                            <ul>
+                                                <li>제라늄 리프</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <h4>데일리 에센셜</h4>
+                                            <ul>
+                                                <li>레저렉션 아로마틱 핸드 밤</li>
+                                                <li>레저렉션 아로마틱 핸드 워시</li>
+                                                <li>제라늄 리프 듀엣</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="item__name"><a href="">헤어</a></div>
+                            <div class="item__contents">
+                                <div class="contents__menu">
+                                    <ul class="inner">
+                                        <li>
+                                            <h4>카테고리</h4>
+                                            <ul>
+                                                <li>헤어 모두 보기</li>
+                                                <li>샴푸</li>
+                                                <li>컨디셔너</li>
+                                                <li>트리트먼트</li>
+                                                <li>그루밍</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <h4>조화로운 셀렉션</h4>
+                                            <ul>
+                                                <li>샴푸</li>
+                                                <li>컨디셔너</li>
+                                                <li>샴푸</li>
+                                                <li>테임 헤어 세럼</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="item__name"><a href="">향수</a></div>
+                            <div class="item__contents">
+                                <div class="contents__menu">
+                                    <ul class="inner">
+                                        <li>
+                                            <h4>카테고리</h4>
+                                            <ul>
+                                                <li>향수 모두 보기</li>
+                                                <li>글롬</li>
+                                                <li>이더시스</li>
+                                                <li>미라세티</li>
+                                                <li>카르스트</li>
+                                                <li>에레미아</li>
+                                                <li>로즈</li>
+                                                <li>휠</li>
+                                                <li>마라케시</li>
+                                                <li>테싯</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <h4>향수 아로마</h4>
+                                            <ul>
+                                                <li>플로럴</li>
+                                                <li>프레쉬</li>
+                                                <li>우디</li>
+                                                <li>오퓰런트</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <h4>레인지</h4>
+                                            <ul>
+                                                <li>아더토피아</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <h4>신제품</h4>
+                                            <ul>
+                                                <li>글롬 오 드 퍼퓸</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="item__name"><a href="">홈</a></div>
+                            <div class="item__contents">
+                                <div class="contents__menu">
+                                    <ul class="inner">
+                                        <li>
+                                            <h4>카테고리</h4>
+                                            <ul>
+                                                <li>홈 모두 보기</li>
+                                                <li>홈</li>
+                                                <li>문학</li>
+                                                <li>홈 케어 기프트</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <h4>사랑받는 제품</h4>
+                                            <ul>
+                                                <li>포스트-푸 드롭스</li>
+                                                <li>올루스 아로마틱 룸 스프레이</li>
+                                                <li>사라시나 아로마틱 인센스</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="item__name"><a href="">키트 & 트래블</a></div>
+                            <div class="item__contents">
+                                <div class="contents__menu">
+                                    <ul class="inner">
+                                        <li>
+                                            <h4>카테고리</h4>
+                                            <ul>
+                                                <li>시즈널 기프트 키트</li>
+                                                <li>스킨 케어 키트</li>
+                                                <li>바디</li>
+                                                <li>바디 & 핸드 케어 키트</li>
+                                                <li>트래블</li>
+                                            </ul>
+                                        </li>
+
+                                        <li>
+                                            <h4>사랑받는 제품</h4>
+                                            <ul>
+                                                <li>마블러스 멘토</li>
+                                                <li>콘그루어스</li>
+                                                <li>이그니어스</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="item__name"><a href="">기프트 가이드</a></div>
+                            <div class="item__contents">
+                                <div class="contents__menu">
+                                    <ul class="inner">
+                                        <li>
+                                            <h4>카테고리</h4>
+                                            <ul>
+                                                <li>감사와 존경의 표시</li>
+                                                <li>시즈널 기프트 키트</li>
+                                                <li>이솝에서 사랑받는 제품들</li>
+                                                <li>작은 제스처</li>
+                                                <li>관대한 선물</li>
+                                                <li>나를 위한 선물</li>
+                                                <li>트래블 기프트</li>
+                                                <li>홈 케어 기프트</li>
+                                            </ul>
+                                        </li>
+
+                                        <li>
+                                            <h4>사랑받는 제품</h4>
+                                            <ul>
+                                                <li>이그니어스</li>
+                                                <li>마블러스 멘토</li>
+                                                <li>레저렉션 듀엣</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="sub__item">
+                        <ul>
+                            <li>
+                                <a href="#"><span class="material-symbols-outlined">search</span></a>
+                            </li>
+                            <li><a href="#">로그인</a></li>
+                            <li><a href="#">카트</a></li>
+                        </ul>
+                    </div>
+                </ul>
+            </nav>
+        </header>
+        <h1>
+            What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+            has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+            type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+            leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+            release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+            software like Aldus PageMaker including versions of Lorem Ipsum. Why do we use it? It is a long established
+            fact that a reader will be distracted by the readable content of a page when looking at its layout. The
+            point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using
+            'Content here, content here', making it look like readable English. Many desktop publishing packages and web
+            page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover
+            many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident,
+            sometimes on purpose (injected humour and the like). Where does it come from? Contrary to popular belief,
+            Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC,
+            making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
+            looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through
+            the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from
+            sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero,
+            written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The
+            first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32. The
+            standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
+            1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact
+            original form, accompanied by English versions from the 1914 translation by H. Rackham. Where can I get
+            some? There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+            alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing
+            hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined
+            chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200
+            Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks
+            reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or
+            non-characteristic words etc.
+        </h1>
+    </body>
+</html>
