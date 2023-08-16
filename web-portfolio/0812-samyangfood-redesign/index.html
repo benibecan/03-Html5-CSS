@@ -12,6 +12,7 @@
         <title>Document</title>
     </head>
     <body>
+        <script src="js/rollingBanner.js"></script>
         <wrap>
             <header>
                 <div class="header__wrap">
@@ -146,100 +147,119 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="community_contents">
-                            <div class="community_contents__wrap">
-                                <div class="community_contents_box">
-                                    <div class="community_contents_box_top">
-                                        <img src="images/promotion_photo_1.jpg" alt="promotion_photo_1" />
-                                    </div>
-                                    <div class="community_contents_box_bottom">
-                                        <p>맛있는 나눔</p>
-                                        <strong>삼양식품 사회공헌활동<br />'맛있는 나눔' Vol.88</strong>
-                                    </div>
-                                </div>
-                                <div class="community_contents_box">
-                                    <div class="community_contents_box_top">
-                                        <iframe
-                                            width="100%"
-                                            height="100%"
-                                            src="https://www.youtube.com/embed/66isu_ojnJY?controls=0"
-                                            title="YouTube video player"
-                                            frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            allowfullscreen
-                                        ></iframe>
-                                    </div>
-                                    <div class="community_contents_box_bottom">
-                                        <p>맛있는 나눔</p>
-                                        <strong>삼양식품 사회공헌활동<br />'맛있는 나눔' Vol.88</strong>
-                                    </div>
-                                </div>
-                                <div class="community_contents_box">
-                                    <div class="community_contents_box_top">
-                                        <img src="images/promotion_photo_2.jpg" alt="promotion_photo_2" />
-                                    </div>
-                                    <div class="community_contents_box_bottom">
-                                        <p>맛있는 나눔</p>
-                                        <strong>삼양식품 사회공헌활동<br />'맛있는 나눔' Vol.88</strong>
-                                    </div>
-                                </div>
-                                <div class="community_contents_box">
-                                    <div class="community_contents_box_top">
-                                        <img src="images/promotion_photo_3.jpg" alt="promotion_photo_3" />
-                                    </div>
-                                    <div class="community_contents_box_bottom">
-                                        <p>맛있는 나눔</p>
-                                        <strong>삼양식품 사회공헌활동<br />'맛있는 나눔' Vol.88</strong>
-                                    </div>
-                                </div>
-                                <div class="community_contents_box">
-                                    <div class="community_contents_box_top">
-                                        <img src="images/promotion_photo_4.jpg" alt="promotion_photo_4" />
-                                    </div>
-                                    <div class="community_contents_box_bottom">
-                                        <p>맛있는 나눔</p>
-                                        <strong>삼양식품 사회공헌활동<br />'맛있는 나눔' Vol.88</strong>
-                                    </div>
-                                </div>
-                                <div class="community_contents_box">
-                                    <div class="community_contents_box_top">
-                                        <img src="images/promotion_photo_5.jpg" alt="promotion_photo_5" />
-                                    </div>
-                                    <div class="community_contents_box_bottom">
-                                        <p>맛있는 나눔</p>
-                                        <strong>삼양식품 사회공헌활동<br />'맛있는 나눔' Vol.88</strong>
-                                    </div>
-                                </div>
-                                <div class="community_contents_box">
-                                    <div class="community_contents_box_top">
-                                        <iframe
-                                            width="100%"
-                                            height="100%"
-                                            src="https://www.youtube.com/embed/0uLz6IUkxP4?controls=0"
-                                            title="YouTube video player"
-                                            frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            allowfullscreen
-                                        ></iframe>
-                                    </div>
-                                    <div class="community_contents_box_bottom">
-                                        <p>맛있는 나눔</p>
-                                        <strong>삼양식품 사회공헌활동<br />'맛있는 나눔' Vol.88</strong>
-                                    </div>
-                                </div>
-                                <div class="community_contents_box">
-                                    <div class="community_contents_box_top">
-                                        <img src="images/promotion_photo_6.jpg" alt="promotion_photo_6" />
-                                    </div>
-                                    <div class="community_contents_box_bottom">
-                                        <p>맛있는 나눔</p>
-                                        <strong>삼양식품 사회공헌활동<br />'맛있는 나눔' Vol.88</strong>
-                                    </div>
-                                </div>
+                        <div class="community_contents wrap">
+                            <div class="community_contents__wrap rolling-list">
+                                <ul>
+                                    <li class="community_contents_box">
+                                        <div class="community_contents_box_top image-wrap">
+                                            <img src="images/promotion_photo_1.jpg" alt="promotion_photo_1" />
+                                        </div>
+                                        <div class="community_contents_box_bottom desc">
+                                            <p>맛있는 나눔</p>
+                                            <strong>삼양식품 사회공헌활동<br />'맛있는 나눔' Vol.88</strong>
+                                        </div>
+                                    </li>
+                                    <li class="community_contents_box">
+                                        <div class="community_contents_box_top image-wrap">
+                                            <iframe
+                                                width="100%"
+                                                height="100%"
+                                                src="https://www.youtube.com/embed/66isu_ojnJY?controls=0"
+                                                title="YouTube video player"
+                                                frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                allowfullscreen
+                                            ></iframe>
+                                        </div>
+                                        <div class="community_contents_box_bottom desc">
+                                            <p>맛있는 나눔</p>
+                                            <strong>삼양식품 사회공헌활동<br />'맛있는 나눔' Vol.88</strong>
+                                        </div>
+                                    </li>
+                                    <li class="community_contents_box">
+                                        <div class="community_contents_box_top image-wrap">
+                                            <img src="images/promotion_photo_2.jpg" alt="promotion_photo_2" />
+                                        </div>
+                                        <div class="community_contents_box_bottom desc">
+                                            <p>맛있는 나눔</p>
+                                            <strong>삼양식품 사회공헌활동<br />'맛있는 나눔' Vol.88</strong>
+                                        </div>
+                                    </li>
+                                    <li class="community_contents_box">
+                                        <div class="community_contents_box_top image-wrap">
+                                            <img src="images/promotion_photo_3.jpg" alt="promotion_photo_3" />
+                                        </div>
+                                        <div class="community_contents_box_bottom desc">
+                                            <p>맛있는 나눔</p>
+                                            <strong>삼양식품 사회공헌활동<br />'맛있는 나눔' Vol.88</strong>
+                                        </div>
+                                    </li>
+                                    <li class="community_contents_box">
+                                        <div class="community_contents_box_top image-wrap">
+                                            <img src="images/promotion_photo_4.jpg" alt="promotion_photo_4" />
+                                        </div>
+                                        <div class="community_contents_box_bottom desc">
+                                            <p>맛있는 나눔</p>
+                                            <strong>삼양식품 사회공헌활동<br />'맛있는 나눔' Vol.88</strong>
+                                        </div>
+                                    </li>
+                                    <li class="community_contents_box">
+                                        <div class="community_contents_box_top image-wrap">
+                                            <img src="images/promotion_photo_5.jpg" alt="promotion_photo_5" />
+                                        </div>
+                                        <div class="community_contents_box_bottom desc">
+                                            <p>맛있는 나눔</p>
+                                            <strong>삼양식품 사회공헌활동<br />'맛있는 나눔' Vol.88</strong>
+                                        </div>
+                                    </li>
+                                    <li class="community_contents_box">
+                                        <div class="community_contents_box_top image-wrap">
+                                            <iframe
+                                                width="100%"
+                                                height="100%"
+                                                src="https://www.youtube.com/embed/0uLz6IUkxP4?controls=0"
+                                                title="YouTube video player"
+                                                frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                allowfullscreen
+                                            ></iframe>
+                                        </div>
+                                        <div class="community_contents_box_bottom desc">
+                                            <p>맛있는 나눔</p>
+                                            <strong>삼양식품 사회공헌활동<br />'맛있는 나눔' Vol.88</strong>
+                                        </div>
+                                    </li>
+                                    <li class="community_contents_box">
+                                        <div class="community_contents_box_top image-wrap">
+                                            <img src="images/promotion_photo_6.jpg" alt="promotion_photo_6" />
+                                        </div>
+                                        <div class="community_contents_box_bottom desc">
+                                            <p>맛있는 나눔</p>
+                                            <strong>삼양식품 사회공헌활동<br />'맛있는 나눔' Vol.88</strong>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
+                <script>
+                    let roller = document.querySelector('.rolling-list');
+                    roller.id = 'roller1'; // 아이디 부여
+
+                    let clone = roller.cloneNode(true);
+                    // cloneNode : 노드 복제. 기본값은 false. 자식 노드까지 복제를 원하면 true 사용
+                    clone.id = 'roller2';
+                    document.querySelector('.wrap').appendChild(clone); // wrap 하위 자식으로 부착
+
+                    document.querySelector('#roller1').style.left = '0px';
+                    document.querySelector('#roller2').style.left =
+                        document.querySelector('.rolling-list ul').offsetWidth + 'px';
+                    // offsetWidth : 요소의 크기 확인(margin을 제외한 padding값, border값까지 계산한 값)
+
+                    roller.classList.add('original');
+                    clone.classList.add('clone');
+                </script>
             </section>
             <section class="product">
                 <div class="product__wrpa">
@@ -284,84 +304,130 @@
                         </div>
                         <div class="product_box">
                             <div class="product_box__wrap">
-                                <ul class="product_box_contents">
-                                    <li class="product_box_contents_top">
-                                        <img src="images/product_ramen_1.png" alt="product_ramen_1" />
-                                    </li>
-                                    <li class="product_box_contents_bottom">
-                                        <p>더 깊고 진해진 라면의 원조</p>
-                                        <h3>삼양라면 오리지널</h3>
-                                    </li>
+                                <div class="product_box__inner">
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="images/product_ramen_1.png" alt="product_ramen_1" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p>더 깊고 진해진 라면의 원조</p>
+                                            <h3>삼양라면 오리지널</h3>
+                                        </li>
+                                    </ul>
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="images/product_ramen_2.png" alt="product_ramen_2" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p>풍부해진 짜장의 맛</p>
+                                            <h3>짜짜로니</h3>
+                                        </li>
+                                    </ul>
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="images/product_ramen_3.png" alt="product_ramen_3" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p>화끈한 매운맛!</p>
+                                            <h3>불닭볶음면</h3>
+                                        </li>
+                                    </ul>
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="images/product_ramen_4.png" alt="product_ramen_4" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p>시원한 해물맛이 느껴지는</p>
+                                            <h3>나가사끼 짬뽕</h3>
+                                        </li>
+                                    </ul>
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="images/product_ramen_5.png" alt="product_ramen_5" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p>라면보다 더 맛있는 라면</p>
+                                            <h3>맛있는 라면</h3>
+                                        </li>
+                                    </ul>
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="images/product_ramen_6.png" alt="product_ramen_6" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p>더 깊고 진해진 라면의 원조</p>
+                                            <h3>육개장</h3>
+                                        </li>
+                                    </ul>
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="images/product_ramen_7.png" alt="product_ramen_7" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p>매콤 꾸덕 투움바파스타</p>
+                                            <h3>쿠티크 투움바파스타</h3>
+                                        </li>
+                                    </ul>
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="images/product_ramen_8.png" alt="product_ramen_8" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p>4가지 과일로 깔끔상큼!</p>
+                                            <h3>4과 비빔면</h3>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer>
+                <div class="footer__wrap">
+                    <div class="footer__innner">
+                        <div class="footer_top">
+                            <div class="footer_top__wrpa">
+                                <ul class="footer_top_contents">
+                                    <li><a href="#">회사소개</a></li>
+                                    <li><a href="#">고객지원</a></li>
+                                    <li><a href="#">IR</a></li>
+                                    <li><a href="#">인재채용</a></li>
+                                    <li><a href="#">찾아오시는 길</a></li>
+                                    <li><a href="#">개인정보처리방침</a></li>
                                 </ul>
-                                <ul class="product_box_contents">
-                                    <li class="product_box_contents_top">
-                                        <img src="images/product_ramen_1.png" alt="product_ramen_1" />
-                                    </li>
-                                    <li class="product_box_contents_bottom">
-                                        <p>더 깊고 진해진 라면의 원조</p>
-                                        <h3>삼양라면 오리지널</h3>
-                                    </li>
+                            </div>
+                        </div>
+                        <div class="footer_bottom">
+                            <div class="footer_bottom__wrap">
+                                <ul class="footer_bottom_contents">
+                                    <li><a href="#">삼양식품(주) 서울특별시 성북구 오패산로3길 104(하월곡동)</a></li>
+                                    <li><a href="#">대표이사 : 김정수, 장재성</a></li>
+                                    <li><a href="#">사업자등록번호 : 102-81-05450</a></li>
+                                    <li><a href="#">통신판매신고번호 : 2016-서울성북-0790</a></li>
+                                    <li><a href="#">고객만족센터 : 080-940-3333(무료상담전화)</a></li>
+                                    <li><a href="#">대표전화 : 02-940-3000</a></li>
+                                    <li><a href="#">Copyright © Samyang Foods Co. Ltd All Rights Reserved.</a></li>
                                 </ul>
-                                <ul class="product_box_contents">
-                                    <li class="product_box_contents_top">
-                                        <img src="images/product_ramen_1.png" alt="product_ramen_1" />
+                                <ul class="footer_bottom_sns">
+                                    <li class="sns_1">
+                                        <a href="#"></a>
                                     </li>
-                                    <li class="product_box_contents_bottom">
-                                        <p>더 깊고 진해진 라면의 원조</p>
-                                        <h3>삼양라면 오리지널</h3>
+                                    <li class="sns_2">
+                                        <a href="#"></a>
                                     </li>
-                                </ul>
-                                <ul class="product_box_contents">
-                                    <li class="product_box_contents_top">
-                                        <img src="images/product_ramen_1.png" alt="product_ramen_1" />
+                                    <li class="sns_3">
+                                        <a href="#"></a>
                                     </li>
-                                    <li class="product_box_contents_bottom">
-                                        <p>더 깊고 진해진 라면의 원조</p>
-                                        <h3>삼양라면 오리지널</h3>
-                                    </li>
-                                </ul>
-                                <ul class="product_box_contents">
-                                    <li class="product_box_contents_top">
-                                        <img src="images/product_ramen_1.png" alt="product_ramen_1" />
-                                    </li>
-                                    <li class="product_box_contents_bottom">
-                                        <p>더 깊고 진해진 라면의 원조</p>
-                                        <h3>삼양라면 오리지널</h3>
-                                    </li>
-                                </ul>
-                                <ul class="product_box_contents">
-                                    <li class="product_box_contents_top">
-                                        <img src="images/product_ramen_1.png" alt="product_ramen_1" />
-                                    </li>
-                                    <li class="product_box_contents_bottom">
-                                        <p>더 깊고 진해진 라면의 원조</p>
-                                        <h3>삼양라면 오리지널</h3>
-                                    </li>
-                                </ul>
-                                <ul class="product_box_contents">
-                                    <li class="product_box_contents_top">
-                                        <img src="images/product_ramen_1.png" alt="product_ramen_1" />
-                                    </li>
-                                    <li class="product_box_contents_bottom">
-                                        <p>더 깊고 진해진 라면의 원조</p>
-                                        <h3>삼양라면 오리지널</h3>
-                                    </li>
-                                </ul>
-                                <ul class="product_box_contents">
-                                    <li class="product_box_contents_top">
-                                        <img src="images/product_ramen_1.png" alt="product_ramen_1" />
-                                    </li>
-                                    <li class="product_box_contents_bottom">
-                                        <p>더 깊고 진해진 라면의 원조</p>
-                                        <h3>삼양라면 오리지널</h3>
+                                    <li class="sns_4">
+                                        <a href="#"></a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-            <footer></footer>
+            </footer>
         </wrap>
     </body>
 </html>
