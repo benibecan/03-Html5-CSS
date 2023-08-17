@@ -9,10 +9,10 @@
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0"
         />
+        <script type="text/javascript" src="js/rollingBanner.js" defer></script>
         <title>Document</title>
     </head>
     <body>
-        <script src="js/rollingBanner.js"></script>
         <wrap>
             <header>
                 <div class="header__wrap">
@@ -46,8 +46,8 @@
                 <div class="banner__wrap">
                     <div class="video">
                         <iframe
-                            src="https://www.youtube.com/embed/NC7qRMxZhm4?autoplay=1&mute=1&loop=1"
-                            title="YouTube video player"
+                            src="https://www.youtube.com/embed/NC7qRMxZhm4?autoplay=1&mute=1&loop=1&controls=0"
+                            title="video player"
                             frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen
@@ -243,58 +243,41 @@
                         </div>
                     </div>
                 </div>
-                <script>
-                    let roller = document.querySelector('.rolling-list');
-                    roller.id = 'roller1'; // 아이디 부여
-
-                    let clone = roller.cloneNode(true);
-                    // cloneNode : 노드 복제. 기본값은 false. 자식 노드까지 복제를 원하면 true 사용
-                    clone.id = 'roller2';
-                    document.querySelector('.wrap').appendChild(clone); // wrap 하위 자식으로 부착
-
-                    document.querySelector('#roller1').style.left = '0px';
-                    document.querySelector('#roller2').style.left =
-                        document.querySelector('.rolling-list ul').offsetWidth + 'px';
-                    // offsetWidth : 요소의 크기 확인(margin을 제외한 padding값, border값까지 계산한 값)
-
-                    roller.classList.add('original');
-                    clone.classList.add('clone');
-                </script>
             </section>
             <section class="product">
                 <div class="product__wrpa">
                     <div class="product__inner">
                         <div class="product_tittle">
-                            <h1>삼양 홍보관</h1>
-                            <p>삼양식품은 여러분과 함께 맛있는 세상을 만들어갑니다.</p>
+                            <h1>삼양 제품</h1>
+                            <p>삼양의 다양한 제품을 한곳에서 즐기세요.</p>
                         </div>
                         <div class="product_menu">
                             <div class="product_menu__wrap">
-                                <ul class="product_menu_item">
+                                <ul class="product_menu_item ramenBtn">
                                     <li class="product_icon">
                                         <span class="material-symbols-outlined">ramen_dining</span>
                                     </li>
                                     <li><p>라면</p></li>
                                 </ul>
-                                <ul class="product_menu_item">
+                                <ul class="product_menu_item snackBtn">
                                     <li class="product_icon">
                                         <span class="material-symbols-outlined">cookie</span>
                                     </li>
                                     <li><p>스낵</p></li>
                                 </ul>
-                                <ul class="product_menu_item">
+                                <ul class="product_menu_item dairyBtn">
                                     <li class="product_icon">
                                         <span class="material-symbols-outlined">water_medium</span>
                                     </li>
                                     <li><p>유제품</p></li>
                                 </ul>
-                                <ul class="product_menu_item">
+                                <ul class="product_menu_item souceBtn">
                                     <li class="product_icon">
                                         <span class="material-symbols-outlined">water_drop</span>
                                     </li>
                                     <li><p>소스 · 간편식</p></li>
                                 </ul>
-                                <ul class="product_menu_item">
+                                <ul class="product_menu_item frozenBtn">
                                     <li class="product_icon">
                                         <span class="material-symbols-outlined">ac_unit</span>
                                     </li>
@@ -304,7 +287,7 @@
                         </div>
                         <div class="product_box">
                             <div class="product_box__wrap">
-                                <div class="product_box__inner">
+                                <div class="product_box__inner ramenContents">
                                     <ul class="product_box_contents">
                                         <li class="product_box_contents_top">
                                             <img src="images/product_ramen_1.png" alt="product_ramen_1" />
@@ -378,6 +361,302 @@
                                         </li>
                                     </ul>
                                 </div>
+                                <div class="product_box__inner snackContents">
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="images/product_snack_1.png" alt="product_snack_1" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p>불닭의 매콤짭짤한 맛!</p>
+                                            <h3>불닭으로딱!집게</h3>
+                                        </li>
+                                    </ul>
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="images/product_snack_2.png" alt="product_snack_2" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p>깊고 진한 바다의 맛!</p>
+                                            <h3>회오리킹 해물맛</h3>
+                                        </li>
+                                    </ul>
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="images/product_snack_3.png" alt="product_snack_3" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p>국내 최초 라면과자</p>
+                                            <h3>별뽀빠이</h3>
+                                        </li>
+                                    </ul>
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="images/product_snack_4.png" alt="product_snack_4" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p>뽀빠이, 쌀뻥튀기, 별사탕의 만남</p>
+                                            <h3>쌀로별뽀빠이강정</h3>
+                                        </li>
+                                    </ul>
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="images/product_snack_5.png" alt="product_snack_5" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p>사랑받는 베스트 장수 스낵</p>
+                                            <h3>짱구</h3>
+                                        </li>
+                                    </ul>
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="images/product_snack_6.png" alt="product_snack_6" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p>계란, 우유 무첨가 비건 스낵</p>
+                                            <h3>사또밥</h3>
+                                        </li>
+                                    </ul>
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="images/product_snack_7.png" alt="product_snack_7" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p>삼양라면을 손쉽게 바사삭!</p>
+                                            <h3>삼양라면스낵</h3>
+                                        </li>
+                                    </ul>
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="images/product_snack_8.png" alt="product_snack_8" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p>100% 국내산, 21가지 곡물</p>
+                                            <h3>곡물치즈롤</h3>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product_box__inner dairyContents">
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="images/procuct_dairy_1.png" alt="procuct_dairy_1" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p>더 깊고 진해진 라면의 원조</p>
+                                            <h3>삼양라면 오리지널</h3>
+                                        </li>
+                                    </ul>
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="images/procuct_dairy_2.png" alt="procuct_dairy_2" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p>풍부해진 짜장의 맛</p>
+                                            <h3>짜짜로니</h3>
+                                        </li>
+                                    </ul>
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="images/procuct_dairy_3.png" alt="procuct_dairy_3" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p>화끈한 매운맛!</p>
+                                            <h3>불닭볶음면</h3>
+                                        </li>
+                                    </ul>
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="images/procuct_dairy_4.png" alt="procuct_dairy_4" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p>시원한 해물맛이 느껴지는</p>
+                                            <h3>나가사끼 짬뽕</h3>
+                                        </li>
+                                    </ul>
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="" alt="" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p></p>
+                                            <h3></h3>
+                                        </li>
+                                    </ul>
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="" alt="" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p></p>
+                                            <h3></h3>
+                                        </li>
+                                    </ul>
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="" alt="" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p></p>
+                                            <h3></h3>
+                                        </li>
+                                    </ul>
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="" alt="" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p></p>
+                                            <h3></h3>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product_box__inner souceContents">
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="images/procuct_souce_1.png" alt="procuct_souce_1" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p>화끈한 불닭소스</p>
+                                            <h3>불닭소스</h3>
+                                        </li>
+                                    </ul>
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="images/procuct_souce_2.png" alt="product_ramen_2" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p>고소한 마요네즈 화끈한 불닭</p>
+                                            <h3>불닭마요</h3>
+                                        </li>
+                                    </ul>
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="images/procuct_souce_3.png" alt="product_ramen_3" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p>매콤 새콤 고소한 맛!</p>
+                                            <h3>불닭치폴레마요</h3>
+                                        </li>
+                                    </ul>
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="images/procuct_souce_4.png" alt="procuct_souce_4" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p>깔끔한 매운맛으로 부담없이</p>
+                                            <h3>불닭스리라차</h3>
+                                        </li>
+                                    </ul>
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="images/procuct_souce_5.png" alt="procuct_souce_5" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p>도전하라! 핵불닭소스</p>
+                                            <h3>핵불닭소스</h3>
+                                        </li>
+                                    </ul>
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="images/procuct_souce_6.png" alt="procuct_souce_6" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p>부드러움 속에 화끈한 매운맛!</p>
+                                            <h3>까르보불닭소스</h3>
+                                        </li>
+                                    </ul>
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="images/procuct_souce_7.png" alt="procuct_souce_7" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p>프로불닭러들을 위한 2kg 대용량 출시!</p>
+                                            <h3>자이언트 불닭소스</h3>
+                                        </li>
+                                    </ul>
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="" alt="" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p></p>
+                                            <h3></h3>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product_box__inner frozenContents">
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="images/procuct_frozen_1.png" alt="procuct_frozen_1" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p>3번 튀겨 더 바삭한 튀김옷</p>
+                                            <h3>쿠티크 리얼크리스피치킨</h3>
+                                        </li>
+                                    </ul>
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="images/procuct_frozen_2.png" alt="procuct_frozen_2" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p>국내산 돼지고기의 담백함</p>
+                                            <h3>쿠티크 몬스터군만두 매콤고기</h3>
+                                        </li>
+                                    </ul>
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="images/procuct_frozen_3.png" alt="procuct_frozen_3" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p>하바네로맛의 매콤함</p>
+                                            <h3>쿠티크 몬스터군만두 매콤김치</h3>
+                                        </li>
+                                    </ul>
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="images/procuct_frozen_4.png" alt="procuct_frozen_4" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p>고소하고 바삭한 탕수육</p>
+                                            <h3>삼양프레시 탕수육</h3>
+                                        </li>
+                                    </ul>
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="images/procuct_frozen_5.png" alt="procuct_frozen_5" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p>돼지고기로 속을 꽉 채운 물만두</p>
+                                            <h3>삼양프레시 물만두</h3>
+                                        </li>
+                                    </ul>
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="images/procuct_frozen_6.png" alt="procuct_frozen_6" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p>촉촉한 육즙을 살린 동그랑땡</p>
+                                            <h3>삼양프레시 동그랑땡</h3>
+                                        </li>
+                                    </ul>
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="images/procuct_frozen_7.png" alt="procuct_frozen_7" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p>직화 그릴에 구워낸 한입 떡갈비</p>
+                                            <h3>삼양프레시 한입떡갈비</h3>
+                                        </li>
+                                    </ul>
+                                    <ul class="product_box_contents">
+                                        <li class="product_box_contents_top">
+                                            <img src="images/procuct_frozen_8.png" alt="procuct_frozen_8" />
+                                        </li>
+                                        <li class="product_box_contents_bottom">
+                                            <p>전통 구이떡 수수부꾸미</p>
+                                            <h3>삼양프레시 수수부꾸미</h3>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -401,26 +680,28 @@
                         <div class="footer_bottom">
                             <div class="footer_bottom__wrap">
                                 <ul class="footer_bottom_contents">
-                                    <li><a href="#">삼양식품(주) 서울특별시 성북구 오패산로3길 104(하월곡동)</a></li>
-                                    <li><a href="#">대표이사 : 김정수, 장재성</a></li>
-                                    <li><a href="#">사업자등록번호 : 102-81-05450</a></li>
-                                    <li><a href="#">통신판매신고번호 : 2016-서울성북-0790</a></li>
-                                    <li><a href="#">고객만족센터 : 080-940-3333(무료상담전화)</a></li>
-                                    <li><a href="#">대표전화 : 02-940-3000</a></li>
-                                    <li><a href="#">Copyright © Samyang Foods Co. Ltd All Rights Reserved.</a></li>
+                                    <li>삼양식품(주) 서울특별시 성북구 오패산로3길 104(하월곡동)</li>
+                                    <li>대표이사 : 김정수, 장재성</li>
+                                    <li>사업자등록번호 : 102-81-05450</li>
+                                    <li>통신판매신고번호 : 2016-서울성북-0790</li>
+                                    <li>고객만족센터 : 080-940-3333(무료상담전화)</li>
+                                    <li>대표전화 : 02-940-3000</li>
+                                    <li>Copyright © Samyang Foods Co. Ltd All Rights Reserved.</li>
                                 </ul>
                                 <ul class="footer_bottom_sns">
                                     <li class="sns_1">
-                                        <a href="#"></a>
+                                        <a href="https://blog.naver.com/samyangfoods"></a>
                                     </li>
                                     <li class="sns_2">
-                                        <a href="#"></a>
+                                        <a href="https://www.instagram.com/samyangfoods/"></a>
                                     </li>
                                     <li class="sns_3">
-                                        <a href="#"></a>
+                                        <a href="https://www.facebook.com/samyangfoods"></a>
                                     </li>
                                     <li class="sns_4">
-                                        <a href="#"></a>
+                                        <a
+                                            href="https://twitter.com/i/flow/login?redirect_after_login=%2Fsamyangfoods"
+                                        ></a>
                                     </li>
                                 </ul>
                             </div>

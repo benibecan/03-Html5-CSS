@@ -1,29 +1,14 @@
-$(window).on('load', function () {
-    setFlowBanner();
-});
+let roller = document.querySelector('.rolling-list');
+roller.id = 'roller1'; // 아이디 부여
 
-function setFlowBanner() {
-    const $wrap = $('.community_contents');
-    const $list = $('.community_contents__wrap');
-    let wrapWidth = $wrap.width();
-    let listWidth = $list.width();
-    const speed = 92; //1초에 몇픽셀 이동하는지 설정
+let clone = roller.cloneNode(true);
+// cloneNode : 노드 복제. 기본값은 false. 자식 노드까지 복제를 원하면 true 사용
+clone.id = 'roller2';
+document.querySelector('.wrap').appendChild(clone); // wrap 하위 자식으로 부착
 
-    //리스트 복제
-    let $clone = $list.clone();
-    $wrap.append($clone);
-    flowBannerAct();
+document.querySelector('#roller1').style.left = '0px';
+document.querySelector('#roller2').style.left = document.querySelector('.rolling-list ul').offsetWidth + 'px';
+// offsetWidth : 요소의 크기 확인(margin을 제외한 padding값, border값까지 계산한 값)
 
-    //배너 실행 함수
-    function flowBannerAct() {
-        //무한 반복을 위해 리스트를 복제 후 배너에 추가
-        if (listWidth < wrapWidth) {
-            const listCount = Math.ceil((wrapWidth * 2) / listWidth);
-            for (let i = 2; i < listCount; i++) {
-                $clone = $clone.clone();
-                $wrap.append($clone);
-            }
-        }
-        $wrap.find('.community_contents__wrap').css({ animation: `${listWidth / speed}s linear infinite flowRolling` });
-    }
-}
+roller.classList.add('original');
+clone.classList.add('clone');
