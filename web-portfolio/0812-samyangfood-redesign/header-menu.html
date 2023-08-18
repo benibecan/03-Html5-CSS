@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./css/fonts.css" type="text/css" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0"
+        />
+        <style>
+            body {
+                background: #ccc;
+            }
+            nav a {
+                position: relative;
+                font-weight: 600;
+            }
+            .item__name a {
+                position: relative;
+            }
+            .item:first-child .item__name a::after,
+            .item:nth-child(2) .item__name a::after {
+                position: absolute;
+                content: '';
+                right: -30%;
+                bottom: 40%;
+                width: 0;
+                height: 0;
+                border-top: 5px solid #111;
+                border-left: 4px solid transparent;
+                border-right: 4px solid transparent;
+                margin: 5px;
+            }
+            .main-menu-wrap {
+                display: flex;
+            }
+            .item__contents {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="header__wrap">
+                <div class="header__inner">
+                    <nav>
+                        <div class="nav__left">
+                            <div class="logo">
+                                <a href="#"><img src="./images/logo.png" alt="logo" /></a>
+                            </div>
+                            <div class="main-menu-wrap">
+                                <div class="item">
+                                    <div class="item__name"><a href="#">회사소개</a></div>
+                                    <div class="item__contents">
+                                        <div class="contents__menu">
+                                            <ul class="inner">
+                                                <li>스킨 케어 모두 보기</li>
+                                                <li>스킨 케어 모두 보기</li>
+                                                <li>스킨 케어 모두 보기</li>
+                                                <li>스킨 케어 모두 보기</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item__name"><a href="#">지속가능경영</a></div>
+                                    <div class="item__contents">
+                                        <div class="contents__menu">
+                                            <ul class="inner">
+                                                <li>스킨 케어 모두 보기</li>
+                                                <li>스킨 케어 모두 보기</li>
+                                                <li>스킨 케어 모두 보기</li>
+                                                <li>스킨 케어 모두 보기</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item__name"><a href="#">홍보관</a></div>
+                                </div>
+                                <div class="item">
+                                    <div class="item__name"><a href="#">삼양 제품</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav__right">
+                            <div class="icon_menu">
+                                <a href="#"><span class="material-symbols-outlined">person</span></a>
+                            </div>
+                            <div class="switch_btn">
+                                <div class="switch_btn__left"><a href="#">삼양몰</a></div>
+                                <div class="switch_btn__right"><a href="#">삼양식품</a></div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <script></script>
+    </body>
+</html>

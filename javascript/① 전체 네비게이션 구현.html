@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+        />
+        <title>① 전체 네비게이션 구현</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            ul {
+                list-style: none;
+            }
+            a {
+                text-decoration: none;
+                color: #333;
+            }
+            body {
+                font-family: pretendard, 맑은고딕, arial, sans-serif;
+            }
+            header {
+                position: relative;
+            }
+            header .menu {
+                width: 1280px;
+                margin: 0 auto;
+            }
+            header .menu ul {
+                display: flex;
+                height: 50px;
+                justify-content: space-between;
+                align-items: center;
+            }
+            header .menu ul li {
+                flex: 1 1 20%;
+                text-align: center;
+                line-height: 50px;
+            }
+            header .menu ul li a {
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+            header .menu ul li a:hover::after,
+            header .menu ul li a.active::after {
+                position: absolute;
+                height: 0;
+                width: 100%;
+                left: 0;
+                top: 50px;
+                background: rgba(10, 100, 0, 0.2);
+                overflow: hidden;
+                transition: height 0.5s;
+            }
+            header .menu ul a:hover,
+            header .menu ul a.on {
+                background: rgba(0, 100, 0, 0.2);
+            }
+            header .menu ul li a:hover::after,
+            header .menu ul li a.active::after {
+                position: absolute;
+                content: '';
+                display: inline-block;
+                width: 100%;
+                height: 3px;
+                border-radius: 20%;
+                background: #000;
+                bottom: 0px;
+                right: 50%;
+            }
+            header header .submenu {
+                position: absolute;
+                height: 0;
+                width: 100%;
+                left: 0;
+                top: 50px;
+                background: rgba(0, 100, 0, 0.2);
+                overflow: hidden;
+                transition: height 0.5s;
+            }
+            header .submenu {
+                position: absolute;
+                height: 0;
+                width: 100%;
+                left: 0;
+                top: 50px;
+                background: rgba(0, 100, 0, 0.2);
+                overflow: hidden;
+                transition: height 0.5s;
+            }
+            header .submenu .lnb {
+                width: 1280px;
+                margin: 0 auto;
+            }
+            header .submenu .lnb > ul {
+                display: flex;
+                justify-content: space-between;
+            }
+            header .submenu .lnb > ul > li {
+                flex: 1 1 20%;
+                line-height: 40px;
+                text-align: center;
+            }
+            header .submenu .lnb > ul > li a {
+                color: #333;
+                font-size: 14px;
+            }
+            header .submenu .lnb > ul > li a:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">스킨 케어</a></li>
+                    <li><a href="#">바디 & 핸드</a></li>
+                    <li><a href="#">헤어</a></li>
+                    <li><a href="#">향수</a></li>
+                    <li><a href="#">홈</a></li>
+                    <li><a href="#">키트 & 트래블</a></li>
+                    <li><a href="#">기트프 가이드</a></li>
+                </ul>
+            </div>
+            <div class="submenu">
+                <div class="lnb">
+                    <ul>
+                        <li>
+                            <ul>
+                                <li><h4>스킨케어 카테고리</h4></li>
+                                <li><a href="#">클렌저</a></li>
+                                <li><a href="#">각질 제거</a></li>
+                                <li><a href="#">트린트먼트 & 마스크</a></li>
+                                <li><a href="#">토너</a></li>
+                                <li><a href="#">하이드레이터</a></li>
+                                <li><a href="#">립 & 아이</a></li>
+                                <li><a href="#">쉐이빙</a></li>
+                                <li><a href="#">선 케어</a></li>
+                                <li><a href="#">키트</a></li>
+                                <li><a href="#">스킨 케어 번들</a></li>
+                                <li><a href="#">스킨 케어 기프트</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><h4>바디 & 핸드 카테고리</h4></li>
+                                <li><a href="#">핸드</a></li>
+                                <li><a href="#">바디</a></li>
+                                <li><a href="#">트린트먼트 & 마스크</a></li>
+                                <li><a href="#">퍼스널 케어</a></li>
+                                <li><a href="#">번들</a></li>
+                                <li><a href="#">핸드 및 바디 케어 기프트</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><h4>헤어 카테고리</h4></li>
+                                <li><a href="#">샴푸</a></li>
+                                <li><a href="#">컨디셔너</a></li>
+                                <li><a href="#">트리트먼트</a></li>
+                                <li><a href="#">그루밍</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><h4>향수 카테고리</h4></li>
+                                <li><a href="#">글롬</a></li>
+                                <li><a href="#">이더시스</a></li>
+                                <li><a href="#">미라세티</a></li>
+                                <li><a href="#">카르스트</a></li>
+                                <li><a href="#">에레미아</a></li>
+                                <li><a href="#">로즈</a></li>
+                                <li><a href="#">휠</a></li>
+                                <li><a href="#">마라케시</a></li>
+                                <li><a href="#">테싯</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><h4>홈 카테고리</h4></li>
+                                <li><a href="#">홈</a></li>
+                                <li><a href="#">문학</a></li>
+                                <li><a href="#">홈 케어 기프트</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><h4>키드 & 트래블 카테고리</h4></li>
+                                <li><a href="#">모든 키트 & 트래블</a></li>
+                                <li><a href="#">시즈널 기프트 키트</a></li>
+                                <li><a href="#">스킨 케어 키트</a></li>
+                                <li><a href="#">트래블</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><h4>기프트 가이드 카테고리</h4></li>
+                                <li><a href="#">시즈널 기프트 키트</a></li>
+                                <li><a href="#">이솝에서 사랑받는 제품들</a></li>
+                                <li><a href="#">관대한 선물</a></li>
+                                <li><a href="#">나를 위한 선물</a></li>
+                                <li><a href="#">트래블 기프트</a></li>
+                                <li><a href="#">홈 케어 기프트</a></li>
+                                <li><a href="#">기프트 번들</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <script>
+            let subMenu = document.querySelector('.submenu');
+            let sub = document.querySelectorAll('.lnb>ul>li');
+            let gnb = document.querySelectorAll('.menu ul li a');
+            let ht = document.querySelector('.lnb').offsetHeight;
+            console.log('ht : ' + ht);
+            gnb.forEach(function (item, keys) {
+                item.addEventListener('mouseenter', function () {
+                    subMenu.style.height = ht + 'px';
+                    console.log(keys);
+                });
+                item.addEventListener('mouseleave', function () {
+                    subMenu.style.height = 0 + 'px';
+                });
+            });
+            sub.forEach(function (item, keys) {
+                item.addEventListener('mouseenter', function () {
+                    subMenu.style.height = ht + 'px';
+                    gnb[keys].classList.add('on', 'active');
+                });
+                item.addEventListener('mouseleave', function () {
+                    subMenu.style.height = 0 + 'px';
+                    gnb[keys].classList.remove('on', 'active');
+                });
+            });
+        </script>
+    </body>
+</html>

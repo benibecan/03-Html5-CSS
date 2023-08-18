@@ -28,7 +28,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 999;
+    z-index: 10;
 }
 header .header__wrap {
     margin: 6px 0;
@@ -46,7 +46,12 @@ header .header__wrap nav {
     justify-content: space-between;
     align-items: center;
 }
+nav a {
+    position: relative;
+    font-weight: 600;
+}
 header .header__wrap nav .nav__left {
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,9 +59,75 @@ header .header__wrap nav .nav__left {
 header .header__wrap nav .nav__left .logo {
     padding-right: 72px;
 }
-header .header__wrap nav .nav__left .a_link {
+header .header__wrap nav .nav__left .item {
+    width: 100%;
+    height: 100%;
     display: flex;
-    gap: 31px;
+    align-items: center;
+    justify-content: space-between;
+}
+header .header__wrap nav .nav__left .item__name {
+    line-height: 76px;
+}
+header .header__wrap nav .nav__left .itemitem__name {
+    height: 100%;
+}
+header .header__wrap nav .nav__left .item .item__name .arrow {
+    position: relative;
+    padding-right: 43px;
+}
+header .header__wrap nav .nav__left .item .item__name a {
+    padding-right: 36px;
+}
+
+header .header__wrap nav .nav__left .item .item__name:hover a {
+    color: #ff6400;
+}
+header .header__wrap nav .nav__left .item .item__name:first-child .arrow {
+    padding-left: 0px;
+}
+.item div .arrow::after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 6px solid #111;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    z-index: 999;
+    margin: 7px;
+    top: 0;
+    right: 22px;
+}
+.item div .arrow:first-child:hover::after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 0px;
+    border-bottom: 6px solid #ff6400;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    z-index: 999;
+    margin: 7px;
+}
+.item__contents {
+    display: none;
+}
+
+.item__name:hover ~ .item__contents,
+.item__contents:hover {
+    position: absolute;
+    display: block;
+    top: 50px;
+    left: 125px;
+    width: 170px;
+    height: 196px;
+    padding: 10px;
+    background: #fff;
+    text-align: center;
+    border: 3px solid #000;
+    border-radius: 20px;
 }
 header .header__wrap nav .nav__right {
     display: flex;
@@ -83,6 +154,14 @@ header .header__wrap nav .nav__right .switch_btn .switch_btn__right {
     padding: 10px 24px;
     background: #ff6400;
     border-radius: 999px;
+}
+.contents__menu .inner li a {
+    display: block;
+    line-height: 20px;
+}
+.contents__menu .inner li a:hover {
+    background: #ccc;
+    border-radius: 20px;
 }
 /* ▲ header end ▲ */
 .banner {
