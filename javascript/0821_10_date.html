@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <p id="demo"></p>
+        <script>
+            function clock() {
+                let now = new Date();
+                let hour = now.getHours();
+                let minute = now.getMinutes();
+                let second = now.getSeconds();
+                let Msecond = now.getMilliseconds();
+                //let time = hour + ':' + minute + ':' + second;
+                let time =
+                    hour.toString().padStart(2, 0) +
+                    ':' +
+                    minute.toString().padStart(2, 0) +
+                    ':' +
+                    second.toString().padStart(2, 0) +
+                    ':' +
+                    Msecond;
+                //padStart()매서드는 처음부터 문자 열을 채워 줌. 주어진 길이에 도달할 때까지 문자 열을 채워 줌.
+                document.getElementById('demo').innerHTML = time;
+            }
+            setInterval(clock, 100);
+        </script>
+    </body>
+</html>

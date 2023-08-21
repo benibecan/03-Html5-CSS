@@ -1,0 +1,7 @@
+@media screen and (max-width: 1599px) {
+    header {
+        position: relative;
+        width: 100%;
+        height: 80px;
+    }
+}

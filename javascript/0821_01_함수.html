@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <p id="demo">click</p>
+        <script>
+            function myfnc() {
+                document.write('오늘은 월요일입니다.<br>');
+            }
+            // document.getElementById('demo').onclick = myfnc();
+            // myfnc();
+            function my(txt) {
+                document.write('오늘은 ' + txt + '입니다.<br>');
+            }
+            my('월요일');
+
+            function myadd(a, b) {
+                return a + b; //결과를 수행하고 값을 반환할 때
+            }
+            document.write(myadd(5, 10) + '<br>'); //숫자는 계산
+            document.write(myadd('하나', '둘') + '<br>'); //문자는 결합
+        </script>
+    </body>
+</html>
