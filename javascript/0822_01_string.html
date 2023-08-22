@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style></style>
+    </head>
+    <body>
+        <script>
+            //String: 자바스크립트에서 문자열을 다루는 객체
+            let str = "nice to meet you. I'm happy to meet you";
+            document.write(str.search('M') + '<br>');
+            document.write(str.replace('nice', 'happy') + '<br>');
+            // ▲ replace == nice를 찾아서 happy로 대체함. 못 찾으면 -1 출력.
+            document.write(str.indexOf('to') + '<br>');
+            // ▲ indexOf == 앞에있는 to를 찾아서 index번호를 찾아서 반환함. 못 찾으면 -1 출력. 대소문자 구분함.
+            document.write(str.lastIndexOf('to') + '<br>');
+            // ▲ lastindexOf == 뒤에있는 to를 찾아서 index번호를 찾아서 반환함. 못 찾으면 -1 출력. 대소문자 구분함.
+            document.write('match : ' + str.match('nice') + '<br>');
+            // ▲ match == 매치하는 단어를 찾아서 출력함. 못 찾으면 null 출력. 대소문자 구분함.
+            document.write('charAt : ' + str.charAt('3') + '<br>');
+            // ▲ charAt == 특정 인덱스 열(3)에 문자(e)를 반환할 때.
+            document.write('substr : ' + str.substr(-3, 3) + '<br>');
+            // ▲ substr(start 시작, length 길이) == 인덱스번호 a부터 b미만substr(a, b)까지 출력함. 인수값에 음의 값을 소환하면substr(-1) 뒤에서부터 출력함.
+            document.write('substring : ' + str.substring(-3, 3) + '<br>');
+            // ▲ substrign(start 시작, end 끝) == 인수값에 음수가 입력되면 0으로 취급함.
+            let txt = '123456-1234567';
+            document.write('길이' + txt.lenght + '<br>');
+            document.write(txt.replace(txt.substr(txt.length - 6), '*******') + '<br>');
+            document.write(txt.replace(txt.substr(7), '*******') + '<br>');
+            /* document.write(txt.replace('1234567', '*******') + '<br>');
+            document.write(txt.substr(0, 7) + '*******' + '<br>');
+            document.write(txt.substring(-10, 7) + '*******' + '<br>');
+            // ▲ 내가 함.
+            */
+            //ex) 123456-******* 로 만들어보자
+            document.write(txt.slice(-3, -1) + '<br>');
+            // ▲ slice(start,end) == substr(start,length)랑 비슷함. 문자에서 일부를 추출함. 인수값에 음의 값을 소환하면 뒤에서부터 출력함.
+            document.write(str.split('' + '<br>'));
+            let arr = str.split('');
+            document.write(arr[1] + '<br>');
+            // ▲ split ==
+            let txt2 = 'nice, to, mett, you';
+            let arr2 = txt2.split(',');
+            let n = arr2.length;
+            for (let i = 0; i < n; i++) {
+                document.write(arr2[i] + '<br>');
+            }
+            document.write(txt2.toUpperCase() + '<br>');
+            // ▲ split 활용1
+            let txt3 = 'Microsoft and microsoft and microsoft';
+            document.write(txt3.replaceAll('microsoft', '마이크로소프트') + '<br>');
+            // ▲ replaceAll 활용1 == 대소문자 구분. replaceAll은 앞뒤 상관없이 다 찾음.
+            document.write(txt3.replace(/microsoft/i, '아이이크로소프트') + '<br>');
+            document.write(txt3.replace(/Microsoft/g, '지크로소프트') + '<br>');
+            // ▲ replace 활용1 == ""사용X. /문자/i == 대소문자 구분하지 않음. /문자/g == 대체문자로 다 바꿈.
+        </script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style></style>
+    </head>
+    <body>
+        <script>
+            let name = prompt('당신의 영문이름은 ?');
+            let number = prompt('당신의 주민등록번호는 ?');
+            document.write(name.toUpperCase() + '<br>' + number.substring(0, number.length - 6) + '*******');
+            // ▲ name을 대문자로 바꾸고 + nuber (-)뒤에서부터 6문자열 잘라내고 + ******을 출력하겠다..
+            let star = '*';
+            document.write(name.toUpperCase() + '<br>' + number.substring(0, number.length - 6) + star.repeat(6));
+            // ▲ name을 대문자로 바꾸고 + number (-)뒤에서부터 6문자열 잘라내고 + star변수를 6번 반복하겠다.
+            let star = '*';
+            document.write(name.toUpperCase() + '<br>' + number.slice(0, number.length - 6) + star.repeat(6));
+            // ▲ name을 대문자로 바꾸고 + nuber (-)뒤에서부터 6문자열 잘라내고 + star변수를 6번 반복하겠다.
+        </script>
+    </body>
+</html>
