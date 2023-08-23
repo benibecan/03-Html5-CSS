@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <a href="#">하나</a>
+        <p id="demo">서식변경</p>
+        <script>
+            /*document.getElementsByTagName('a')[0].onclick = function (e) {
+                e.preventDefault();
+                document.getElementById('demo').style.color = 'red';
+            };*/
+            document.getElementsByTagName('a')[0].onclick = function () {
+                document.getElementById('demo').style.color = 'red';
+                //location.href = 'http://www.naver.com'; // 절대주소 현창에서 띄움
+                //location.href = '0823_10_onkeydown.html'; // 상대주소
+                //window.open('http://www.naver.com'); // window 새창에서 띄움
+                window.open('0823_10_onkeydown.htm');
+                return false;
+                // ▲ ruturn false == 설정을 막을 때 사용함 구문의 끝에 써야 함
+            };
+        </script>
+    </body>
+</html>

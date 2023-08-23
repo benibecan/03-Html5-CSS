@@ -619,18 +619,6 @@ header .header__wrap nav .nav__right .switch_btn .switch_btn__right {
     gap: 10px;
     padding: 0 129px;
 }
-/* .ramenBtn:checked .ramenContents {
-    visibility: visible;
-}
-/* .snackContents,
-.dairyContents,
-.souceContents,
-.frozenContents {
-    visibility: hidden;
-    position: absolute;
-    opacity: 0;
-} */
-
 .product_box_contents {
     width: 244px;
     height: 292px;
@@ -642,6 +630,17 @@ header .header__wrap nav .nav__right .switch_btn .switch_btn__right {
     border-radius: 30px;
     text-align: center;
     gap: 10px;
+}
+.product_box_contents:hover > li > img {
+    transform: scale(1.1);
+}
+.product_box_contents_top {
+    height: 150px;
+}
+.product_box_contents img {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
 }
 .product_box_contents p {
     padding-bottom: 2px;
