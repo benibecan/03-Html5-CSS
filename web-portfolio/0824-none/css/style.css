@@ -1,0 +1,42 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #111;
+}
+body {
+    font-family: Pretendard, 'Noto Sans KR', sans-serif;
+    font-size: 1.6em;
+    font-weight: 400;
+    color: #111;
+}
+html {
+    font-size: 62.5%;
+}
+.image {
+    width: 12rem;
+}
+.item {
+    font-size: 1.6rem;
+}
+/* ▲ 기본셋팅 end ▲ */
+header {
+    width: 100%;
+    height: 110px;
+    background-color: rgba(50, 50, 50, 0.5);
+    transform: initial;
+    position: fixed;
+    transition: transform 0.5s ease-in-out;
+}
+header.scrollDown {
+    transform: translate(0, -120px);
+}
+#blank {
+    height: 1500px;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+            }
+            header {
+                width: 100%;
+                height: 110px;
+                background-color: rgba(50, 50, 50, 0.5);
+                transform: initial;
+                position: fixed;
+                transition: transform 0.5s ease-in-out;
+            }
+            header.scrollDown {
+                transform: translate(0, -120px);
+            }
+            #blank {
+                height: 1500px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Moving Header</h1>
+        </header>
+        <div id="blank"></div>
+        <script>
+            var header = document.querySelector('header');
+            var headerMoving = function (direction) {
+                if (direction === 'up') {
+                    header.className = '';
+                } else if (direction === 'down') {
+                    header.className = 'scrollDown';
+                }
+            };
+            var prevScrollTop = 0;
+            document.addEventListener('scroll', function () {
+                var nextScrollTop = window.pageYOffset || 0; // pageYOffset -> IE 8 이하 빼고 다 됨.
+                if (nextScrollTop > prevScrollTop) {
+                    headerMoving('down');
+                } else if (nextScrollTop < prevScrollTop) {
+                    headerMoving('up');
+                }
+                prevScrollTop = nextScrollTop;
+            });
+        </script>
+    </body>
+</html>
