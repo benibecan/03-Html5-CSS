@@ -1,0 +1,219 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #111;
+}
+body {
+    font-family: Pretendard, 'Noto Sans KR', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #111;
+}
+html {
+    font-size: 62.5%;
+}
+.image {
+    width: 12rem;
+}
+.item {
+    font-size: 1.6rem;
+}
+#blank {
+    height: 1500rem;
+}
+/* ▲ 기본셋팅 ▲ */
+#nav {
+    position: fixed;
+    top: -11rem;
+    width: 100%;
+    transition: 0.5s;
+}
+#contents {
+    position: fixed;
+    width: 100%;
+    transition: 0.5s;
+    z-index: -1;
+}
+/* ▲ 휠반응 헤더2 ▲ */
+header {
+    /* position: relative; */
+    border-bottom: 0.5rem solid rgba(100, 100, 100, 0.1);
+}
+header .menu {
+    width: 120rem;
+    margin: 0 auto;
+}
+header .menu ul {
+    display: flex;
+    height: 11rem;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 0 3.2rem; */
+}
+header .menu > ul > li {
+    width: 80%;
+}
+header .menu > ul > li > ul {
+    display: flex;
+    justify-content: flex-end;
+}
+header .menu > ul > li > ul > li {
+    flex: 1 1 20%;
+    text-align: center;
+    line-height: 11rem;
+}
+header .menu ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    font-weight: 600;
+}
+header .menu ul li a:hover::after,
+header .menu ul li a.active::after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border-bottom: 1rem solid gold;
+    border-left: 0.9rem solid transparent;
+    border-right: 0.9rem solid transparent;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+header .submenu {
+    position: absolute;
+    height: 0;
+    width: 100%;
+    left: 0;
+    top: 11rem;
+    overflow: hidden;
+}
+header:hover .submenu::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1rem;
+    background: gold;
+    z-index: 3;
+}
+header:hover .submenu::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, rgb(247, 247, 247) 50%, #fff 50%);
+    border-bottom: 0.1rem solid rgb(230, 230, 230);
+    box-sizing: border-box;
+}
+header .submenu .lnb {
+    width: 120rem;
+    margin: 0 auto;
+}
+header .submenu .lnb > ul {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    z-index: 3;
+}
+header .submenu .lnb > ul > li {
+    flex: 1 1 20%;
+    line-height: 2.4rem;
+    padding: 3.6rem 2.4rem;
+    border-left: 0.1rem solid rgb(240, 240, 240);
+    border-bottom: 0.1rem solid rgb(230, 230, 230);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+
+header .submenu .lnb > ul > li:first-child {
+    background: rgb(247, 247, 247);
+}
+header .submenu .lnb > ul > li a {
+    font-size: 1.6rem;
+}
+
+header .submenu .lnb > ul > li > ul > li:nth-child(2) {
+    padding-top: 1rem;
+}
+header .submenu .lnb > ul > li:nth-child(1) {
+    border-left: none;
+    padding-left: 0;
+}
+header .submenu .lnb > ul > li:nth-child(2) {
+    font-size: 1.8rem;
+}
+header .submenu .lnb > ul > li a:hover {
+    text-decoration: underline;
+}
+.lnb_button {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-top: 3.2rem;
+}
+.lnb_button > button {
+    position: relative;
+    border-radius: 0.1rem;
+    border: 1px solid;
+    height: 3.6rem;
+    text-align: left;
+    padding-left: 10%;
+    cursor: pointer;
+}
+.lnb_button > button::after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 0.5rem solid;
+    border-top: 0.5rem solid transparent;
+    border-bottom: 0.5rem solid transparent;
+    top: 50%;
+    right: 10%;
+    transform: translate(-50%, -50%);
+}
+.lnb_button > button:first-child {
+    border-color: green;
+    color: green;
+}
+.lnb_button > button:first-child::after {
+    border-left-color: green;
+}
+.lnb_button > button:nth-child(2) {
+    border-color: orange;
+    color: orange;
+}
+.lnb_button > button:nth-child(2)::after {
+    border-left-color: orange;
+}
+.lnb_button > button:nth-child(3) {
+    border-color: rgb(202, 70, 18);
+    color: rgb(202, 70, 18);
+}
+.lnb_button > button:nth-child(3)::after {
+    border-left-color: rgb(202, 70, 18);
+}
+/* ▲ 네비게이션 ▲ */
+main .banner {
+    width: 100%;
+    height: 58rem;
+    background: seagreen;
+}
+
+/* ▲ 배너 ▲ */
