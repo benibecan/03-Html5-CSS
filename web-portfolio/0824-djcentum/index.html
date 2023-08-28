@@ -7,12 +7,13 @@
         <link rel="stylesheet" href="css/webfonts.css" type="text/css" />
         <link rel="stylesheet" href="css/style.css" type="text/css" />
         <title>대전센텀병원</title>
+        <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon" />
     </head>
     <body>
         <header class="nav-down" id="nav">
             <div class="menu">
                 <ul>
-                    <a href="#"><img style="width: 9rem" src="imagse/logo.png" alt="logo" /></a>
+                    <a href="#"><img style="width: 9rem" src="images/logo.png" alt="logo" /></a>
                     <li>
                         <ul>
                             <li><a href="#">센텀소개</a></li>
@@ -322,19 +323,117 @@
             </div>
         </header>
         <main id="contents">
-            <div class="banner"></div>
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">Slide 1</div>
-                    <div class="swiper-slide">Slide 2</div>
-                    <div class="swiper-slide">Slide 3</div>
-                    <div class="swiper-slide">Slide 4</div>
-                    <div class="swiper-slide">Slide 5</div>
+            <section class="first">
+                <div class="banner"><img src="images/banner_1.jpg" alt="banner_1" /></div>
+            </section>
+            <section class="second">
+                <h1 class="title"><span>병원</span><span> 둘러보기</span></h1>
+                <div id="slideShow">
+                    <ul class="slides">
+                        <li><img src="images/slides_1.jpg" alt="slides_1" /></li>
+                        <li><img src="images/slides_2.jpg" alt="slides_2" /></li>
+                        <li><img src="images/slides_3.jpg" alt="slides_3" /></li>
+                        <li><img src="images/slides_4.jpg" alt="slides_4" /></li>
+                        <li><img src="images/slides_5.jpg" alt="slides_5" /></li>
+                        <li><img src="images/slides_6.jpg" alt="slides_6" /></li>
+                    </ul>
+                    <p class="controller">
+                        <span class="prev">&lang;</span>
+                        <span class="next">&rang;</span>
+                    </p>
+                    <div class="page">
+                        <span class="dot" onclick="currentSlide(0)"></span>
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                        <span class="dot" onclick="currentSlide(5)"></span>
+                    </div>
                 </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
+            </section>
+            <section class="third">
+                <div class="photo"><img src="images/banner_1.jpg" alt="" /></div>
+                <div class="txt">
+                    <h2>병원 소식</h2>
+                    <p>
+                        Over the years, many property buyers and sellers have reached out requesting personal
+                        recommendations for brokers. While we strive to create helpful lists for every area in the U.S.,
+                        we know that each transaction is unique in its location, budget, and scope, and that the
+                        Realtors featured in our articles may not always match each person’s needs.
+                    </p>
+                    <p>
+                        For anyone looking for personalized recommendations, we are happy to leverage our agent
+                        directory and database to create a tailored list specifically for them.
+                    </p>
+                    <button class="custom-btn btn-3"><span>자세히 보기</span></button>
+                </div>
+            </section>
+            <section class="fourth">
+                <div class="txt">
+                    <h2>병원 소식</h2>
+                    <p>
+                        Over the years, many property buyers and sellers have reached out requesting personal
+                        recommendations for brokers. While we strive to create helpful lists for every area in the U.S.,
+                        we know that each transaction is unique in its location, budget, and scope, and that the
+                        Realtors featured in our articles may not always match each person’s needs.
+                    </p>
+                    <p>
+                        For anyone looking for personalized recommendations, we are happy to leverage our agent
+                        directory and database to create a tailored list specifically for them.
+                    </p>
+                    <div>
+                        <button class="custom-btn btn-3"><span>자세히 보기</span></button>
+                        <button class="custom-btn btn-3 smallbtn"><span>자세히 보기</span></button>
+                    </div>
+                </div>
+                <div class="photo"><img src="images/banner_1.jpg" alt="" /></div>
+            </section>
+            <section class="fifth">
+                <h1 class="title"><span>전문</span><span> 의료진 소개</span></h1>
+                <div class="frame">
+                    <div class="square__wrap">
+                        <div class="square"><img src="images/doctor_1.png" alt="doctor_1" /></div>
+                        <p>박병철 외과진료의</p>
+                    </div>
+                    <div class="square__wrap">
+                        <div class="square"><img src="images/doctor_2.png" alt="doctor_1" /></div>
+                        <p>박병철 외과진료의</p>
+                    </div>
+                    <div class="square__wrap">
+                        <div class="square"><img src="images/doctor_3.png" alt="doctor_1" /></div>
+                        <p>박병철 외과진료의</p>
+                    </div>
+                    <div class="square__wrap">
+                        <div class="square"><img src="images/doctor_4.png" alt="doctor_1" /></div>
+                        <p>박병철 외과진료의</p>
+                    </div>
+                    <div class="square__wrap">
+                        <div class="square"><img src="images/doctor_5.png" alt="doctor_1" /></div>
+                        <p>박병철 외과진료의</p>
+                    </div>
+                    <div class="square__wrap">
+                        <div class="square"><img src="images/doctor_6.png" alt="doctor_1" /></div>
+                        <p>박병철 외과진료의</p>
+                    </div>
+                    <div class="square__wrap">
+                        <div class="square"><img src="images/doctor_7.png" alt="doctor_1" /></div>
+                        <p>박병철 외과진료의</p>
+                    </div>
+                    <div class="square__wrap">
+                        <div class="square"><img src="images/doctor_8.png" alt="doctor_1" /></div>
+                        <p>박병철 외과진료의</p>
+                    </div>
+                </div>
+            </section>
+            <section class="sixth">
+                <div class="add">
+                    <img src="images/add_1.jpg" alt="add_1" />
+                </div>
+            </section>
+            <section class="seventh">
+                <h1>Customer Testimonials</h1>
+                <div></div>
+            </section>
         </main>
         <div id="blank"></div>
         <script src="js/script.js"></script>
