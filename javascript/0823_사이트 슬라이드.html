@@ -30,6 +30,9 @@
             }
 
             .swiper-slide {
+                width: 50%;
+                height: 50%;
+                border-radius: 20px;
                 text-align: center;
                 font-size: 18px;
                 background: #ccc;
@@ -80,7 +83,7 @@
         <script>
             var swiper = new Swiper('.mySwiper', {
                 mousewheel: true,
-                slidesPerView: 1, //한번에 보이는 slide 개수
+                slidesPerView: 2, //한번에 보이는 slide 개수
                 spaceBetween: 30,
                 loop: true, //반복
                 mousewheel: true, //마우스 휠해서 앞뒤로 넘김

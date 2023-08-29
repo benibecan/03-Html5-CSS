@@ -194,6 +194,13 @@ header .submenu .lnb > ul > li a:hover {
 .lnb_button > button:first-child::after {
     border-left-color: green;
 }
+.lnb_button > button:first-child:hover {
+    background: green;
+    color: #fff;
+}
+.lnb_button > button:first-child:hover::after {
+    border-left-color: #fff;
+}
 .lnb_button > button:nth-child(2) {
     border-color: orange;
     color: orange;
@@ -201,12 +208,26 @@ header .submenu .lnb > ul > li a:hover {
 .lnb_button > button:nth-child(2)::after {
     border-left-color: orange;
 }
+.lnb_button > button:hover:nth-child(2) {
+    background: orange;
+    color: #fff;
+}
+.lnb_button > button:nth-child(2):hover::after {
+    border-left-color: #fff;
+}
 .lnb_button > button:nth-child(3) {
     border-color: rgb(202, 70, 18);
     color: rgb(202, 70, 18);
 }
 .lnb_button > button:nth-child(3)::after {
     border-left-color: rgb(202, 70, 18);
+}
+.lnb_button > button:nth-child(3):hover {
+    background: rgb(202, 70, 18);
+    color: #fff;
+}
+.lnb_button > button:nth-child(3):hover::after {
+    border-left-color: #fff;
 }
 /* ▲ 네비게이션 ▲ */
 main .banner {
@@ -344,6 +365,9 @@ button {
     margin: 2rem;
     outline: none;
 }
+button > span {
+    font-weight: 500;
+}
 .custom-btn {
     width: 25rem;
     height: 6rem;
@@ -399,7 +423,7 @@ button {
     content: '';
     right: 0;
     bottom: 0;
-    background: green;
+    background: gold;
     transition: all 0.3s ease;
 }
 .btn-3 span:before {
@@ -421,21 +445,22 @@ button {
 }
 /* btn3 */
 section.fifth {
-    width: 120rem;
-    margin: 6.4rem auto;
+    width: 100%;
+    padding: 6.4rem 0;
+    background: #eee;
 }
 section.fifth .frame {
-    width: 100%;
+    width: 120rem;
     height: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 3.2rem;
-    margin-top: 3.2rem;
+    padding-top: 3.2rem;
+    margin: 0 auto;
 }
 section.fifth .frame .square__wrap {
     flex: 1 1 20%;
     width: 100%;
-
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
@@ -444,7 +469,8 @@ section.fifth .frame .square__wrap .square {
     position: relative;
     width: 100%;
     height: 27.6rem;
-    background: rgba(100, 100, 100, 0.1);
+    /* background: rgba(100, 100, 100, 0.1); */
+    background: rgb(149, 215, 243);
     overflow: hidden;
     border-radius: 0.5rem;
 }
@@ -465,7 +491,7 @@ section.fifth .frame .square__wrap p {
     transition: 0.5s;
 }
 .frame > div.square__wrap:hover > div.square > img {
-    filter: drop-shadow(0.1rem 0.3rem 2.3rem rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(0.1rem 0.3rem 2.3rem rgba(0, 0, 0, 0.3));
 }
 /* section fifth */
 section.sixth {
@@ -474,7 +500,7 @@ section.sixth {
 }
 section.sixth .add {
     height: 30rem;
-    margin: 3.2rem auto;
+    margin: 6.4rem auto;
 }
 section.sixth .add img {
     width: 100%;
@@ -482,3 +508,98 @@ section.sixth .add img {
     object-fit: cover;
 }
 /* section sixth */
+section.seventh {
+    position: relative;
+    width: 100%;
+}
+section.seventh > .wrap {
+    width: 120rem;
+    margin: 0 auto;
+    padding: 6.4rem 0;
+}
+section.seventh::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 26rem;
+    background: navy;
+    z-index: -1;
+}
+section.seventh h1 {
+    font-size: 4.2rem;
+    color: #fff;
+    padding-bottom: 3.2rem;
+}
+.swiper {
+    width: 120rem;
+    height: 50rem;
+}
+.swiper-slide {
+    width: 55.2rem;
+    height: 40rem;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    background: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* section seventh */
+footer {
+    width: 100%;
+    background: #4a4a4a;
+}
+footer .container {
+    width: 120rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+footer .logo {
+}
+footer .logo img {
+    object-fit: contain;
+    object-position: center;
+}
+footer .wrap {
+    height: 25rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding-left: 3.2rem;
+}
+footer a,
+footer li {
+    color: #fff;
+}
+.footmenu_l {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3rem;
+}
+.footmenu_l li a strong {
+}
+.footmenu_l > li > a::after {
+    content: ' |';
+}
+.footmenu_l > li > a:last-of-type:after {
+    content: '';
+}
+.footmenu_r li {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.6rem;
+}

@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="css/style.css" type="text/css" />
         <title>대전센텀병원</title>
         <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="css/swaper-bundle.css" />
     </head>
     <body>
         <header class="nav-down" id="nav">
@@ -352,18 +353,19 @@
                 </div>
             </section>
             <section class="third">
-                <div class="photo"><img src="images/banner_1.jpg" alt="" /></div>
+                <div class="photo"><img src="images/photo_3.jpg" alt="" /></div>
                 <div class="txt">
                     <h2>병원 소식</h2>
                     <p>
-                        Over the years, many property buyers and sellers have reached out requesting personal
-                        recommendations for brokers. While we strive to create helpful lists for every area in the U.S.,
-                        we know that each transaction is unique in its location, budget, and scope, and that the
-                        Realtors featured in our articles may not always match each person’s needs.
+                        대전센텀병원의 미션은 "100세까지 건강한 척추와 관절"을 위한 최선의 노력과 정성으로 인류의 삶의
+                        질 향상에 기여하는 것 입니다. 다음 비전으로 기본과 원칙에 충실하며 환자 중심의 병원으로
+                        지역사회와 함께 성장하는 것 입니다. 부모를 대하듯 고객을 섬기고 환자와 보호자가 믿을 수 있는
+                        신뢰를 주고 어르신의 척추, 관절을 사랑하는 병원이 되는 것을 핵심가치로 두고 있습니다.
                     </p>
                     <p>
-                        For anyone looking for personalized recommendations, we are happy to leverage our agent
-                        directory and database to create a tailored list specifically for them.
+                        환자와 고객을 대하는 서비스마인드 행동강령은 열정적으로 최선을 다하며 끊임없이 혁신적인 사고를
+                        추구하고 환자와 직원 개인의 가치를 존중하며 모두에게 감동을 주고 서로 원활하게 소통하는 것
+                        입니다.
                     </p>
                     <button class="custom-btn btn-3"><span>자세히 보기</span></button>
                 </div>
@@ -427,15 +429,73 @@
             </section>
             <section class="sixth">
                 <div class="add">
-                    <img src="images/add_1.jpg" alt="add_1" />
+                    <a href="#"><img src="images/add_1.jpg" alt="add_1" /></a>
                 </div>
             </section>
             <section class="seventh">
-                <h1>Customer Testimonials</h1>
-                <div></div>
+                <div class="wrap">
+                    <h1>Customer Testimonials</h1>
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">Slide 1</div>
+                            <div class="swiper-slide">Slide 2</div>
+                            <div class="swiper-slide">Slide 3</div>
+                            <div class="swiper-slide">Slide 4</div>
+                            <div class="swiper-slide">Slide 5</div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
+        <footer>
+            <div class="container">
+                <div class="logo"><img src="images/logo.png" alt="" /></div>
+                <div class="wrap">
+                    <ul class="footmenu_l">
+                        <li>
+                            <a href="#">환자권리장전</a>
+                            <a href="#"><strong>개인정보처리방침</strong></a>
+                            <a href="#">이용약관</a>
+                            <a href="#">의료정보운영방침</a>
+                        </li>
+                        <li>
+                            <p>대전광역시 서구 청사로 234 (둔산동 913번지)</p>
+                            <p>TEL 042-481-0100 FAX | 042-481-0105</p>
+                            <p>Copyright (c) centumhospital. All right reserved.</p>
+                        </li>
+                    </ul>
+                    <ul class="footmenu_r">
+                        <li>
+                            <a href="#"><img src="images/bigicon_blog_36.png" alt="blog" /></a>
+                            <a href="#"><img src="images/bigicon_facebook_36.png" alt="blog" /></a>
+                            <a href="#"><img src="images/bigicon_instagram_36.png" alt="instargram" /></a>
+                            <a href="#"><img src="images/bigicon_blog_36.png" alt="blog" /></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
         <div id="blank"></div>
         <script src="js/script.js"></script>
+        <script src="js/swiper-bundle.js"></script>
+        <script>
+            var swiper = new Swiper('.mySwiper', {
+                // mousewheel: true,
+                slidesPerView: 2, //한번에 보이는 slide 개수
+                spaceBetween: 30,
+                loop: true, //반복
+
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+
+                autoplay: {
+                    delay: 3000, //넘어가는 속도
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true, //마우스 올리면 움직임 멈춤
+                },
+            });
+        </script>
     </body>
 </html>
