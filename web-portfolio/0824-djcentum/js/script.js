@@ -1,3 +1,4 @@
+document.getElementById('nav').style.top = '0';
 window.onscroll = function () {
     scrht = document.documentElement.scrollTop;
     if (scrht < 11) {
@@ -71,7 +72,7 @@ let slideCount = slideImg.length;
 dots[0].className += ' act';
 let prev = document.querySelector('.prev'); //이전 버튼
 let next = document.querySelector('.next'); //다음 버튼
-let slideWidth = 100; //슬라이드이미지 넓이
+let slideWidth = 120; //슬라이드이미지 넓이
 makeClone(); // 처음이미지와 마지막 이미지 복사 함수
 initfunction(); //슬라이드 넓이와 위치값 초기화 함수
 function makeClone() {

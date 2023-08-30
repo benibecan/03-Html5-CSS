@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script>
+            $(function () {
+                //$('ul').append('<li class="html">html</li>');
+                //append==ul 자식요소 뒤에 추가
+
+                //$('ul').prepend('<li class="html">html</li>');
+                //prepend==ul 자식요소 앞에 추가
+
+                //$('<li class="html">html</li>').appendTo('ul');
+                //appendTo==ul 자식요소 뒤에 추가
+
+                //$('<li class="html">html</li>').prependTo('ul');
+                //prependTo==ul 자식요소 앞에 추가
+
+                $('ul').clone().prependTo('body');
+                //clone==ul복제 prependTo==body 자식요소(ul) 앞에 추가
+
+                //$('ul').clone().appendTo('body');
+                //clone==ul복제 appendTo==body 자식요소(ul) 뒤에 추가
+
+                //$('ul:first').wrap('<div class="wrap"></div>');
+                //wrap==ul:first를 wrap("")한다.
+
+                //$('ul li').wrapInner('<div class="wrap"></div>');
+                //wrapInner==ul li 안에 wrapinner("")
+
+                $('ul').wrapAll('<div class="wrap"></div>');
+                //wrapAll==ul을 통으로 묶음 wrapAll ("")
+
+                $('.html').after('<li class="page">page</li>');
+                //after==
+
+                $('.html').before('<li class="page">page</li>');
+                //after==
+
+                $('<li class="css3">css3</li>').insertAfter('.css');
+                //insertAfter==
+
+                $('<li class="css3">css3</li>').insertBefore('.css');
+                //insertBefore==
+
+                $('.page').replaceWith('<li id="con">변경</li>');
+                //replaceWith==.page를 ("") 대체
+
+                let txt = $('.html').text();
+                console.log(txt);
+                //let txt2 = txt.replace('html', '페이지');
+                //let txt3 = txt.slice(start, end);
+                //let txt3 = txt.substr(start, lengh);
+                //let txt3 = txt.substring(start, end);
+                let txt3 = txt.slice(0, 2); //ht추출
+                console.log(txt3);
+                let txt4 = txt.substr(0, 2); //ht추출
+                console.log(txt4);
+                let txt5 = txt.slice(-2); //ml추출
+                console.log(txt5);
+                let txt6 = txt.substring(0, 2); //ht추출
+                console.log(txt6);
+                //
+            });
+        </script>
+    </head>
+    <body>
+        <ul>
+            <li class="html">html</li>
+            <li class="css">css</li>
+            <li class="css3">css3</li>
+            <li class="javascript">javascript</li>
+            <li class="jquery">jquery</li>
+        </ul>
+    </body>
+</html>
