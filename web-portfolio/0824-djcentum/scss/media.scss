@@ -1,0 +1,105 @@
+// @charset "utf-8";
+@import './mixin';
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+// 데스크탑
+@include desktop {
+    background: white;
+    header {
+        width: 80%;
+    }
+
+    .section {
+    }
+
+    .footer {
+    }
+}
+
+// 노트북에서 데스크탑
+@include desktopToLaptop {
+    background: yellow;
+
+    .visual {
+    }
+
+    .section {
+    }
+
+    .footer {
+    }
+}
+
+// 노트북
+@include laptop {
+    background: green;
+
+    .visual {
+    }
+
+    .section {
+    }
+
+    .footer {
+    }
+}
+
+// 태블릿에서 노트북
+@include laptopToTablet {
+    background: tomato;
+    .visual {
+    }
+
+    .section {
+    }
+
+    .footer {
+    }
+}
+
+// 태블릿
+@include tablet {
+    background: skyblue;
+
+    .visual {
+    }
+
+    .section {
+    }
+
+    .footer {
+    }
+}
+
+// 모바일에서 태블릿
+@include tabletToMobile {
+    background: violet;
+
+    .visual {
+    }
+
+    .section {
+    }
+
+    .footer {
+    }
+}
+
+// 모바일
+@include mobile {
+    background: orangered;
+
+    .visual {
+    }
+
+    .section {
+    }
+
+    .footer {
+    }
+}

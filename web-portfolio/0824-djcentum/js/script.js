@@ -15,7 +15,7 @@ let sub = document.querySelectorAll('.lnb');
 let gnb = document.querySelectorAll('.menu ul li a');
 let Lnb = document.querySelectorAll('.lnb');
 let ht = Lnb[1].offsetHeight;
-console.log('rem : ' + ht);
+console.log('ht : ' + ht);
 // for (let i = 0; i < 4; i++) {
 //   subMenu[i].style.opacity = "0";
 // }
@@ -27,20 +27,20 @@ gnb.forEach(function (item, keys) {
         }
         let otherItem = Array.from(subMenu).filter(others);
         otherItem.forEach(function (item) {
-            item.style.height = '0';
+            item.style.height = '0px';
             item.style.opacity = '0';
         });
         sub.forEach(function () {
             let subht = sub[j].offsetHeight;
             console.log('subht : ' + subht);
-            subMenu[j].style.height = subht + 'rem';
+            subMenu[j].style.height = subht + 'px';
             subMenu[j].style.opacity = '1';
         });
     });
 
     item.addEventListener('mouseleave', function () {
         for (let i = 0; i <= 4; i++) {
-            subMenu[i].style.height = 0 + 'rem';
+            subMenu[i].style.height = 0 + 'px';
         }
     });
 });
@@ -50,14 +50,14 @@ subMenu.forEach(function (item, keys) {
         sub.forEach(function () {
             let subht = sub[j].offsetHeight;
             console.log('subht : ' + subht);
-            subMenu[j].style.height = subht + 'rem';
+            subMenu[j].style.height = subht + 'px';
             subMenu[j].style.opacity = '1';
         });
         gnb[j].classList.add('on', 'active');
     });
     item.addEventListener('mouseleave', function (e) {
         for (let i = 0; i <= 4; i++) {
-            subMenu[i].style.height = 0 + 'rem';
+            subMenu[i].style.height = 0 + 'px';
         }
         gnb[keys].classList.remove('on', 'active');
     });

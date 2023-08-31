@@ -1,4 +1,9 @@
-@charset "UTF-8";
+@charset "utf-8";
+
+@font-face {
+    font-family: Pretendard;
+    src: url(webfonts.css) format('woff');
+}
 * {
     margin: 0;
     padding: 0;
@@ -16,6 +21,7 @@ body {
     font-size: 1.6rem;
     font-weight: 400;
     color: #111;
+    overflow-x: hidden;
 }
 html {
     font-size: 62.5%;
@@ -27,6 +33,13 @@ html {
     font-size: 1.6rem;
 }
 /* ▲ 기본셋팅 ▲ */
+.pop {
+    position: fixed;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    z-index: 10;
+}
+/* ▲ pop ▲ */
 #nav {
     position: fixed;
     top: -11rem;
@@ -34,7 +47,6 @@ html {
     transition: 0.5s;
 }
 #contents {
-    /* position: fixed; */
     width: 100%;
     transition: 0.5s;
     z-index: -1;
@@ -47,7 +59,7 @@ header {
     z-index: 1;
 }
 header .menu {
-    width: 120rem;
+    width: 100%;
     margin: 0 auto;
 }
 header .menu ul {
@@ -55,7 +67,6 @@ header .menu ul {
     height: 11rem;
     justify-content: space-between;
     align-items: center;
-    /* padding: 0 3.2rem; */
 }
 header .menu > ul > li {
     width: 80%;
@@ -95,7 +106,7 @@ header .submenu {
     height: 0;
     width: 100%;
     left: 0;
-    /* top: 11rem; */
+    top: 11rem;
     overflow: hidden;
 }
 header:hover .submenu::after {
@@ -113,13 +124,13 @@ header:hover .submenu::before {
     position: absolute;
     z-index: 1;
     width: 100%;
-    height: 10%;
+    height: 100%;
     background-image: linear-gradient(to right, rgb(247, 247, 247) 50%, #fff 50%);
     border-bottom: 0.1rem solid rgb(230, 230, 230);
     box-sizing: border-box;
 }
 header .submenu .lnb {
-    width: 120rem;
+    width: 100%;
     margin: 0 auto;
 }
 header .submenu .lnb > ul {
@@ -153,7 +164,7 @@ header .submenu .lnb > ul > li > ul > li:nth-child(2) {
 }
 header .submenu .lnb > ul > li:nth-child(1) {
     border-left: none;
-    padding-left: 0;
+    padding-left: 3.2rem;
 }
 header .submenu .lnb > ul > li:nth-child(2) {
     font-size: 1.8rem;
@@ -266,6 +277,7 @@ h2 {
 }
 /* ▲ h제목 태그 ▲ */
 section.second {
+    width: 100%;
     margin-top: 6.4rem;
 }
 /* ▲ section  ▲ */
@@ -275,6 +287,7 @@ section.second {
     position: relative;
     overflow: hidden;
     margin: 3.2rem auto;
+    border-radius: 0.5rem;
 }
 #slideShow h1 {
     color: #111;
@@ -348,17 +361,23 @@ section.second {
 /* ▲  슬라이드 ▲ */
 .third,
 .fourth {
+    width: 100%;
+}
+.third > .wrap,
+.fourth > .wrap {
     width: 120rem;
     height: 36.3rem;
     display: flex;
     margin: 6.4rem auto;
     gap: 3.2rem;
 }
+
 .photo {
     width: 50%;
     height: 100%;
     background-size: cover;
     overflow: hidden;
+    border-radius: 0.5rem;
 }
 .photo:hover img {
     left: 0;
@@ -421,7 +440,7 @@ button > span {
     content: '';
     left: 0;
     top: 0;
-    background: green;
+    background: rgb(34, 160, 209);
     transition: all 0.3s ease;
 }
 .btn-3:before {
@@ -444,7 +463,7 @@ button > span {
     content: '';
     right: 0;
     bottom: 0;
-    background: gold;
+    background: rgb(34, 160, 209);
     transition: all 0.3s ease;
 }
 .btn-3 span:before {
@@ -491,7 +510,7 @@ section.fifth .frame .square__wrap .square {
     width: 100%;
     height: 27.6rem;
     /* background: rgba(100, 100, 100, 0.1); */
-    background: rgb(149, 215, 243);
+    background: #b2def0;
     overflow: hidden;
     border-radius: 0.5rem;
 }
@@ -519,15 +538,48 @@ section.sixth {
     width: 120rem;
     margin: 0 auto;
 }
-section.sixth .add {
+section.sixth .hover {
     height: 30rem;
     margin: 6.4rem auto;
+    padding: 3.2rem;
 }
-section.sixth .add img {
+section.sixth .hover img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+.hover figure {
+    position: relative;
+}
+.hover figure::before {
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+    -webkit-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+}
+.hover figure:hover::before {
+    -webkit-animation: shine 0.75s;
+    animation: shine 0.75s;
+}
+@-webkit-keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
+@keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
+
 /* section sixth */
 section.seventh {
     position: relative;
@@ -544,7 +596,7 @@ section.seventh::before {
     content: '';
     width: 100%;
     height: 26rem;
-    background: navy;
+    background: rgb(34, 160, 209);
     z-index: -1;
 }
 section.seventh h1 {
@@ -613,6 +665,7 @@ footer .container {
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
+    padding: 3.2rem;
 }
 footer .logo img {
     object-fit: contain;
@@ -650,4 +703,53 @@ footer li {
     align-items: flex-start;
     gap: 0.6rem;
 }
+.footmenu_r li a {
+    display: block;
+    width: 100%;
+}
 /* footer  */
+
+@media screen and (max-width: 1599px) {
+    header {
+        width: 100%;
+        height: 11rem;
+    }
+    #content {
+        width: 100%;
+    }
+    footer {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    header {
+        width: 100%;
+        height: 11rem;
+    }
+    #content {
+        width: 100%;
+    }
+    footer {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 1023px) {
+    header {
+        width: 100%;
+        height: 11rem;
+    }
+
+    #content {
+        width: 100%;
+    }
+    footer {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 779px) {
+}
+@media screen and (max-width: 639px) {
+}
+@media screen and (max-width: 479px) {
+}
