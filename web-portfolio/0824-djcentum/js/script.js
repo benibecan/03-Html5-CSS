@@ -72,7 +72,7 @@ let slideCount = slideImg.length;
 dots[0].className += ' act';
 let prev = document.querySelector('.prev'); //이전 버튼
 let next = document.querySelector('.next'); //다음 버튼
-let slideWidth = 120; //슬라이드이미지 넓이
+let slideWidth = innerWidth; //슬라이드이미지 넓이
 makeClone(); // 처음이미지와 마지막 이미지 복사 함수
 initfunction(); //슬라이드 넓이와 위치값 초기화 함수
 function makeClone() {
@@ -82,15 +82,15 @@ function makeClone() {
     slides.insertBefore(cloneSlide_last, slides.firstElementChild); //선택한 요소를 첫번째로?.?..
 }
 function initfunction() {
-    slides.style.width = slideWidth * (slideCount + 2) + 'rem';
-    slides.style.left = -slideWidth + 'rem';
+    slides.style.width = slideWidth * (slideCount + 2) + 'px';
+    slides.style.left = -slideWidth + 'px';
 }
 function showSlide(n) {
     for (i = 0; i < slideImg.length; i++) {
         dots[i].className = dots[i].className.replace(' act', '');
     }
     dots[n].className += ' act';
-    slides.style.left = -(n + 1) * slideWidth + 'rem';
+    slides.style.left = -(n + 1) * slideWidth + 'px';
     slides.style.transition = '0.5s';
 }
 function currentSlide(n) {
@@ -99,14 +99,14 @@ function currentSlide(n) {
 next.onclick = function () {
     if (currentIdx <= slideCount - 1) {
         //슬라이드이동
-        slides.style.left = -(currentIdx + 2) * slideWidth + 'rem';
+        slides.style.left = -(currentIdx + 2) * slideWidth + 'px';
         slides.style.transition = '0.5s';
     }
     if (currentIdx === slideCount - 1) {
         //마지막 슬라이드 일때
         setTimeout(function () {
             //0.5초동안 복사한 첫번째 이미지에서, 진짜 첫번째 위치로 이동
-            slides.style.left = -slideWidth + 'rem';
+            slides.style.left = -slideWidth + 'px';
             slides.style.transition = '0s';
         }, 500);
         currentIdx = -1;

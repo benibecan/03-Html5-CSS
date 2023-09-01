@@ -342,27 +342,17 @@
             </section>
             <section class="second">
                 <h1 class="title"><span>병원</span><span> 둘러보기</span></h1>
-                <div id="slideShow">
-                    <ul class="slides">
-                        <li><img src="images/slides_1.jpg" alt="slides_1" /></li>
-                        <li><img src="images/slides_2.jpg" alt="slides_2" /></li>
-                        <li><img src="images/slides_3.jpg" alt="slides_3" /></li>
-                        <li><img src="images/slides_4.jpg" alt="slides_4" /></li>
-                        <li><img src="images/slides_5.jpg" alt="slides_5" /></li>
-                        <li><img src="images/slides_6.jpg" alt="slides_6" /></li>
-                    </ul>
-                    <p class="controller">
-                        <span class="prev">&lang;</span>
-                        <span class="next">&rang;</span>
-                    </p>
-                    <div class="page">
-                        <span class="dot" onclick="currentSlide(0)"></span>
-                        <span class="dot" onclick="currentSlide(1)"></span>
-                        <span class="dot" onclick="currentSlide(2)"></span>
-                        <span class="dot" onclick="currentSlide(3)"></span>
-                        <span class="dot" onclick="currentSlide(4)"></span>
-                        <span class="dot" onclick="currentSlide(5)"></span>
+                <div class="swiper meSwiper">
+                    <div class="swiper wrapper">
+                        <div class="swiperslide"><img src="images/slides_1.jpg" alt="" /></div>
+                        <div class="swiperslide"><img src="images/slides_2.jpg" alt="" /></div>
+                        <div class="swiperslide"><img src="images/slides_3.jpg" alt="" /></div>
+                        <div class="swiperslide"><img src="images/slides_4.jpg" alt="" /></div>
+                        <div class="swiperslide"><img src="images/slides_5.jpg" alt="" /></div>
                     </div>
+                    <div class="swiperpagination"></div>
+                    <div class="swiperbutton-next"></div>
+                    <div class="swiperbutton-prev"></div>
                 </div>
             </section>
             <section class="third">
@@ -399,7 +389,6 @@
                         </p>
                         <div>
                             <button class="custom-btn btn-3"><span>더 자세히 보기</span></button>
-                            <button class="custom-btn btn-3 smallbtn"><span>문의하기</span></button>
                         </div>
                     </div>
                     <div class="photo"><img src="images/banner_1.jpg" alt="" /></div>
@@ -450,83 +439,86 @@
                 </div>
             </section>
             <section class="seventh">
-                <div class="wrap">
-                    <h1>Customer Testimonials</h1>
-                </div>
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div>
-                                <div class="person"><img src="images/person_1.jpg" alt="" /></div>
+                <div class="container">
+                    <div class="wrap">
+                        <h1>Customer Testimonials</h1>
+                    </div>
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
                                 <div>
-                                    <h3>Ehfh***</h3>
-                                    <p>척추측만증</p>
+                                    <div class="person"><img src="images/person_1.jpg" alt="" /></div>
+                                    <div>
+                                        <h3>Ehfh***</h3>
+                                        <p>척추측만증</p>
+                                    </div>
                                 </div>
+                                <p>
+                                    처음에는 걱정이 많았는데 병원분들이 다 친절하고 시설도 좋아서 수술을 결정했어요.
+                                    입원해서도 계속 괜찮은지 체크하시고 불편한 건 없는지 물어봐주셔서 안심됐어요. 수술
+                                    후에 좀 힘들었는데 재활치료 도와주시는 선생님이 꾸준히 같이 하면 된다고 하셔서
+                                    어려움 없이 했던 거 같아요. 지금은 뛰어다닐만큼 멀쩡하고 건강해요! ㅎㅎ
+                                </p>
                             </div>
-                            <p>
-                                처음에는 걱정이 많았는데 병원분들이 다 친절하고 시설도 좋아서 수술을 결정했어요.
-                                입원해서도 계속 괜찮은지 체크하시고 불편한 건 없는지 물어봐주셔서 안심됐어요. 수술 후에
-                                좀 힘들었는데 재활치료 도와주시는 선생님이 꾸준히 같이 하면 된다고 하셔서 어려움 없이
-                                했던 거 같아요. 지금은 뛰어다닐만큼 멀쩡하고 건강해요! ㅎㅎ
-                            </p>
-                        </div>
-                        <div class="swiper-slide">
-                            <div>
-                                <div class="person"><img src="images/person_2.jpg" alt="" /></div>
+                            <div class="swiper-slide">
                                 <div>
-                                    <h3>eos8***</h3>
-                                    <p>어깨충돌 증후군</p>
+                                    <div class="person"><img src="images/person_2.jpg" alt="" /></div>
+                                    <div>
+                                        <h3>eos8***</h3>
+                                        <p>어깨충돌 증후군</p>
+                                    </div>
                                 </div>
+                                <p>
+                                    두 달 전 부터 팔만 들면 어깨에서 뚝뚝 소리가 나서 걱정도 되고 밤에 종종 아프기도
+                                    해서 정형외과 검색해서 찾아갔는데 대전센텀병원을 방문하게 됐어요. 선생님이 어깨충돌
+                                    증후군이 초기라서 괜찮아 보이지만 시간이 지나면 수술을 해야 된다며 일찍 잘
+                                    찾아왔다고 하셔서 얼마나 마음이 놓였는지 몰라요. 진짜 진료 잘해주시고 어디가 아픈지
+                                    딱 짚어주셔서 믿음이 갑니다.
+                                </p>
                             </div>
-                            <p>
-                                두 달 전 부터 팔만 들면 어깨에서 뚝뚝 소리가 나서 걱정도 되고 밤에 종종 아프기도 해서
-                                정형외과 검색해서 찾아갔는데 대전센텀병원을 방문하게 됐어요. 선생님이 어깨충돌 증후군이
-                                초기라서 괜찮아 보이지만 시간이 지나면 수술을 해야 된다며 일찍 잘 찾아왔다고 하셔서
-                                얼마나 마음이 놓였는지 몰라요. 진짜 진료 잘해주시고 어디가 아픈지 딱 짚어주셔서 믿음이
-                                갑니다.
-                            </p>
-                        </div>
-                        <div class="swiper-slide">
-                            <div>
-                                <div class="person"><img src="images/person_3.jpg" alt="" /></div>
+                            <div class="swiper-slide">
                                 <div>
-                                    <h3>qwer***</h3>
-                                    <p>심장초음파검사 / 심전도</p>
+                                    <div class="person"><img src="images/person_3.jpg" alt="" /></div>
+                                    <div>
+                                        <h3>qwer***</h3>
+                                        <p>심장초음파검사 / 심전도</p>
+                                    </div>
                                 </div>
+                                <p>
+                                    약한 부정맥이 있어서 심전도랑 초음파를 받으러 갔습니다. 친절하고 빠르게 검사
+                                    도와주셔서 좋았습니다. 시설도 깨끗하고 회사랑 가까워서 한번씩 필요할 때 가기 좋을 것
+                                    같네요.
+                                </p>
                             </div>
-                            <p>
-                                약한 부정맥이 있어서 심전도랑 초음파를 받으러 갔습니다. 친절하고 빠르게 검사 도와주셔서
-                                좋았습니다. 시설도 깨끗하고 회사랑 가까워서 한번씩 필요할 때 가기 좋을 것 같네요.
-                            </p>
-                        </div>
-                        <div class="swiper-slide">
-                            <div>
-                                <div class="person"><img src="images/person_4.jpg" alt="" /></div>
+                            <div class="swiper-slide">
                                 <div>
-                                    <h3>phil***</h3>
-                                    <p>일반재활치료</p>
+                                    <div class="person"><img src="images/person_4.jpg" alt="" /></div>
+                                    <div>
+                                        <h3>phil***</h3>
+                                        <p>일반재활치료</p>
+                                    </div>
                                 </div>
+                                <p>
+                                    3년 전에 교통사고 난 뒤로 발목이 안 좋아서 비오는 날 전이나 후에 한번 씩 갑니다.
+                                    다녀오면 발목 시큰거림도 좀 괜찮아지고 걷거나 뛸때도 무리가 좀 덜 오는거 같고
+                                    괜찮습니다.
+                                </p>
                             </div>
-                            <p>
-                                3년 전에 교통사고 난 뒤로 발목이 안 좋아서 비오는 날 전이나 후에 한번 씩 갑니다.
-                                다녀오면 발목 시큰거림도 좀 괜찮아지고 걷거나 뛸때도 무리가 좀 덜 오는거 같고
-                                괜찮습니다.
-                            </p>
-                        </div>
-                        <div class="swiper-slide">
-                            <div>
-                                <div class="person"><img src="images/person_5.jpg" alt="" /></div>
+                            <div class="swiper-slide">
                                 <div>
-                                    <h3>he10***</h3>
-                                    <p>수부클리닉 / 방아쇠수지/p></p>
+                                    <div class="person"><img src="images/person_5.jpg" alt="" /></div>
+                                    <div>
+                                        <h3>he10***</h3>
+                                        <p>수부클리닉 / 방아쇠수지/p></p>
+                                    </div>
                                 </div>
+                                <p>
+                                    어머니가 손가락에 힘이 잘 안들어간다고 하셔서 모시고 갔습니다. 의사선생님이과 상담한
+                                    후에 수술하고 입원까지 진행했는데 간병인을 따로 할 필요가 없어서 좋았습니다.
+                                    어머니께서 큰 불편함 없이 퇴원하셨고 지금은 꾸준히 재활받으면서 나아지고 있습니다.
+                                    어르신들께서 가시면 좋을 병원같습니다.
+                                </p>
                             </div>
-                            <p>
-                                어머니가 손가락에 힘이 잘 안들어간다고 하셔서 모시고 갔습니다. 의사선생님이과 상담한
-                                후에 수술하고 입원까지 진행했는데 간병인을 따로 할 필요가 없어서 좋았습니다. 어머니께서
-                                큰 불편함 없이 퇴원하셨고 지금은 꾸준히 재활받으면서 나아지고 있습니다. 어르신들께서
-                                가시면 좋을 병원같습니다.
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -578,6 +570,30 @@
                     delay: 3000, //넘어가는 속도
                     disableOnInteraction: false,
                     pauseOnMouseEnter: true, //마우스 올리면 움직임 멈춤
+                },
+            });
+            var swiper = new Swiper('.meSwiper', {
+                mousewheel: true,
+                slidesPerView: 1, //한번에 보이는 slide 개수
+                spaceBetween: 30,
+                loop: true, //반복
+                mousewheel: true, //마우스 휠해서 앞뒤로 넘김
+
+                pagination: {
+                    el: '.swiperpagination',
+                    clickable: true,
+                },
+
+                autoplay: {
+                    delay: 2500, //넘어가는 속도
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true, //마우스 올리면 움직임 멈춤
+                },
+
+                navigation: {
+                    //버튼
+                    nextEl: '.swiperbutton-next', //버튼 전
+                    prevEl: '.swiperbutton-prev', //버튼 후
                 },
             });
         </script>

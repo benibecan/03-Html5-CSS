@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            p,
+            div {
+                width: 100px;
+                height: 100px;
+                background: #ccc;
+            }
+            @keyframes hide {
+                0% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0;
+                }
+            }
+            @keyframes show {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+            .out {
+                animation: hide 1s forwards;
+            }
+            .in {
+                animation: show 1s forwards;
+            }
+        </style>
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script>
+            $(function () {
+                $('#fadeout').click(function () {
+                    //모든 클래스를 지우고 .out 추가
+                    $('p').removeClass().addClass('out');
+                });
+                $('#fadein').click(function () {
+                    //모든 클래스를 지우고 .in 추가
+                    $('p').removeClass().addClass('in');
+                });
+                let fade = true;
+                $('#fadetoggle').click(function () {
+                    if (fade) {
+                        $('p').removeClass().addClass('in');
+                    } else {
+                        $('p').removeClass().addClass('out');
+                    }
+                    //참거짓 제어! 한번은 참, 한번은 거짓
+                    fade = !fade;
+                });
+                //fadeIn fadeOut fadeToggle== display none block
+                //speed== "slow" "fast" "1000"
+                //easing=== "ease" "swing"
+                //callback== fadein, fadeout()매소드가 완료된 후, 실행될 구문
+                $('#fadeIn').click(function () {
+                    $('div').fadeIn('fast');
+                });
+                $('#fadeOut').click(function () {
+                    $('div').fadeOut('slow');
+                });
+                $('#fadeToggle').click(function () {
+                    $('div').fadeToggle(1000, function () {
+                        $('div').text('fadeToggle');
+                    });
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <p></p>
+        <button id="fadein">fadein</button>
+        <button id="fadeout">fadeout</button>
+        <button id="fadetoggle">fadetoggle</button>
+
+        <div></div>
+        <button id="fadeIn">fadeIn</button>
+        <button id="fadeOut">fadeOut</button>
+        <button id="fadeToggle">fadeToggle</button>
+    </body>
+</html>
