@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/aos.css" />
+        <link rel="stylesheet" href="css/swaper-bundle.css" />
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script src="js/aos.js"></script>
+        <script src="js/swiper-bundle.js"></script>
+        <title>Travel</title>
+        <script>
+            AOS.init({
+                offset: 120, //트리거 포인트에서 오프셋(px) 기본값120
+                duration: 1000, // 1000=1초, 기본값 400, 0~30000까지 들어간다. 단위는 밀리세컨드
+                delay: 500, //지연시간
+                once: false, //한번실행 true 여러번실행 false
+                easing: 'ease-in',
+            });
+        </script>
+    </head>
+    <body>
+        <div class="popup"></div>
+        <div id="wrap">
+            <header></header>
+            <div class="top">top</div>
+            <div class="content">
+                <div class="left">left</div>
+                <div class="right">
+                    right
+                    <span>EAST NUSA TENGGARA</span>
+                    <h1>Have you enjoyed your holiday?</h1>
+                    <p>
+                        You will be amazed if you take part in this sailing Komodo island tour package. So it is also
+                        mandatory for you, besides enjoying Komodo tourism on Komodo Island, you also have to taste the
+                        marine tourism. The beautiful waters of Komodo will make you meet many travelers from other
+                        countries.
+                    </p>
+                    <span>read more</span>
+                </div>
+            </div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/photo1.jpg" alt="" /></div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 4</div>
+                    <div class="swiper-slide">Slide 5</div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <footer></footer>
+        </div>
+        <script>
+            // 배너
+            var swiper = new Swiper('.mySwiper', {
+                mousewheel: true,
+                slidesPerView: 1, //한번에 보이는 slide 개수
+                spaceBetween: 30,
+                loop: true, //반복
+                mousewheel: true, //마우스 휠해서 앞뒤로 넘김
+
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+
+                autoplay: {
+                    delay: 1000, //넘어가는 속도
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true, //마우스 올리면 움직임 멈춤
+                },
+
+                navigation: {
+                    //버튼
+                    nextEl: '.swiper-button-next', //버튼 전
+                    prevEl: '.swiper-button-prev', //버튼 후
+                },
+            });
+        </script>
+    </body>
+</html>

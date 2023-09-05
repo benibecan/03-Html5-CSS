@@ -1,0 +1,45 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'KoPubWorld', 'notosans', '나눔고딕';
+}
+
+#wrap {
+    width: 100vw;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.top {
+    height: 400px;
+    background: tomato;
+}
+
+.content {
+    display: flex;
+    height: 400px;
+}
+
+.content .left {
+    width: 50vw;
+    height: 100%;
+    background: sandybrown;
+}
+
+.content .right {
+    width: 50vw;
+    height: 100%;
+    background: teal;
+}
